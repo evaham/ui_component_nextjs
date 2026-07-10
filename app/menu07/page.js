@@ -1,11 +1,21 @@
+'use client';
 import SearchBar from "@/components/SearchBar";
+import SearchTab from "@/components/SearchTab";
 
-export default function Menu03Page() {
+export default function Menu07Page() {
   return (
     <div className="flex flex-col flex-1 max-w-7xl justify-center">
       <main className="flex items-start gap-6">
         <div className="flex-1 flex flex-col gap-4 p-6 border border-zinc-200 rounded-xl bg-white shadow-sm">
-          <SearchBar />
+          <div>
+            <SearchTab />
+            <SearchBar />
+          </div>
+
+          <div className="flex p-10 bg-gray-100 border">
+            사용자
+          </div>
+
           <div className="overflow-y-auto h-150 border-y border-zinc-200">
             <table className="table-fixed w-full border-collapse bg-white text-sm">
               <colgroup>
@@ -41,6 +51,7 @@ export default function Menu03Page() {
             </table>
           </div>
         </div>
+
 
       </main>
     </div>

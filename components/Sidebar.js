@@ -10,13 +10,12 @@ const navItems = [
   { href: "/menu03", label: "특매효과 측정" },
   { href: "/menu04", label: "매입단가 포지션" },
   { href: "/menu05", label: "급상승 상품" },
-  { href: "/menu06", label: "뜨는 신상품" },
-  { href: "/menu07", label: "특매효과 측정" },
-  { href: "/menu08", label: "우리매장" },
-  { href: "/menu09", label: "가격비교,단품매출비교" },
-  { href: "/menu10", label: "미취급상품" },
-  { href: "/menu11", label: "일별 매출비교" },
-  { href: "/menu12", label: "매출속보" },
+  { href: "/menu06", label: "급상승 상품 집계" },
+  { href: "/menu07", label: "우리매장" },
+  { href: "/menu08", label: "가격비교,단품매출비교" },
+  { href: "/menu09", label: "미취급상품" },
+  { href: "/menu10", label: "일별 매출비교" },
+  { href: "/menu11", label: "매출속보" },
 ];
 
 function getNavClass(isActive) {

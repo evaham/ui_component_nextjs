@@ -1,6 +1,6 @@
 import SearchBar from "@/components/SearchBar";
 
-export default function Menu02Page() {
+export default function Menu04Page() {
   return (
     <div className="flex flex-col flex-1 max-w-7xl justify-center">
       <main className="flex items-start gap-6">
@@ -25,6 +25,9 @@ export default function Menu02Page() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-zinc-200">
+                <tr className="hidden">
+                  <td colSpan="14" className="px-4 py-12 text-center text-zinc-400">데이터를 준비 중입니다.</td>
+                </tr>
                 <tr className="hover:bg-zinc-50">
                   <td className="px-1 py-2 text-center">1</td>
                   <td className="px-1 py-2 text-left">8809591316526</td>
@@ -34,17 +37,11 @@ export default function Menu02Page() {
                   <td className="px-1 py-2 text-right">5,600</td>
                   <td className="px-1 py-2 text-right">27.3%<span>down</span></td>
                 </tr>
-
-                <tr className="hidden">
-                  <td colSpan="7" className="px-4 py-12 text-center text-zinc-400">데이터를 준비 중입니다.</td>
-                </tr>
-
-
               </tbody>
             </table>
           </div>
         </div>
-        {/* 선택상품 정보 */}
+        {/* 그래프 정보 */}
         <div className="flex flex-col gap-4 w-80 p-6 border border-zinc-200 rounded-xl bg-white shadow-sm">
           <div className="">농심바나나킥</div>
           <hr />
@@ -111,6 +108,19 @@ export default function Menu02Page() {
             </div>
           </div>
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
       </main>
     </div>
   )
