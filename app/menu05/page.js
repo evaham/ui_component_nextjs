@@ -1,6 +1,11 @@
 import SearchBar from "@/components/SearchBar";
+import DateTableList from '@/components/DateTableList';
 
 export default function Menu05Page() {
+  const rows = [
+    { id: 'r1', no: 1, barcode: '8809591316526', name: '신라면 블랙', position: '1,511', avgPrice: '4,480', ourPrice: '5,600', comparison: '27.3% down' }
+  ];
+
   return (
     <div className="flex flex-col flex-1 max-w-7xl justify-center">
       <main className="flex items-start gap-6">
@@ -24,20 +29,7 @@ export default function Menu05Page() {
                   <th className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">판매가 비교</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-zinc-200">
-                <tr className="hidden">
-                  <td colSpan="14" className="px-4 py-12 text-center text-zinc-400">데이터를 준비 중입니다.</td>
-                </tr>
-                <tr className="hover:bg-zinc-50">
-                  <td className="px-1 py-2 text-center">1</td>
-                  <td className="px-1 py-2 text-left">8809591316526</td>
-                  <td className="px-1 py-2 text-left"><a href="#" className="text-blue-700 hover:underline">신라면 블랙</a></td>
-                  <td className="px-1 py-2 text-right">1,511</td>
-                  <td className="px-1 py-2 text-right">4,480</td>
-                  <td className="px-1 py-2 text-right">5,600</td>
-                  <td className="px-1 py-2 text-right">27.3%<span>down</span></td>
-                </tr>
-              </tbody>
+              <DateTableList rows={rows} rowKey="id" />
             </table>
           </div>
         </div>

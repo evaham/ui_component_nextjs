@@ -1,59 +1,27 @@
 'use client';
-import SearchBar from "@/components/SearchBar";
-import SearchTab from "@/components/SearchTab";
+import { useState } from 'react';
+import DashboardCard4 from '@/components/DashboardCard4';
+import LineGraph from '@/components/LineGraph';
+import RollingBanner from '@/components/RollingBanner';
 
 export default function Menu07Page() {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
   return (
-    <div className="flex flex-col flex-1 max-w-7xl justify-center">
-      <main className="flex items-start gap-6">
-        <div className="flex-1 flex flex-col gap-4 p-6 border border-zinc-200 rounded-xl bg-white shadow-sm">
-          <div>
-            <SearchTab />
-            <SearchBar />
-          </div>
+    <div className="flex flex-col flex-1 max-w-260 justify-center">
+      <main className="flex flex-col gap-6">
+        {/* 매출속보 */}
+        <DashboardCard4 type="sales" />
 
-          <div className="flex p-10 bg-gray-100 border">
-            사용자
-          </div>
-
-          <div className="overflow-y-auto h-150 border-y border-zinc-200">
-            <table className="table-fixed w-full border-collapse bg-white text-sm">
-              <colgroup>
-                <col style={{ width: '40px' }} />
-                <col style={{ width: '120px' }} />
-                <col style={{ width: '150px' }} />
-              </colgroup>
-              <thead className="bg-zinc-50 border-b border-zinc-200 sticky top-0 z-10">
-                <tr>
-                  <th className="px-1 py-2 text-center font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">No.</th>
-                  <th className="px-1 py-2 text-left font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">바코드</th>
-                  <th className="px-1 py-2 text-left font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">상품명</th>
-                  <th className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">품목포지션</th>
-                  <th className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">평균 판매가</th>
-                  <th className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">우리 판매가</th>
-                  <th className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">판매가 비교</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-zinc-200">
-                <tr className="hidden">
-                  <td colSpan="14" className="px-4 py-12 text-center text-zinc-400">데이터를 준비 중입니다.</td>
-                </tr>
-                <tr className="hover:bg-zinc-50">
-                  <td className="px-1 py-2 text-center">1</td>
-                  <td className="px-1 py-2 text-left">8809591316526</td>
-                  <td className="px-1 py-2 text-left"><a href="#" className="text-blue-700 hover:underline">신라면 블랙</a></td>
-                  <td className="px-1 py-2 text-right">1,511</td>
-                  <td className="px-1 py-2 text-right">4,480</td>
-                  <td className="px-1 py-2 text-right">5,600</td>
-                  <td className="px-1 py-2 text-right">27.3%<span>down</span></td>
-                </tr>
-              </tbody>
-            </table>
+        <div className="flex gap-4">
+          {/* 그래프영역 */}
+          <div className="flex-2 flex flex-col gap-4">
+            <LineGraph />
+            <LineGraph />
           </div>
         </div>
-
-
       </main>
     </div>
+
   )
 }

@@ -1,7 +1,48 @@
+"use client";
 import SearchBar from "@/components/SearchBar";
 import SearchTab from "@/components/SearchTab";
+import DateTableList from '@/components/DateTableList';
 
 export default function Menu01Page() {
+  const rows = [
+    {
+      id: 'r1',
+      no: 1,
+      barcode: '8809591316526',
+      name: '신라면 블랙',
+      storesHandled: '1,511',
+      otherBuy: '4,480',
+      otherSell: '5,600',
+      otherProfit: '20%',
+      otherSales: '150',
+      ourBuy: '5,152',
+      ourSell: '6,440',
+      ourProfit: '20%',
+      ourSales: '109',
+      inventoryQty: '15.0%',
+      inventoryAmount: '27.3%'
+    }
+  ];
+
+  const renderRow = (row, idx) => (
+    <tr key={row.id ?? idx} className="hover:bg-zinc-50">
+      <td className="px-1 py-2 text-center">{row.no}</td>
+      <td className="px-1 py-2 text-left">{row.barcode}</td>
+      <td className="px-1 py-2 text-left">{row.name}</td>
+      <td className="px-1 py-2 text-right">{row.storesHandled}</td>
+      <td className="px-1 py-2 text-right">{row.otherBuy}</td>
+      <td className="px-1 py-2 text-right">{row.otherSell}</td>
+      <td className="px-1 py-2 text-right">{row.otherProfit}</td>
+      <td className="px-1 py-2 text-right">{row.otherSales}</td>
+      <td className="px-1 py-2 text-right">{row.ourBuy}</td>
+      <td className="px-1 py-2 text-right">{row.ourSell}</td>
+      <td className="px-1 py-2 text-right">{row.ourProfit}</td>
+      <td className="px-1 py-2 text-right">{row.ourSales}</td>
+      <td className="px-1 py-2 text-right">{row.inventoryQty}</td>
+      <td className="px-1 py-2 text-right">{row.inventoryAmount}</td>
+    </tr>
+  );
+
   return (
     <div className="flex flex-col flex-1 max-w-7xl justify-center">
       <main className="flex flex-col gap-6">
@@ -79,27 +120,7 @@ export default function Menu01Page() {
                 <th className="px-1 py-0.5 text-right font-semibold text-zinc-600 bg-blue-50/30">판매량</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-zinc-200">
-              <tr className="hidden">
-                <td colSpan="14" className="px-4 py-12 text-center text-zinc-400">데이터를 준비 중입니다.</td>
-              </tr>
-              <tr className="hover:bg-zinc-50">
-                <td className="px-1 py-2 text-center">1</td>
-                <td className="px-1 py-2 text-left">8809591316526</td>
-                <td className="px-1 py-2 text-left"><a href="#" className="text-blue-700 hover:underline">신라면 블랙</a></td>
-                <td className="px-1 py-2 text-right">1,511</td>
-                <td className="px-1 py-2 text-right">4,480</td>
-                <td className="px-1 py-2 text-right">5,600</td>
-                <td className="px-1 py-2 text-right">20%</td>
-                <td className="px-1 py-2 text-right">150</td>
-                <td className="px-1 py-2 text-right">5,152</td>
-                <td className="px-1 py-2 text-right">6,440</td>
-                <td className="px-1 py-2 text-right">20%</td>
-                <td className="px-1 py-2 text-right">109</td>
-                <td className="px-1 py-2 text-right">15.0%<span>up</span></td>
-                <td className="px-1 py-2 text-right">27.3%<span>down</span></td>
-              </tr>
-            </tbody>
+            <DateTableList rows={rows} renderRow={renderRow} rowKey="id" />
           </table>
         </div>
       </main>
