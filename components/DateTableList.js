@@ -7,13 +7,129 @@ export default function DateTableList({ rows = [], renderRow, rowKey = 'id' }) {
 
   const defaultRender = (row, idx) => (
     <tr key={row[rowKey] ?? idx} className="hover:bg-zinc-50">
-      <td className="px-1 py-2 text-center">{row.no ?? idx + 1}</td>
-      <td className="px-1 py-2 text-left">{row.barcode}</td>
-      <td className="px-1 py-2 text-left">{row.name}</td>
-      <td className="px-1 py-2 text-right">{row.position}</td>
-      <td className="px-1 py-2 text-right">{row.avgPrice}</td>
-      <td className="px-1 py-2 text-right">{row.ourPrice}</td>
-      <td className="px-1 py-2 text-right">{row.comparison}</td>
+      {row.no!= null && row.no !== '' && (
+        <td className="px-1 py-2 text-center">{row.no ?? idx + 1}</td>
+      )}
+      {row.바코드 != null && row.바코드 !== '' && (
+        <td className="px-1 py-2 text-left">{row.바코드}</td>
+      )}
+      {row.상품명 != null && row.상품명 !== '' && (
+        <td className="px-1 py-2 text-left"><span className="overflow-hidden text-ellipsis">{row.상품명}</span></td>
+      )}
+      {row.취급매장 != null && row.취급매장 !== '' && (
+        <td className="px-1 py-2 text-right">{row.취급매장}</td>
+      )}
+      {row.판매량 != null && row.판매량 !== '' && (
+        <td className="px-1 py-2 text-right">{row.판매량}</td>
+      )}
+      {row.판매액 != null && row.판매액 !== '' && (
+        <td className="px-1 py-2 text-right">{row.판매액}</td>
+      )}
+      {row.확산지역 != null && row.확산지역 !== '' && (
+        <td className="px-1 py-2 text-right">{row.확산지역}</td>
+      )}
+      {row.품목포지션 != null && row.품목포지션 !== '' && (
+        <td className="px-1 py-2 text-right">{row.품목포지션}</td>
+      )}
+      {row.평균매입가 != null && row.평균매입가 !== '' && (
+        <td className="px-1 py-2 text-right">{row.평균매입가}</td>
+      )}
+      {row.우리매입량 != null && row.우리매입량 !== '' && (
+        <td className="px-1 py-2 text-right">{row.우리매입량}</td>
+      )}
+      {row.우리매입가 != null && row.우리매입가 !== '' && (
+        <td className="px-1 py-2 text-right">{row.우리매입가}</td>
+      )}
+      {row.차액율 != null && row.차액율 !== '' && (
+        <td className="px-1 py-2 text-right">{row.차액율}</td>
+      )}
+      {row.취급점 != null && row.취급점 !== '' && (
+        <td className="px-1 py-2 text-right">{row.취급점}</td>
+      )}
+      {row.우리판매가 != null && row.우리판매가 !== '' && (
+        <td className="px-1 py-2 text-right">{row.우리판매가}</td>
+      )}
+      {row.최종매입 != null && row.최종매입 !== '' && (
+        <td className="px-1 py-2 text-right">{row.최종매입}</td>
+      )}
+      {row.판매가변경 != null && row.판매가변경 !== '' && (
+        <td className="px-1 py-2 text-right">{row.판매가변경}</td>
+      )}
+      {row.평균판매량 != null && row.평균판매량 !== '' && (
+        <td className="px-1 py-2 text-right">{row.평균판매량}</td>
+      )}
+      {row.평균판매액 != null && row.평균판매액 !== '' && (
+        <td className="px-1 py-2 text-right">{row.평균판매액}</td>
+      )}
+      {row.등록일 != null && row.등록일 !== '' && (
+        <td className="px-1 py-2 text-right">{row.등록일}</td>
+      )}
+      {row.평균판매가 != null && row.평균판매가 !== '' && (
+        <td className="px-1 py-2 text-right">{row.평균판매가}</td>
+      )}
+      {row.지역 != null && row.지역 !== '' && (
+        <td className="px-1 py-2 text-left">{row.지역}</td>
+      )}
+      {row.규모 != null && row.규모 !== '' && (
+        <td className="px-1 py-2 text-left">{row.규모}</td>
+      )}
+      {row.점포명 != null && row.점포명 !== '' && (
+        <td className="px-1 py-2 text-left">{row.점포명}</td>
+      )}
+      {row.매장명 != null && row.매장명 !== '' && (
+        <td className="px-1 py-2 text-left">{row.매장명}</td>
+      )}
+      {row.매출액 != null && row.매출액 !== '' && (
+        <td className="px-1 py-2 text-right">{row.매출액}</td>
+      )}
+      {row.객수 != null && row.객수 !== '' && (
+        <td className="px-1 py-2 text-right">{row.객수}</td>
+      )}
+      {row.객단가 != null && row.객단가 !== '' && (
+        <td className="px-1 py-2 text-right">{row.객단가}</td>
+      )}
+      {row.회원매출액 != null && row.회원매출액 !== '' && (
+        <td className="px-1 py-2 text-right">{row.회원매출액}</td>
+      )}
+      {row.회원객수 != null && row.회원객수 !== '' && (
+        <td className="px-1 py-2 text-right">{row.회원객수}</td>
+      )}
+      {row.회원객단가 != null && row.회원객단가 !== '' && (
+        <td className="px-1 py-2 text-right">{row.회원객단가}</td>
+      )}
+      {row.수집시각 != null && row.수집시각 !== '' && (
+        <td className="px-1 py-2 text-right">{row.수집시각}</td>
+      )}
+      {row.타매장매입가 != null && row.타매장매입가 !== '' && (
+        <td className="px-1 py-2 text-right">{row.타매장매입가}</td>
+      )}
+      {row.타매장판매가 != null && row.타매장판매가 !== '' && (
+        <td className="px-1 py-2 text-right">{row.타매장판매가}</td>
+      )}
+      {row.타매장이익율 != null && row.타매장이익율 !== '' && (
+        <td className="px-1 py-2 text-right">{row.타매장이익율}</td>
+      )}
+      {row.타매장판매량 != null && row.타매장판매량 !== '' && (
+        <td className="px-1 py-2 text-right">{row.타매장판매량}</td>
+      )}
+      {row.우리매장매입가 != null && row.우리매장매입가 !== '' && (
+        <td className="px-1 py-2 text-right">{row.우리매장매입가}</td>
+      )}
+      {row.우리매장판매가 != null && row.우리매장판매가 !== '' && (
+        <td className="px-1 py-2 text-right">{row.우리매장판매가}</td>
+      )}
+      {row.우리매장이익율 != null && row.우리매장이익율 !== '' && (
+        <td className="px-1 py-2 text-right">{row.우리매장이익율}</td>
+      )}
+      {row.우리매장판매량 != null && row.우리매장판매량 !== '' && (
+        <td className="px-1 py-2 text-right">{row.우리매장판매량}</td>
+      )}
+      {row.판매가비교 != null && row.판매가비교 !== '' && (
+        <td className="px-1 py-2 text-right">{row.판매가비교}</td>
+      )}
+      {row.판매량비교 != null && row.판매량비교 !== '' && (
+        <td className="px-1 py-2 text-right">{row.판매량비교}</td>
+      )}
     </tr>
   );
 

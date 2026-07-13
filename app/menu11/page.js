@@ -87,6 +87,13 @@ export default function Menu11Page() {
 
         <div className="flex flex-col gap-4 overflow-x-auto p-6 border border-zinc-200 rounded-xl bg-white shadow-sm">
           <div>
+            <SearchTab tabs={[
+              '전체',
+              'A. 유지',
+              'B. 점검필요',
+              'C. 강점확인',
+              'D. 교체검토'
+            ]} />
             <SearchBar />
           </div>
 

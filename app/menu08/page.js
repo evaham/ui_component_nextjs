@@ -46,7 +46,13 @@ export default function Menu08Page() {
       <main className="flex items-start gap-6">
         <div className="flex-1 flex flex-col gap-4 p-6 border border-zinc-200 rounded-xl bg-white shadow-sm">
           <div>
-            <SearchTab />
+            <SearchTab tabs={[
+              '전체',
+              '품목별',
+              '매출별',
+              '재고별',
+              '기타'
+            ]} />
             <SearchBar />
           </div>
 
@@ -77,7 +83,6 @@ export default function Menu08Page() {
           </div>
         </div>
       </main>
-
       <LayerPopup 
         isOpen={isPopupOpen} 
         onClose={() => setIsPopupOpen(false)} 

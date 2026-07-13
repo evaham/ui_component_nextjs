@@ -5,7 +5,21 @@ import DateTableList from '@/components/DateTableList';
 
 export default function Menu10Page() {
   const rows = [
-    { id: 'r1', no: 1, barcode: '8809591316526', name: '신라면 블랙', position: '1,511', avgPrice: '4,480', ourPrice: '5,600', comparison: '27.3% down' }
+    { id: 'r1', no: 1, 지역: '대구', 규모: '200평 이하', 점포명: '대백마트', 매출액: '94,477,960', 객수: '5,600', 객단가: '22,629', 회원매출액: '79,477,960', 회원객수: '4,800', 회원객단가: '16,566'   },
+    { id: 'r2', no: 2, 지역: '인천', 규모: '200평 이하', 점포명: '아울렛마트', 매출액: '83,478,8100', 객수: '2,320', 객단가: '11,334', 회원매출액: '44,137,220', 회원객수: '1,320', 회원객단가: '44,436'   },
+    { id: 'r3', no: 3, 지역: '서울', 규모: '200평 이하', 점포명: '1q23마트', 매출액: '74,477,960', 객수: '1,600', 객단가: '46,629', 회원매출액: '69,477,960', 회원객수: '1,400', 회원객단가: '49,566'   },
+    { id: 'r4', no: 4, 지역: '부산', 규모: '200평 이하', 점포명: '도연이네', 매출액: '64,477,960', 객수: '1,200', 객단가: '53,629', 회원매출액: '59,477,960', 회원객수: '1,000', 회원객단가: '59,566'   },
+    { id: 'r5', no: 5, 지역: '대전', 규모: '200평 이하', 점포명: '동네사랑마트', 매출액: '54,477,960', 객수: '1,000', 객단가: '54,629', 회원매출액: '49,477,960', 회원객수: '800', 회원객단가: '61,566'   },
+    { id: 'r6', no: 6, 지역: '광주', 규모: '200평 이하', 점포명: '마스트코 마트', 매출액: '44,477,960', 객수: '800', 객단가: '55,629', 회원매출액: '39,477,960', 회원객수: '600', 회원객단가: '65,566'   },
+    { id: 'r7', no: 7, 지역: '울산', 규모: '200평 이하', 점포명: '에이플러스마트', 매출액: '34,477,960', 객수: '600', 객단가: '57,629', 회원매출액: '29,477,960', 회원객수: '400', 회원객단가: '73,566'   },
+    { id: 'r8', no: 8, 지역: '세종', 규모: '200평 이하', 점포명: '장바구니담기마트', 매출액: '24,477,960', 객수: '400', 객단가: '61,629', 회원매출액: '19,477,960', 회원객수: '200', 회원객단가: '97,566'   },
+    { id: 'r9', no: 9, 지역: '강원', 규모: '200평 이하', 점포명: '유한회사 투플러스유통', 매출액: '14,477,960', 객수: '200', 객단가: '72,629', 회원매출액: '9,477,960', 회원객수: '100', 회원객단가: '94,566'   },
+    { id: 'r10', no: 10, 지역: '경기', 규모: '200평 이하', 점포명: '케이식자재마트', 매출액: '4,477,960', 객수: '100', 객단가: '44,629', 회원매출액: '3,477,960', 회원객수: '50', 회원객단가: '69,566'   },
+    { id: 'r11', no: 11, 지역: '충북', 규모: '200평 이하', 점포명: '주식회사 오케이웰빙유통', 매출액: '2,477,960', 객수: '50', 객단가: '49,629', 회원매출액: '1,477,960', 회원객수: '25', 회원객단가: '59,566'   },
+    { id: 'r12', no: 12, 지역: '충남', 규모: '200평 이하', 점포명: '큐브파트너스 주식회사', 매출액: '1,477,960', 객수: '25', 객단가: '59,629', 회원매출액: '777,960', 회원객수: '10', 회원객단가: '77,566'   },
+    { id: 'r13', no: 13, 지역: '전북', 규모: '200평 이하', 점포명: '부산농축산유통센터', 매출액: '777,960', 객수: '10', 객단가: '77,629', 회원매출액: '377,960', 회원객수: '5', 회원객단가: '75,566'   },
+    { id: 'r14', no: 14, 지역: '전남', 규모: '200평 이하', 점포명: '유한회사 슈퍼와', 매출액: '377,960', 객수: '5', 객단가: '75,629', 회원매출액: '177,960', 회원객수: '2', 회원객단가: '88,566'   },
+    { id: 'r15', no: 15, 지역: '경북', 규모: '200평 이하', 점포명: '주식회사 피앤디화성', 매출액: '177,960', 객수: '2', 객단가: '88,629', 회원매출액: '77,960', 회원객수: '1', 회원객단가: '77,566'   },
   ];
 
   return (
@@ -13,108 +27,89 @@ export default function Menu10Page() {
       <main className="flex items-start gap-6">
         <div className="flex-1 flex flex-col gap-4 p-6 border border-zinc-200 rounded-xl bg-white shadow-sm">
           <SearchBar />
-          <div className="overflow-y-auto h-150 border-y border-zinc-200">
+
+          <div className="mb-2">
             <table className="table-fixed w-full border-collapse bg-white text-sm">
               <colgroup>
                 <col style={{ width: '40px' }} />
-                <col style={{ width: '120px' }} />
-                <col style={{ width: '150px' }} />
+                <col style={{ width: '60px' }} />
+                <col style={{ width: '100px' }} />
+                <col style={{ width: '280px' }} />
               </colgroup>
               <thead className="bg-zinc-50 border-b border-zinc-200 sticky top-0 z-10">
                 <tr>
-                  <th className="px-1 py-2 text-center font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">No.</th>
-                  <th className="px-1 py-2 text-left font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">바코드</th>
-                  <th className="px-1 py-2 text-left font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">상품명</th>
-                  <th className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">품목포지션</th>
-                  <th className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">평균 판매가</th>
-                  <th className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">우리 판매가</th>
-                  <th className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">판매가 비교</th>
+                  <th className="px-1 py-2 text-center font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50"></th>
+                  <th colSpan={3} className="px-1 py-2 text-left font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">우리매장 매출(6/15)</th>
+                  <th className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">매출액</th>
+                  <th className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">객수</th>
+                  <th className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">객단가</th>
+                  <th className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">3,450</th>
+                  <th className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">13,321</th>
+                  <th className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">123,123,123</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+
+          <div className="border-y border-zinc-200">
+
+            <table className="table-fixed w-full border-collapse bg-white text-sm">
+              <colgroup>
+                <col style={{ width: '40px' }} />
+                <col style={{ width: '60px' }} />
+                <col style={{ width: '100px' }} />
+                <col style={{ width: '280px' }} />
+              </colgroup>
+              <thead className="bg-zinc-50 border-b border-zinc-200 sticky top-0 z-10">
+
+
+
+
+
+                
+                <tr>
+                  <td className="px-1 py-2 text-center font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50"></td>
+                  <td className="px-1 py-2 text-left font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">전체</td>
+                  <td className="px-1 py-2 text-left font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">200평이하</td>
+                  <td className="px-1 py-2 text-left font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">평균(00개 매장)</td>
+                  <td className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">65,805,200</td>
+                  <td className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">2,895</td>
+                  <td className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">22,731</td>
+                  <td className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">60,580,200</td>
+                  <td className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">2,689</td>
+                  <td className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">22,529</td>
+                </tr> 
+                <tr>
+                  <th className="px-1 py-2 text-center font-semibold text-white uppercase tracking-wider bg-blue-500">No.</th>
+                  <th className="px-1 py-2 text-left font-semibold text-white uppercase tracking-wider bg-blue-500">지역</th>
+                  <th className="px-1 py-2 text-left font-semibold text-white uppercase tracking-wider bg-blue-500">규모</th>
+                  <th className="px-1 py-2 text-left font-semibold text-white uppercase tracking-wider bg-blue-500">점포명</th>
+                  <th className="px-1 py-2 text-right font-semibold text-white uppercase tracking-wider bg-blue-500">매출액</th>
+                  <th className="px-1 py-2 text-right font-semibold text-white uppercase tracking-wider bg-blue-500">객수</th>
+                  <th className="px-1 py-2 text-right font-semibold text-white uppercase tracking-wider bg-blue-500">객단가</th>
+                  <th className="px-1 py-2 text-right font-semibold text-white uppercase tracking-wider bg-blue-500">회원 매출액</th>
+                  <th className="px-1 py-2 text-right font-semibold text-white uppercase tracking-wider bg-blue-500">회원 객수</th>
+                  <th className="px-1 py-2 text-right font-semibold text-white uppercase tracking-wider bg-blue-500">회원 객단가</th>
                 </tr>
               </thead>
               <DateTableList rows={rows} rowKey="id" />
+              <tfoot>
+                <tr>
+                  <td className="px-1 py-2 text-center font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50"></td>
+                  <td className="px-1 py-2 text-left font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">전체</td>
+                  <td className="px-1 py-2 text-left font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">200평이하</td>
+                  <td className="px-1 py-2 text-left font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">평균(00개 매장)</td>
+                  <td className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">65,805,200</td>
+                  <td className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">2,895</td>
+                  <td className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">22,731</td>
+                  <td className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">60,580,200</td>
+                  <td className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">2,689</td>
+                  <td className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">22,529</td>
+                </tr> 
+              </tfoot>
             </table>
           </div>
         </div>
-        {/* 그래프 정보 */}
-        <div className="flex flex-col gap-4 w-80 p-6 border border-zinc-200 rounded-xl bg-white shadow-sm">
-          <div className="">농심바나나킥</div>
-          <hr />
-          <div className="flex flex-col gap-2">
-            <div className="flex-1 flex flex-col gap-1 border border-zinc-200 rounded-xl p-4">
-              <div className="text-sm">현 단가 유지</div>
-              <div>
-                <span className="text-3xl font-bold">2,500</span>원
-              </div>
-              <div className="text-sm">
-                <dl className="flex gap-1 justify-between">
-                  <dt>이익율</dt>
-                  <dd>28 %</dd>
-                </dl>
-                <dl className="flex gap-1 justify-between">
-                  <dt>예상 판매량</dt>
-                  <dd>18 개</dd>
-                </dl>
-                <dl className="flex gap-1 justify-between">
-                  <dt>월 실현이익</dt>
-                  <dd>12,100 원</dd>
-                </dl>
-              </div>
-            </div>
-            <div className="flex-1 flex flex-col gap-1 border border-zinc-200 rounded-xl p-4">
-              <div className="text-sm">추천</div>
-              <div>
-                <span className="text-3xl font-bold">2,500</span>원
-              </div>
-              <div className="text-sm">
-                <dl className="flex gap-1 justify-between">
-                  <dt>이익율</dt>
-                  <dd>28 %</dd>
-                </dl>
-                <dl className="flex gap-1 justify-between">
-                  <dt>예상 판매량</dt>
-                  <dd>18 개</dd>
-                </dl>
-                <dl className="flex gap-1 justify-between">
-                  <dt>월 실현이익</dt>
-                  <dd>12,100 원</dd>
-                </dl>
-              </div>
-            </div>
-            <div className="flex-1 flex flex-col gap-1 border border-zinc-200 rounded-xl p-4">
-              <div className="text-sm">비효율</div>
-              <div>
-                <span className="text-3xl font-bold">2,500</span>원
-              </div>
-              <div className="text-sm">
-                <dl className="flex gap-1 justify-between">
-                  <dt>이익율</dt>
-                  <dd>28 %</dd>
-                </dl>
-                <dl className="flex gap-1 justify-between">
-                  <dt>예상 판매량</dt>
-                  <dd>18 개</dd>
-                </dl>
-                <dl className="flex gap-1 justify-between">
-                  <dt>월 실현이익</dt>
-                  <dd>12,100 원</dd>
-                </dl>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
       </main>
     </div>
   )

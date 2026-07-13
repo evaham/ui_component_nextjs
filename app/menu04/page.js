@@ -12,7 +12,16 @@ export default function Menu04Page() {
     <div className="flex flex-col flex-1 max-w-7xl justify-center">
       <main className="flex items-start gap-6">
         <div className="flex-1 flex flex-col gap-4 p-6 border border-zinc-200 rounded-xl bg-white shadow-sm">
-          <SearchBar />
+          <SearchBar
+            searchFilters={[
+              { label: '지역', options: [{ value: '', label: '전체' }, { value: 'seoul', label: '서울' }, { value: 'busan', label: '부산' }] },
+              { label: '규모', options: [{ value: '', label: '전체' }, { value: 'small', label: '200평 이하' }, { value: 'large', label: '200평 이상' }] },
+              { label: '정렬', options: [{ value: 'position', label: '포지션순' }, { value: 'sales', label: '매출순' }] }
+            ]}
+            centerFilters={[]}
+            placeholder="바코드, 상품명"
+            buttonLabel="검색"
+          />
           <div className="overflow-y-auto h-150 border-y border-zinc-200">
             <table className="table-fixed w-full border-collapse bg-white text-sm">
               <colgroup>

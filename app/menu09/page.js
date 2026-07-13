@@ -4,7 +4,7 @@ import DateTableList from '@/components/DateTableList';
 
 export default function Menu09Page() {
   const rows = [
-    { id: 'r1', no: 1, barcode: '8809591316526', name: '신라면 블랙', position: '1,511', avgPrice: '4,480', ourPrice: '5,600', comparison: '27.3% down' }
+    { id: 'r1', no: 1, data01: '8809591316526', data02: '신라면 블랙', data03: '1,511', data04: '321,480', data05: '3,125,600', data06: '999,999',data07: '123,123,123',data08: '2023-06-02',  },
   ];
 
   return (
@@ -24,10 +24,12 @@ export default function Menu09Page() {
                   <th className="px-1 py-2 text-center font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">No.</th>
                   <th className="px-1 py-2 text-left font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">바코드</th>
                   <th className="px-1 py-2 text-left font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">상품명</th>
-                  <th className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">품목포지션</th>
+                  <th className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">취급점</th>
+                  <th className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">평균 매입가</th>
                   <th className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">평균 판매가</th>
-                  <th className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">우리 판매가</th>
-                  <th className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">판매가 비교</th>
+                  <th className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">평균 판매량</th>
+                  <th className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">평균 판매액</th>
+                  <th className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">등록일</th>
                 </tr>
               </thead>
               <DateTableList rows={rows} rowKey="id" />
@@ -35,84 +37,6 @@ export default function Menu09Page() {
           </div>
         </div>
         {/* 그래프 정보 */}
-        <div className="flex flex-col gap-4 w-80 p-6 border border-zinc-200 rounded-xl bg-white shadow-sm">
-          <div className="">농심바나나킥</div>
-          <hr />
-          <div className="flex flex-col gap-2">
-            <div className="flex-1 flex flex-col gap-1 border border-zinc-200 rounded-xl p-4">
-              <div className="text-sm">현 단가 유지</div>
-              <div>
-                <span className="text-3xl font-bold">2,500</span>원
-              </div>
-              <div className="text-sm">
-                <dl className="flex gap-1 justify-between">
-                  <dt>이익율</dt>
-                  <dd>28 %</dd>
-                </dl>
-                <dl className="flex gap-1 justify-between">
-                  <dt>예상 판매량</dt>
-                  <dd>18 개</dd>
-                </dl>
-                <dl className="flex gap-1 justify-between">
-                  <dt>월 실현이익</dt>
-                  <dd>12,100 원</dd>
-                </dl>
-              </div>
-            </div>
-            <div className="flex-1 flex flex-col gap-1 border border-zinc-200 rounded-xl p-4">
-              <div className="text-sm">추천</div>
-              <div>
-                <span className="text-3xl font-bold">2,500</span>원
-              </div>
-              <div className="text-sm">
-                <dl className="flex gap-1 justify-between">
-                  <dt>이익율</dt>
-                  <dd>28 %</dd>
-                </dl>
-                <dl className="flex gap-1 justify-between">
-                  <dt>예상 판매량</dt>
-                  <dd>18 개</dd>
-                </dl>
-                <dl className="flex gap-1 justify-between">
-                  <dt>월 실현이익</dt>
-                  <dd>12,100 원</dd>
-                </dl>
-              </div>
-            </div>
-            <div className="flex-1 flex flex-col gap-1 border border-zinc-200 rounded-xl p-4">
-              <div className="text-sm">비효율</div>
-              <div>
-                <span className="text-3xl font-bold">2,500</span>원
-              </div>
-              <div className="text-sm">
-                <dl className="flex gap-1 justify-between">
-                  <dt>이익율</dt>
-                  <dd>28 %</dd>
-                </dl>
-                <dl className="flex gap-1 justify-between">
-                  <dt>예상 판매량</dt>
-                  <dd>18 개</dd>
-                </dl>
-                <dl className="flex gap-1 justify-between">
-                  <dt>월 실현이익</dt>
-                  <dd>12,100 원</dd>
-                </dl>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-
-
-
-
-
-
-
-
-
-
 
       </main>
     </div>
