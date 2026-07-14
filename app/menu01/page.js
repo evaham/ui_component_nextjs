@@ -19,37 +19,52 @@ export default function Menu01Page() {
   return (
     <div className="flex flex-col flex-1 max-w-7xl justify-center">
       <main className="flex flex-col gap-6">
-        <div className="flex flex-col gap-4 overflow-x-auto p-6 border border-zinc-200 rounded-xl bg-white shadow-sm">
+        <div className="flex flex-col gap-4 p-6 rounded-2xl bg-white shadow-xs">
+          <div className="flex items-center gap-2">
+            <div className="w-1.5 h-1.5 bg-[#26499d] rounded-full"></div>
+            <span className="font-bold text-zinc-900 tracking-tight">우리매장 상품 상황</span>
+          </div>
           <div className="flex gap-4">
-            <div className="flex-1 flex flex-col gap-1">
-              <div className="text-sm">A. 유지</div>
+            <div className="flex-1 flex flex-col gap-1 p-6 border border-zinc-200 rounded-2xl">
+              <div className="mr-auto px-4 py-1 rounded-full bg-zinc-200 text-sm">A. 유지</div>
               <div>
-                <span className="text-4xl font-bold">87</span>개
+                <span className="text-6xl font-bold">87</span>개
               </div>
-              <div className="text-sm">전국 평균 유지</div>
+              <div className="text-sm">
+                <span className="font-bold">전국 평균 유지</span><br />
+                <span className="text-zinc-500">판매량이 전국 평균과 비슷한 상품입니다. 판매 전략을 유지하세요.</span>
+              </div>
             </div>
-            <div className="flex-1 flex flex-col gap-1">
-              <div className="text-sm">B. 점검필요</div>
+            <div className="flex-1 flex flex-col gap-1 p-6 border border-zinc-200 rounded-2xl">
+              <div className="mr-auto px-4 py-1 rounded-full bg-yellow-200 text-sm">B. 점검필요</div>
               <div>
-                <span className="text-4xl font-bold">12</span>개
+                <span className="text-6xl font-bold">12</span>개
               </div>
-              <div className="text-sm">우리매장만 판매 저조</div>
+              <div className="text-sm">
+                <span className="font-bold">우리매장만 판매 저조</span><br />
+                <span className="text-zinc-500">전국 평균 대비 판매량이 낮은 상품입니다. 가격을 조정하는 것을 추천 합니다.</span>
+              </div>
             </div>
-            <div className="flex-1 flex flex-col gap-1">
-              <div className="text-sm">C. 강점확인</div>
+            <div className="flex-1 flex flex-col gap-1 p-6 border border-zinc-200 rounded-2xl">
+              <div className="mr-auto px-4 py-1 rounded-full bg-blue-200 text-sm">C. 강점확인</div>
               <div>
-                <span className="text-4xl font-bold">3</span>개
+                <span className="text-6xl font-bold">3</span>개
               </div>
-              <div className="text-sm">우리매장 잘 팔림</div>
+              <div className="text-sm"><span className="font-bold">우리매장 잘 팔림</span><br />
+                <span className="text-zinc-500">전국 평균 대비 판매량이 높은 상품입니다. 판매 전략을 강화하세요.</span>
+              </div>
             </div>
-            <div className="flex-1 flex flex-col gap-1">
-              <div className="text-sm">D. 교체검토</div>
+            <div className="flex-1 flex flex-col gap-1 p-6 border border-zinc-200 rounded-2xl">
+              <div className="mr-auto px-4 py-1 rounded-full bg-red-200 text-sm">D. 교체검토</div>
               <div>
-                <span className="text-4xl font-bold">3</span>개
+                <span className="text-6xl font-bold">3</span>개
               </div>
-              <div className="text-sm">전국 판매 저조</div>
+              <div className="text-sm">
+                <span className="font-bold">전국 판매 저조</span>
+                <br /><span className="text-zinc-500">전국 평균 대비 판매량이 낮은 상품입니다. 상품교체를 추천합니다.</span>
+              </div>
             </div>
-            <div className="flex-1 flex flex-col gap-1">
+            <div className="flex-1 flex flex-col gap-1 p-4 border bg-zinc-50 rounded-xl">
               <div className="text-sm">
                 전월 전국매장 평균 대비 <br />
                 우리 매장 판매량 비교
@@ -58,6 +73,10 @@ export default function Menu01Page() {
               <div className="text-sm">2026.5.1 ~ 2026.5.31</div>
             </div>
           </div>
+
+        </div>
+        <div className="flex flex-col gap-4 overflow-x-auto p-6 border border-zinc-200 rounded-xl bg-white shadow-sm">
+
           <div className="flex flex-col">
             <SearchTab tabs={[
               '전체',

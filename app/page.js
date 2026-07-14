@@ -5,8 +5,8 @@ import LineGraph from "@/components/LineGraph";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 max-w-260 justify-center">
-      <main className="flex flex-col gap-6">
+    <div className="flex flex-col flex-1 max-w-7xl justify-center">
+      <main className="flex flex-col gap-4">
         {/* 매출속보 */}
         <DashboardCard4 type="sales" />
 

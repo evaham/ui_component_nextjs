@@ -56,9 +56,9 @@ export default function RollingBanner() {
   const extendedData = [...productData, ...productData.slice(0, 5)];
 
   return (
-    <div className=" border border-zinc-200 rounded-xl bg-white shadow-sm p-5 overflow-hidden">
+    <div className="rounded-xl bg-white shadow-xs p-5 overflow-hidden">
       {/* 타이틀 헤더 */}
-      <div className="flex items-center gap-2 mb-4">
+      <div className="flex items-center gap-2 mb-2">
         <div className="w-2 h-2 rounded-full bg-[#26499d]" />
         <h2 className="font-bold tracking-tight">주목 상품정보</h2>
       </div>
@@ -79,7 +79,7 @@ export default function RollingBanner() {
               className="flex flex-col justify-center"
             >
               <div className="flex items-center gap-2 mb-1">
-                <div className="px-2 py-0.5 rounded text-sm font-bold bg-blue-50 text-blue-700 whitespace-nowrap">
+                <div className="px-1 py-0.5 rounded text-xs font-bold bg-blue-50 text-blue-700 whitespace-nowrap">
                   {item.tag}
                 </div>
                 <span className="font-bold text-zinc-900 truncate">{item.title}</span>
