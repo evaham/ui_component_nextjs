@@ -18,7 +18,7 @@ export default function Menu03Page() {
   return (
     <div className="flex flex-col flex-1 max-w-7xl justify-center">
       <main className="flex items-start gap-6">
-        <div className="flex-1 flex flex-col gap-4 p-6 border border-zinc-200 rounded-xl bg-white shadow-sm">
+        <div className="flex-1 flex flex-col gap-4 p-6 rounded-2xl bg-white shadow-xs transition-all">
           <SearchBar
             searchFilters={[
               { label: '상위 100개', options: [{ value: 'top100', label: '상위 100개' }] },
@@ -33,7 +33,7 @@ export default function Menu03Page() {
             placeholder="바코드, 상품명"
             buttonLabel="조회"
           />
-          <div className="overflow-y-auto h-150 border-y border-zinc-200">
+          <div className="border-y border-zinc-200">
             <table className="table-fixed w-full border-collapse bg-white text-sm">
               <colgroup>
                 <col style={{ width: '40px' }} />

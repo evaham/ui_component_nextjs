@@ -13,45 +13,27 @@ export default function Menu08Page() {
     {
       id: 'r1',
       no: 1,
-      barcode: '8809591316526',
-      name: '신라면 블랙',
-      position: '1,511',
-      avgPrice: '4,480',
-      ourPrice: '5,600',
-      comparison: '27.3% down'
+      바코드: '8809591316526',
+      상품명: '신라면 블랙',
+      품목포지션: '1,511',
+      평균판매가: '4,480',
+      우리판매가: '5,600',
+      판매가비교: '27.3% down'
     }
   ];
 
-  const renderRow = (row, idx) => (
-    <tr key={row.id ?? idx} className="hover:bg-zinc-50">
-      <td className="px-1 py-2 text-center">{row.no}</td>
-      <td className="px-1 py-2 text-left">{row.barcode}</td>
-      <td className="px-1 py-2 text-left">
-        <button
-          onClick={() => setIsPopupOpen(true)}
-          className="text-blue-700 hover:underline text-left"
-        >
-          {row.name}
-        </button>
-      </td>
-      <td className="px-1 py-2 text-right">{row.position}</td>
-      <td className="px-1 py-2 text-right">{row.avgPrice}</td>
-      <td className="px-1 py-2 text-right">{row.ourPrice}</td>
-      <td className="px-1 py-2 text-right">{row.comparison}</td>
-    </tr>
-  );
 
   return (
     <div className="flex flex-col flex-1 max-w-7xl justify-center">
       <main className="flex items-start gap-6">
-        <div className="flex-1 flex flex-col gap-4 p-6 border border-zinc-200 rounded-xl bg-white shadow-sm">
+        <div className="flex-1 flex flex-col gap-4 p-6 rounded-xl bg-white shadow-xs transition-all">
           <div>
             <SearchTab tabs={[
-              '전체',
-              '품목별',
-              '매출별',
-              '재고별',
-              '기타'
+              '분류별',
+              '공급사별',
+              '제조사별',
+              '날짜별',
+              '검색어'
             ]} />
             <SearchBar />
           </div>
@@ -78,7 +60,7 @@ export default function Menu08Page() {
                   <th className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">판매가 비교</th>
                 </tr>
               </thead>
-              <DateTableList rows={rows} renderRow={renderRow} rowKey="id" />
+              <DateTableList rows={rows} rowKey="id" />
             </table>
           </div>
         </div>

@@ -42,8 +42,7 @@ export default function SearchBar({
   };
 
   return (
-    <div className="flex flex-col gap-1 border border-zinc-200 bg-zinc-50 p-4 text-sm text-midium">
-
+    <div className="flex flex-col gap-1 border-zinc-200 text-sm text-midium">
       {searchFilters.length > 0 && <div>
         <div className="flex flex-wrap gap-1 items-center">
           <div>{searchGroupLabel1}</div>

@@ -8,10 +8,10 @@ export default function Menu07Page() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   return (
-    <div className="flex flex-col flex-1 max-w-260 justify-center">
+    <div className="flex flex-col flex-1 max-w-7xl justify-center">
       <main className="flex flex-col gap-6">
         {/* 매출속보 */}
-        <DashboardCard4 type="sales" />
+        <DashboardCard4 type="today" />
 
         <div className="flex gap-4">
           {/* 그래프영역 */}

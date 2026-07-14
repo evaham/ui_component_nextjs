@@ -1,10 +1,32 @@
+import DateTableList from "@/components/DateTableList";
 import SearchBar from "@/components/SearchBar";
 
+
 export default function Menu02Page() {
+  const rows = [
+    { id: 'r1', no: 1, 바코드: '8809591316526', 상품명: '신라면 블랙', 품목포지션: <span className="text-red-500">B. 점검필요</span>, 평균판매가: '4,480', 우리판매가: '5,600', 판매가비교: '20%'},
+    { id: 'r2', no: 2, 바코드: '8809591316526', 상품명: '신라면 블랙', 품목포지션: <span className="text-green-600">A. 유지</span>, 평균판매가: '4,480', 우리판매가: '5,600', 판매가비교: '20%'},
+    { id: 'r3', no: 3, 바코드: '8809591316526', 상품명: '신라면 블랙', 품목포지션: <span className="text-red-500">B. 점검필요</span>, 평균판매가: '4,480', 우리판매가: '5,600', 판매가비교: '20%'},
+    { id: 'r4', no: 4, 바코드: '8809591316526', 상품명: '신라면 블랙', 품목포지션: <span className="text-red-500">B. 점검필요</span>, 평균판매가: '4,480', 우리판매가: '5,600', 판매가비교: '20%'},
+    { id: 'r5', no: 5, 바코드: '8809591316526', 상품명: '신라면 블랙', 품목포지션: <span className="text-red-500">B. 점검필요</span>, 평균판매가: '4,480', 우리판매가: '5,600', 판매가비교: '20%'},
+    { id: 'r6', no: 6, 바코드: '8809591316526', 상품명: '신라면 블랙', 품목포지션: <span className="text-red-500">B. 점검필요</span>, 평균판매가: '4,480', 우리판매가: '5,600', 판매가비교: '20%'},
+    { id: 'r7', no: 7, 바코드: '8809591316526', 상품명: '신라면 블랙', 품목포지션: <span className="text-red-500">B. 점검필요</span>, 평균판매가: '4,480', 우리판매가: '5,600', 판매가비교: '20%'},
+    { id: 'r8', no: 8, 바코드: '8809591316526', 상품명: '신라면 블랙', 품목포지션: <span className="text-red-500">B. 점검필요</span>, 평균판매가: '4,480', 우리판매가: '5,600', 판매가비교: '20%'},
+    { id: 'r9', no: 9, 바코드: '8809591316526', 상품명: '신라면 블랙', 품목포지션: <span className="text-zinc-700">D. 교체검토</span>, 평균판매가: '4,480', 우리판매가: '5,600', 판매가비교: '20%'},
+    { id: 'r10', no: 10, 바코드: '8809591316526', 상품명: '신라면 블랙', 품목포지션: <span className="text-red-500">B. 점검필요</span>, 평균판매가: '4,480', 우리판매가: '5,600', 판매가비교: '20%'},
+    { id: 'r11', no: 11, 바코드: '8809591316526', 상품명: '신라면 블랙', 품목포지션: <span className="text-red-500">B. 점검필요</span>, 평균판매가: '4,480', 우리판매가: '5,600', 판매가비교: '20%'},
+    { id: 'r12', no: 12, 바코드: '8809591316526', 상품명: '신라면 블랙', 품목포지션: <span className="text-blue-600">C. 강점확인</span>, 평균판매가: '4,480', 우리판매가: '5,600', 판매가비교: '20%'},
+    { id: 'r13', no: 13, 바코드: '8809591316526', 상품명: '신라면 블랙', 품목포지션: <span className="text-red-500">B. 점검필요</span>, 평균판매가: '4,480', 우리판매가: '5,600', 판매가비교: '20%'},
+    { id: 'r14', no: 14, 바코드: '8809591316526', 상품명: '신라면 블랙', 품목포지션: <span className="text-zinc-700">D. 교체검토</span>, 평균판매가: '4,480', 우리판매가: '5,600', 판매가비교: '20%'},
+    { id: 'r15', no: 15, 바코드: '8809591316526', 상품명: '신라면 블랙', 품목포지션: <span className="text-zinc-700">D. 교체검토</span>, 평균판매가: '4,480', 우리판매가: '5,600', 판매가비교: '20%'},
+    { id: 'r16', no: 16, 바코드: '8809591316526', 상품명: '신라면 블랙', 품목포지션: <span className="text-red-500">B. 점검필요</span>, 평균판매가: '4,480', 우리판매가: '5,600', 판매가비교: '20%'},
+    { id: 'r17', no: 17, 바코드: '8809591316526', 상품명: '신라면 블랙', 품목포지션: <span className="text-red-500">B. 점검필요</span>, 평균판매가: '4,480', 우리판매가: '5,600', 판매가비교: '20%'},
+  ];
+
   return (
     <div className="flex flex-col flex-1 max-w-7xl justify-center">
       <main className="flex items-start gap-6">
-        <div className="flex-1 flex flex-col gap-4 p-6 border border-zinc-200 rounded-xl bg-white shadow-sm">
+        <div className="flex-1 flex flex-col gap-4 p-6 rounded-2xl bg-white shadow-xs transition-all">
           <SearchBar
             searchFilters={[
               { label: '품목', options: [{ value: '', label: '품목포지션' }] },
@@ -18,53 +40,37 @@ export default function Menu02Page() {
             placeholder="바코드, 상품명"
             buttonLabel="검색"
           />
-          <div className="overflow-y-auto h-150 border-y border-zinc-200">
+          <div className="-mx-6 border-y border-zinc-100">
             <table className="table-fixed w-full border-collapse bg-white text-sm">
               <colgroup>
                 <col style={{ width: '40px' }} />
-                <col style={{ width: '120px' }} />
-                <col style={{ width: '150px' }} />
+                <col style={{ width: '130px' }} />
+                <col style={{ width: '200px' }} />
               </colgroup>
-              <thead className="bg-zinc-50 border-b border-zinc-200 sticky top-0 z-10">
+              <thead className="border-b border-zinc-200 sticky top-0 z-10">
                 <tr>
-                  <th className="px-1 py-2 text-center font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">No.</th>
-                  <th className="px-1 py-2 text-left font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">바코드</th>
-                  <th className="px-1 py-2 text-left font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">상품명</th>
-                  <th className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">품목포지션</th>
-                  <th className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">평균 판매가</th>
-                  <th className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">우리 판매가</th>
-                  <th className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">판매가 비교</th>
+                  <th className="p-2 text-center font-medium text-zinc-800 bg-blue-50">No.</th>
+                  <th className="p-2 text-left font-medium text-zinc-800 bg-blue-50">바코드</th>
+                  <th className="p-2 text-left font-medium text-zinc-800 bg-blue-50">상품명</th>
+                  <th className="p-2 text-left font-medium text-zinc-800 bg-blue-50">품목포지션</th>
+                  <th className="p-2 text-right font-medium text-zinc-800 bg-blue-50">평균 판매가</th>
+                  <th className="p-2 text-right font-medium text-zinc-800 bg-blue-50">우리 판매가</th>
+                  <th className="p-2 pr-6 text-right font-medium text-zinc-800 bg-blue-50">판매가 비교</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-zinc-200">
-                <tr className="hover:bg-zinc-50">
-                  <td className="px-1 py-2 text-center">1</td>
-                  <td className="px-1 py-2 text-left">8809591316526</td>
-                  <td className="px-1 py-2 text-left"><a href="#" className="text-blue-700 hover:underline">신라면 블랙</a></td>
-                  <td className="px-1 py-2 text-right">1,511</td>
-                  <td className="px-1 py-2 text-right">4,480</td>
-                  <td className="px-1 py-2 text-right">5,600</td>
-                  <td className="px-1 py-2 text-right">27.3%<span>down</span></td>
-                </tr>
-
-                <tr className="hidden">
-                  <td colSpan="7" className="px-4 py-12 text-center text-zinc-400">데이터를 준비 중입니다.</td>
-                </tr>
-
-
-              </tbody>
+              <DateTableList rows={rows} rowKey="id" />
             </table>
           </div>
         </div>
         {/* 선택상품 정보 */}
-        <div className="flex flex-col gap-4 w-80 p-6 border border-zinc-200 rounded-xl bg-white shadow-sm">
-          <div className="">농심바나나킥</div>
-          <hr />
-          <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-4 w-70 p-6 rounded-2xl bg-white shadow-xs transition-all">
+          <div className="">상품명이 들어가는 영역</div>
+          <hr className="border-zinc-200" />
+          <div className="flex flex-col gap-4">
             <div className="flex-1 flex flex-col gap-1 border border-zinc-200 rounded-xl p-4">
               <div className="text-sm">현 단가 유지</div>
               <div>
-                <span className="text-3xl font-bold">2,500</span>원
+                <span className="text-3xl font-bold">2,800</span>원
               </div>
               <div className="text-sm">
                 <dl className="flex gap-1 justify-between">
@@ -81,7 +87,7 @@ export default function Menu02Page() {
                 </dl>
               </div>
             </div>
-            <div className="flex-1 flex flex-col gap-1 border border-zinc-200 rounded-xl p-4">
+            <div className="flex-1 flex flex-col gap-1 border border-blue-600 rounded-xl p-4">
               <div className="text-sm">추천</div>
               <div>
                 <span className="text-3xl font-bold">2,500</span>원
@@ -104,7 +110,7 @@ export default function Menu02Page() {
             <div className="flex-1 flex flex-col gap-1 border border-zinc-200 rounded-xl p-4">
               <div className="text-sm">비효율</div>
               <div>
-                <span className="text-3xl font-bold">2,500</span>원
+                <span className="text-3xl font-bold">3,000</span>원
               </div>
               <div className="text-sm">
                 <dl className="flex gap-1 justify-between">
