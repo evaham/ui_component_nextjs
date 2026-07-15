@@ -19,15 +19,15 @@ export default function Menu01Page() {
   return (
     <div className="flex flex-col flex-1 max-w-7xl justify-center">
       <main className="flex flex-col gap-6">
-        <div className="flex flex-col gap-3 p-6 rounded-2xl bg-[#26499d] text-white shadow-xs">
-          <div className="flex -mx-6 divide-x divide-white/20">
+        <div className="flex flex-col gap-3 p-6 bg-white rounded-2xl">
+          <div className="flex -mx-6 divide-x divide-black/20">
             <div className="flex-1 flex flex-col gap-1 px-6">
               <div className="flex items-center gap-2">
                 <div className="relative mr-auto px-2 py-0.5 rounded bg-green-100 text-sm text-green-700 font-bold">
                   A. 유지
                 </div>
                 <div>
-                  <span className="text-4xl font-bold">3,187</span>개
+                  <span className="text-3xl font-bold text-blue-800">3,187</span>개
                 </div>
               </div>
               <div className="flex flex-col gap-2 text-sm">
@@ -42,7 +42,7 @@ export default function Menu01Page() {
                   B. 점검필요
                 </div>
                 <div>
-                  <span className="text-4xl font-bold">32</span>개
+                  <span className="text-4xl font-bold text-blue-800">32</span>개
                 </div>
               </div>
               <div className="flex flex-col gap-2 text-sm">
@@ -54,7 +54,7 @@ export default function Menu01Page() {
               <div className="flex items-center gap-2">
                 <div className="mr-auto px-2 py-0.5 rounded bg-blue-100 text-sm text-blue-700 font-bold">C. 강점확인</div>
                 <div>
-                  <span className="text-4xl font-bold">13</span>개
+                  <span className="text-4xl font-bold text-blue-800">13</span>개
                 </div>
               </div>
               <div className="flex flex-col gap-2 text-sm">
@@ -66,7 +66,7 @@ export default function Menu01Page() {
               <div className="flex items-center gap-2">
                 <div className="mr-auto px-2 py-0.5 rounded bg-zinc-100 text-sm text-zinc-700 font-bold">D. 교체검토</div>
                 <div>
-                  <span className="text-4xl font-bold">3</span>개
+                  <span className="text-4xl font-bold text-blue-800">3</span>개
                 </div>
               </div>
               <div className="flex flex-col gap-2 text-sm">
@@ -80,12 +80,12 @@ export default function Menu01Page() {
                 <span className="font-bold">전월</span> 전국매장 평균 대비 <br />
                 우리 매장 판매량 비교
               </div>
-              <a href="#" className="mx-auto text-white underline">기준 자세히 보기</a>
+              <a href="#" className="mx-auto text-blue-800 underline">기준 자세히 보기</a>
               <div className="text-sm">2026.5.1 ~ 2026.5.31</div>
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-4 overflow-x-auto p-6 rounded-2xl bg-white shadow-xs transition-all">
+        <div className="flex flex-col gap-4 p-6 rounded-2xl bg-white transition-all">
           <SearchTab tabs={[
             '전체',
             'A. 유지',
