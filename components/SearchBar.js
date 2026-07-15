@@ -52,7 +52,7 @@ export default function SearchBar({
             placeholder={placeholder}
             className="min-w-30 px-2 py-1 border rounded border-zinc-300 bg-white"
           />
-          <button className="px-4 py-1 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors">
+          <button className="px-4 py-1 bg-[#26499d] text-white rounded hover:bg-[#26499d] transition-colors cursor-pointer">
             {buttonLabel}
           </button>
         </div>

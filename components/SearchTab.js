@@ -19,10 +19,10 @@ export default function SearchTab({ tabs }) {
           const isActive = idx === activeIndex;
           const isFirst = idx === 0;
           const isLast = idx === tabLabels.length - 1;
-          const baseClass = 'px-3 py-1.5 border rounded-lg font-medium text-sm hover:bg-white hover:text-zinc-900 hover:shadow-xs cursor-pointer';
+          const baseClass = 'px-3 py-1.5 border rounded-lg font-medium text-sm cursor-pointer';
           const activeClass = isActive
-            ? 'bg-white text-zinc-900 border border-blue-600'
-            : 'border-transparent text-zinc-500';
+            ? 'bg-[#26499d] text-white hover:bg-[#26499d] hover:text-white'
+            : 'border-transparent text-zinc-500 hover:bg-white hover:text-zinc-900 hover:shadow-xs';
           return (
             <button
               key={`${label}-${idx}`}

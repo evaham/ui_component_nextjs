@@ -19,62 +19,73 @@ export default function Menu01Page() {
   return (
     <div className="flex flex-col flex-1 max-w-7xl justify-center">
       <main className="flex flex-col gap-6">
-        <div className="flex flex-col gap-2 p-6 rounded-2xl bg-white shadow-xs">
-          <div className="flex items-center gap-2">
-            <div className="w-1.5 h-1.5 bg-[#26499d] rounded-full"></div>
-            <span className="font-bold text-zinc-900 tracking-tight">우리매장 상품 상황</span>
-          </div>
-          <div className="flex gap-4">
-            <div className="flex-1 flex flex-col gap-1 p-6 border border-zinc-200 rounded-2xl">
-              <div className="mr-auto px-3 py-1 rounded-full bg-green-200 text-sm">A. 유지</div>
-              <div>
-                <span className="text-6xl font-bold">187</span>개
+        <div className="flex flex-col gap-3 p-6 rounded-2xl bg-[#26499d] text-white shadow-xs">
+          <div className="flex -mx-6 divide-x divide-white/20">
+            <div className="flex-1 flex flex-col gap-1 px-6">
+              <div className="flex items-center gap-2">
+                <div className="relative mr-auto px-2 py-0.5 rounded bg-green-100 text-sm text-green-700 font-bold">
+                  A. 유지
+                </div>
+                <div>
+                  <span className="text-4xl font-bold">3,187</span>개
+                </div>
               </div>
-              <div className="text-sm">
-                <span className="font-bold">전국 평균 유지</span><br />
-                <span className="text-zinc-500 tracking-tight">판매량이 전국 평균과 비슷한 상품입니다. 판매 전략을 유지하세요.</span>
-              </div>
-            </div>
-            <div className="flex-1 flex flex-col gap-1 p-6 border border-zinc-200 rounded-2xl">
-              <div className="mr-auto px-3 py-1 rounded-full bg-red-200 text-sm">B. 점검필요</div>
-              <div>
-                <span className="text-6xl font-bold">32</span>개
-              </div>
-              <div className="text-sm">
-                <span className="font-bold">우리매장만 판매 저조</span><br />
-                <span className="text-zinc-500 tracking-tight">전국 평균 대비 판매량이 낮은 상품입니다. 가격을 조정이 필요합니다.</span>
+              <div className="flex flex-col gap-2 text-sm">
+                <span className="font-bold">전국 평균 유지</span>
+                <span className="opacity-70">판매량이 전국 평균과 비슷한 상품입니다. 판매 전략을 유지하세요.</span>
               </div>
             </div>
-            <div className="flex-1 flex flex-col gap-1 py-6 px-4 border border-zinc-200 rounded-2xl">
-              <div className="mr-auto px-3 py-1 rounded-full bg-blue-200 text-sm">C. 강점확인</div>
-              <div>
-                <span className="text-6xl font-bold">13</span>개
+
+            <div className="flex-1 flex flex-col gap-1 px-6">
+              <div className="flex items-center gap-2">
+                <div className="relative mr-auto px-2 py-0.5 rounded bg-red-100 text-sm text-red-700 font-bold">
+                  B. 점검필요
+                </div>
+                <div>
+                  <span className="text-4xl font-bold">32</span>개
+                </div>
               </div>
-              <div className="text-sm"><span className="font-bold">우리매장 잘 팔림</span><br />
-                <span className="text-zinc-500 tracking-tight">전국 평균 대비 판매량이 높은 상품입니다. 판매 전략을 강화하세요.</span>
+              <div className="flex flex-col gap-2 text-sm">
+                <span className="font-bold">우리매장만 판매 저조</span>
+                <span className="opacity-80">전국 평균 대비 판매량이 낮은 상품입니다. 가격을 조정이 필요합니다.</span>
               </div>
             </div>
-            <div className="flex-1 flex flex-col gap-1 p-6 border border-zinc-200 rounded-2xl">
-              <div className="mr-auto px-3 py-1 rounded-full bg-zinc-200 text-sm">D. 교체검토</div>
-              <div>
-                <span className="text-6xl font-bold">3</span>개
+            <div className="flex-1 flex flex-col gap-1 px-6">
+              <div className="flex items-center gap-2">
+                <div className="mr-auto px-2 py-0.5 rounded bg-blue-100 text-sm text-blue-700 font-bold">C. 강점확인</div>
+                <div>
+                  <span className="text-4xl font-bold">13</span>개
+                </div>
               </div>
-              <div className="text-sm">
+              <div className="flex flex-col gap-2 text-sm">
+                <span className="font-bold">우리매장 잘 팔림</span>
+                <span className="opacity-80 font-light tracking-tight">전국 평균 대비 판매량이 높은 상품입니다. 판매 전략을 강화하세요.</span>
+              </div>
+            </div>
+            <div className="flex-1 flex flex-col gap-1 px-6">
+              <div className="flex items-center gap-2">
+                <div className="mr-auto px-2 py-0.5 rounded bg-zinc-100 text-sm text-zinc-700 font-bold">D. 교체검토</div>
+                <div>
+                  <span className="text-4xl font-bold">3</span>개
+                </div>
+              </div>
+              <div className="flex flex-col gap-2 text-sm">
                 <span className="font-bold">전국 판매 저조</span>
-                <br /><span className="text-zinc-500 tracking-tight">전국 평균 대비 판매량이 낮은 상품입니다. 상품교체를 추천합니다.</span>
+                <span className="opacity-80 font-light tracking-tight">전국 평균 대비 판매량이 낮은 상품입니다. 상품교체를 추천합니다.</span>
               </div>
             </div>
-            <div className="flex flex-col gap-1 justify-center p-6 bg-zinc-50 rounded-xl text-sm">
+
+            <div className="flex flex-col gap-2 justify-center px-6 text-sm">
               <div className="">
                 <span className="font-bold">전월</span> 전국매장 평균 대비 <br />
                 우리 매장 판매량 비교
               </div>
-              <a href="#" className="text-blue-500 underline">기준 자세히 보기</a>
+              <a href="#" className="mx-auto text-white underline">기준 자세히 보기</a>
               <div className="text-sm">2026.5.1 ~ 2026.5.31</div>
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-4 overflow-x-auto p-6 rounded-xl bg-white shadow-xs transition-all">
+        <div className="flex flex-col gap-4 overflow-x-auto p-6 rounded-2xl bg-white shadow-xs transition-all">
           <SearchTab tabs={[
             '전체',
             'A. 유지',
@@ -113,26 +124,26 @@ export default function Menu01Page() {
                 <col style={{ width: '80px' }} />
                 <col style={{ width: '80px' }} />
               </colgroup>
-              <thead className="bg-zinc-50 border-b border-zinc-200">
+              <thead className="border-b border-zinc-200 text-white bg-[#26499d]">
                 <tr>
-                  <th rowSpan="2" className="p-2 py-1 text-center font-medium text-zinc-800 bg-blue-50">No.</th>
-                  <th rowSpan="2" className="p-2 py-1 text-left font-medium text-zinc-800 bg-blue-50">바코드</th>
-                  <th rowSpan="2" className="p-2 py-1 text-left font-medium text-zinc-800 bg-blue-50">상품명</th>
-                  <th rowSpan="2" className="p-2 py-1 text-right font-medium text-zinc-800 bg-blue-50">취급점</th>
-                  <th colSpan="4" className="p-2 py-1 text-center font-medium text-zinc-800 bg-blue-50 underline-offset-4 decoration-2">타매장 평균</th>
-                  <th colSpan="4" className="p-2 py-1 text-center font-medium text-zinc-800 bg-blue-100">우리 매장</th>
-                  <th rowSpan="2" className="p-2 py-1 text-right font-medium text-zinc-800 bg-blue-50">판매가비교</th>
-                  <th rowSpan="2" className="p-2 pr-6 py-1 text-right font-medium text-zinc-800 bg-blue-50">판매량비교</th>
+                  <th rowSpan="2" className="p-2 py-0.5 text-center font-medium">No.</th>
+                  <th rowSpan="2" className="p-2 py-0.5 text-left font-medium">바코드</th>
+                  <th rowSpan="2" className="p-2 py-0.5 text-left font-medium">상품명</th>
+                  <th rowSpan="2" className="p-2 py-0.5 text-right font-medium">취급점</th>
+                  <th colSpan="4" className="p-2 py-0.5 text-center font-medium">타매장 평균</th>
+                  <th colSpan="4" className="p-2 py-0.5 text-center font-medium">우리 매장</th>
+                  <th rowSpan="2" className="p-2 py-0.5 text-right font-medium">판매가비교</th>
+                  <th rowSpan="2" className="p-2 pr-6 py-0.5 text-right font-medium">판매량비교</th>
                 </tr>
                 <tr>
-                  <th className="p-2 py-1 text-right font-medium text-zinc-800 bg-blue-50">매입가</th>
-                  <th className="p-2 py-1 text-right font-medium text-zinc-800 bg-blue-50">판매가</th>
-                  <th className="p-2 py-1 text-right font-medium text-zinc-800 bg-blue-50">이익율</th>
-                  <th className="p-2 py-1 text-right font-medium text-zinc-800 bg-blue-50">판매량</th>
-                  <th className="p-2 py-1 text-right font-medium text-zinc-800 bg-blue-100">매입가</th>
-                  <th className="p-2 py-1 text-right font-medium text-zinc-800 bg-blue-100">판매가</th>
-                  <th className="p-2 py-1 text-right font-medium text-zinc-800 bg-blue-100">이익율</th>
-                  <th className="p-2 pr-6 py-1 text-right font-medium text-zinc-800 bg-blue-100">판매량</th>
+                  <th className="p-2 py-0.5 text-right font-medium">매입가</th>
+                  <th className="p-2 py-0.5 text-right font-medium">판매가</th>
+                  <th className="p-2 py-0.5 text-right font-medium">이익율</th>
+                  <th className="p-2 py-0.5 text-right font-medium">판매량</th>
+                  <th className="p-2 py-0.5 text-right font-medium">매입가</th>
+                  <th className="p-2 py-0.5 text-right font-medium">판매가</th>
+                  <th className="p-2 py-0.5 text-right font-medium">이익율</th>
+                  <th className="p-2 pr-6 py-0.5 text-right font-medium">판매량</th>
                 </tr>
               </thead>
               <DateTableList rows={rows} rowKey="id" />

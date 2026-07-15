@@ -36,23 +36,22 @@ export default function Menu10Page() {
                 <col style={{ width: '100px' }} />
                 <col style={{ width: '280px' }} />
               </colgroup>
-              <thead className="bg-zinc-50 border-b border-zinc-200 sticky top-0 z-10">
+              <thead className="sticky top-0 z-10 border-b border-zinc-200 text-white bg-[#26499d]">
                 <tr>
-                  <th className="px-1 py-2 text-center font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50"></th>
-                  <th colSpan={3} className="px-1 py-2 text-left font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">우리매장 매출(6/15)</th>
-                  <th className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">매출액</th>
-                  <th className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">객수</th>
-                  <th className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">객단가</th>
-                  <th className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">3,450</th>
-                  <th className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">13,321</th>
-                  <th className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">123,123,123</th>
+                  <th className="p-2 text-center font-normal"></th>
+                  <th colSpan={3} className="p-2 text-left font-normal">우리매장 매출(6/15)</th>
+                  <th className="p-2 text-right font-normal">매출액</th>
+                  <th className="p-2 text-right font-normal">객수</th>
+                  <th className="p-2 text-right font-normal">객단가</th>
+                  <th className="p-2 text-right font-normal">3,450</th>
+                  <th className="p-2 text-right font-normal">13,321</th>
+                  <th className="p-2 text-right font-normal">123,123,123</th>
                 </tr>
               </thead>
             </table>
           </div>
 
-          <div className="border-y border-zinc-200">
-
+          <div className="min-h-150 -mx-6 border-y border-zinc-100">
             <table className="table-fixed w-full border-collapse bg-white text-sm">
               <colgroup>
                 <col style={{ width: '40px' }} />
@@ -60,51 +59,45 @@ export default function Menu10Page() {
                 <col style={{ width: '100px' }} />
                 <col style={{ width: '280px' }} />
               </colgroup>
-              <thead className="bg-zinc-50 border-b border-zinc-200 sticky top-0 z-10">
-
-
-
-
-
-                
+              <thead className="sticky top-0 z-10 border-b border-zinc-200 text-white bg-[#26499d]">
                 <tr>
-                  <td className="px-1 py-2 text-center font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50"></td>
-                  <td className="px-1 py-2 text-left font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">전체</td>
-                  <td className="px-1 py-2 text-left font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">200평이하</td>
-                  <td className="px-1 py-2 text-left font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">평균(00개 매장)</td>
-                  <td className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">65,805,200</td>
-                  <td className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">2,895</td>
-                  <td className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">22,731</td>
-                  <td className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">60,580,200</td>
-                  <td className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">2,689</td>
-                  <td className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">22,529</td>
+                  <td className="p-2 text-center font-normal"></td>
+                  <td className="p-2 text-left font-normal">전체</td>
+                  <td className="p-2 text-left font-normal">200평이하</td>
+                  <td className="p-2 text-left font-normal">평균(00개 매장)</td>
+                  <td className="p-2 text-right font-normal">65,805,200</td>
+                  <td className="p-2 text-right font-normal">2,895</td>
+                  <td className="p-2 text-right font-normal">22,731</td>
+                  <td className="p-2 text-right font-normal">60,580,200</td>
+                  <td className="p-2 text-right font-normal">2,689</td>
+                  <td className="p-2 pr-6 text-right font-normal">22,529</td>
                 </tr> 
                 <tr>
-                  <th className="px-1 py-2 text-center font-semibold text-white uppercase tracking-wider bg-blue-500">No.</th>
-                  <th className="px-1 py-2 text-left font-semibold text-white uppercase tracking-wider bg-blue-500">지역</th>
-                  <th className="px-1 py-2 text-left font-semibold text-white uppercase tracking-wider bg-blue-500">규모</th>
-                  <th className="px-1 py-2 text-left font-semibold text-white uppercase tracking-wider bg-blue-500">점포명</th>
-                  <th className="px-1 py-2 text-right font-semibold text-white uppercase tracking-wider bg-blue-500">매출액</th>
-                  <th className="px-1 py-2 text-right font-semibold text-white uppercase tracking-wider bg-blue-500">객수</th>
-                  <th className="px-1 py-2 text-right font-semibold text-white uppercase tracking-wider bg-blue-500">객단가</th>
-                  <th className="px-1 py-2 text-right font-semibold text-white uppercase tracking-wider bg-blue-500">회원 매출액</th>
-                  <th className="px-1 py-2 text-right font-semibold text-white uppercase tracking-wider bg-blue-500">회원 객수</th>
-                  <th className="px-1 py-2 text-right font-semibold text-white uppercase tracking-wider bg-blue-500">회원 객단가</th>
+                  <th className="p-2 text-center font-normal">No.</th>
+                  <th className="p-2 text-left font-normal">지역</th>
+                  <th className="p-2 text-left font-normal">규모</th>
+                  <th className="p-2 text-left font-normal">점포명</th>
+                  <th className="p-2 text-right font-normal">매출액</th>
+                  <th className="p-2 text-right font-normal">객수</th>
+                  <th className="p-2 text-right font-normal">객단가</th>
+                  <th className="p-2 text-right font-normal">회원 매출액</th>
+                  <th className="p-2 text-right font-normal">회원 객수</th>
+                  <th className="p-2 pr-6 text-right font-normal">회원 객단가</th>
                 </tr>
               </thead>
               <DateTableList rows={rows} rowKey="id" />
-              <tfoot>
+              <tfoot className="sticky top-0 z-10 border-b border-zinc-200 text-white bg-[#26499d]">
                 <tr>
-                  <td className="px-1 py-2 text-center font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50"></td>
-                  <td className="px-1 py-2 text-left font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">전체</td>
-                  <td className="px-1 py-2 text-left font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">200평이하</td>
-                  <td className="px-1 py-2 text-left font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">평균(00개 매장)</td>
-                  <td className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">65,805,200</td>
-                  <td className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">2,895</td>
-                  <td className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">22,731</td>
-                  <td className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">60,580,200</td>
-                  <td className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">2,689</td>
-                  <td className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">22,529</td>
+                  <td className="p-2 text-center font-normal"></td>
+                  <td className="p-2 text-left font-normal">전체</td>
+                  <td className="p-2 text-left font-normal">200평이하</td>
+                  <td className="p-2 text-left font-normal">평균(00개 매장)</td>
+                  <td className="p-2 text-right font-normal">65,805,200</td>
+                  <td className="p-2 text-right font-normal">2,895</td>
+                  <td className="p-2 text-right font-normal">22,731</td>
+                  <td className="p-2 text-right font-normal">60,580,200</td>
+                  <td className="p-2 text-right font-normal">2,689</td>
+                  <td className="p-2 pr-6 text-right font-normal">22,529</td>
                 </tr> 
               </tfoot>
             </table>

@@ -47,15 +47,15 @@ export default function Menu02Page() {
                 <col style={{ width: '130px' }} />
                 <col style={{ width: '200px' }} />
               </colgroup>
-              <thead className="border-b border-zinc-200 sticky top-0 z-10">
+              <thead className="border-b border-zinc-200 text-white bg-[#26499d]">
                 <tr>
-                  <th className="p-2 text-center font-medium text-zinc-800 bg-blue-50">No.</th>
-                  <th className="p-2 text-left font-medium text-zinc-800 bg-blue-50">바코드</th>
-                  <th className="p-2 text-left font-medium text-zinc-800 bg-blue-50">상품명</th>
-                  <th className="p-2 text-left font-medium text-zinc-800 bg-blue-50">품목포지션</th>
-                  <th className="p-2 text-right font-medium text-zinc-800 bg-blue-50">평균 판매가</th>
-                  <th className="p-2 text-right font-medium text-zinc-800 bg-blue-50">우리 판매가</th>
-                  <th className="p-2 pr-6 text-right font-medium text-zinc-800 bg-blue-50">판매가 비교</th>
+                  <th className="p-2 text-center font-normal">No.</th>
+                  <th className="p-2 text-left font-normal">바코드</th>
+                  <th className="p-2 text-left font-normal">상품명</th>
+                  <th className="p-2 text-left font-normal">품목포지션</th>
+                  <th className="p-2 text-right font-normal">평균 판매가</th>
+                  <th className="p-2 text-right font-normal">우리 판매가</th>
+                  <th className="p-2 pr-6 text-right font-normal">판매가 비교</th>
                 </tr>
               </thead>
               <DateTableList rows={rows} rowKey="id" />

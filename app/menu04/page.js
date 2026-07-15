@@ -4,14 +4,14 @@ import DateTableList from '@/components/DateTableList';
 export default function Menu04Page() {
   const rows = [
     {
-      id: 'r1', no: 1, barcode: '8809591316526', name: '신라면 블랙', position: '1,511', avgPrice: '4,480', ourPrice: '5,600', comparison: '27.3% down'
+      id: 'r1', no: 1, 바코드: '8809591316526', 상품명: '신라면 블랙', position: '1,511', avgPrice: '4,480', ourPrice: '5,600', comparison: '27.3% down'
     }
   ];
 
   return (
     <div className="flex flex-col flex-1 max-w-7xl justify-center">
       <main className="flex items-start gap-6">
-        <div className="flex-1 flex flex-col gap-4 p-6 border border-zinc-200 rounded-xl bg-white shadow-sm">
+        <div className="flex-1 flex flex-col gap-4 p-6 rounded-2xl bg-white">
           <SearchBar
             searchFilters={[
               { label: '지역', options: [{ value: '', label: '전체' }, { value: 'seoul', label: '서울' }, { value: 'busan', label: '부산' }] },
@@ -20,24 +20,25 @@ export default function Menu04Page() {
             ]}
             centerFilters={[]}
             placeholder="바코드, 상품명"
-            buttonLabel="검색"
+            buttonLabel="조회"
           />
-          <div className="overflow-y-auto h-150 border-y border-zinc-200">
+
+          <div className="overflow-y-auto h-170 -mx-6 border-y border-zinc-100">
             <table className="table-fixed w-full border-collapse bg-white text-sm">
               <colgroup>
                 <col style={{ width: '40px' }} />
                 <col style={{ width: '120px' }} />
                 <col style={{ width: '150px' }} />
               </colgroup>
-              <thead className="bg-zinc-50 border-b border-zinc-200 sticky top-0 z-10">
+              <thead className="sticky top-0 z-10 border-b border-zinc-200 text-white bg-[#26499d]">
                 <tr>
-                  <th className="px-1 py-2 text-center font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">No.</th>
-                  <th className="px-1 py-2 text-left font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">바코드</th>
-                  <th className="px-1 py-2 text-left font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">상품명</th>
-                  <th className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">품목포지션</th>
-                  <th className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">평균 판매가</th>
-                  <th className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">우리 판매가</th>
-                  <th className="px-1 py-2 text-right font-semibold text-zinc-600 uppercase tracking-wider bg-zinc-50">판매가 비교</th>
+                  <th className="p-2 text-center font-normal">No.</th>
+                  <th className="p-2 text-left font-normal">바코드</th>
+                  <th className="p-2 text-left font-normal">상품명</th>
+                  <th className="p-2 text-right font-normal">품목포지션</th>
+                  <th className="p-2 text-right font-normal">평균 판매가</th>
+                  <th className="p-2 text-right font-normal">우리 판매가</th>
+                  <th className="p-2 pr-6 text-right font-normal">판매가 비교</th>
                 </tr>
               </thead>
               <DateTableList rows={rows} rowKey="id" />
@@ -45,7 +46,7 @@ export default function Menu04Page() {
           </div>
         </div>
         {/* 그래프 정보 */}
-        <div className="flex flex-col gap-4 w-80 p-6 border border-zinc-200 rounded-xl bg-white shadow-sm">
+        <div className="flex flex-col gap-4 w-80 p-6 rounded-2xl bg-white">
           <div className="">농심바나나킥</div>
           <hr />
           <div className="flex flex-col gap-2">
