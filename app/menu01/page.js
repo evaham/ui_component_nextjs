@@ -124,7 +124,7 @@ export default function Menu01Page() {
                 <col style={{ width: '80px' }} />
                 <col style={{ width: '80px' }} />
               </colgroup>
-              <thead className="border-b border-zinc-200 text-white bg-blue-900/90">
+              <thead className="border-b border-zinc-200 text-white bg-[#4A5B6D]">
                 <tr>
                   <th rowSpan="2" className="p-2 py-0.5 text-center font-normal">No.</th>
                   <th rowSpan="2" className="p-2 py-0.5 text-left font-normal">바코드</th>

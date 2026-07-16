@@ -27,40 +27,16 @@ export default function Menu10Page() {
       <main className="flex items-start gap-6">
         <div className="flex-1 flex flex-col gap-4 p-6 rounded-xl bg-white">
           <SearchBar />
-
-          <div className="mb-2">
-            <table className="table-fixed w-full border-collapse bg-white text-sm">
-              <colgroup>
-                <col style={{ width: '40px' }} />
-                <col style={{ width: '60px' }} />
-                <col style={{ width: '100px' }} />
-                <col style={{ width: '280px' }} />
-              </colgroup>
-              <thead className="sticky top-0 z-10 border-b border-zinc-200 text-white bg-blue-900/90">
-                <tr>
-                  <th className="p-2 text-center font-normal"></th>
-                  <th colSpan={3} className="p-2 text-left font-normal">우리매장 매출(6/15)</th>
-                  <th className="p-2 text-right font-normal">매출액</th>
-                  <th className="p-2 text-right font-normal">객수</th>
-                  <th className="p-2 text-right font-normal">객단가</th>
-                  <th className="p-2 text-right font-normal">3,450</th>
-                  <th className="p-2 text-right font-normal">13,321</th>
-                  <th className="p-2 text-right font-normal">123,123,123</th>
-                </tr>
-              </thead>
-            </table>
-          </div>
-
           <div className="min-h-150 -mx-6 border-y border-zinc-100">
             <table className="table-fixed w-full border-collapse bg-white text-sm">
               <colgroup>
                 <col style={{ width: '40px' }} />
                 <col style={{ width: '60px' }} />
                 <col style={{ width: '100px' }} />
-                <col style={{ width: '280px' }} />
+                <col style={{ width: '200px' }} />
               </colgroup>
-              <thead className="sticky top-0 z-10 border-b border-zinc-200 text-white bg-[#26499d]">
-                <tr>
+              <thead className="sticky top-0 z-10 border-b border-zinc-200 text-white bg-[#4A5B6D]">
+                <tr className="bg-[#26499D]">
                   <td className="p-2 text-center font-normal"></td>
                   <td className="p-2 text-left font-normal">전체</td>
                   <td className="p-2 text-left font-normal">200평이하</td>
@@ -84,9 +60,19 @@ export default function Menu10Page() {
                   <th className="p-2 text-right font-normal">회원 객수</th>
                   <th className="p-2 pr-6 text-right font-normal">회원 객단가</th>
                 </tr>
+                <tr className="bg-blue-100 text-zinc-900">
+                  <th className="p-2 text-center font-normal"></th>
+                  <th colSpan={3} className="p-2 text-left font-normal">우리매장 매출(6/15)</th>
+                  <th className="p-2 text-right font-normal">83,478,810</th>
+                  <th className="p-2 text-right font-normal">2,485</th>
+                  <th className="p-2 text-right font-normal">33,593</th>
+                  <th className="p-2 text-right font-normal">3,450</th>
+                  <th className="p-2 text-right font-normal">13,321</th>
+                  <th className="p-2 pr-6 text-right font-normal">123,123,123</th>
+                </tr>
               </thead>
               <DateTableList rows={rows} rowKey="id" />
-              <tfoot className="sticky top-0 z-10 border-b border-zinc-200 text-white bg-[#26499d]">
+              <tfoot className="sticky top-0 z-10 border-b border-zinc-200 text-white bg-[#26499D]">
                 <tr>
                   <td className="p-2 text-center font-normal"></td>
                   <td className="p-2 text-left font-normal">전체</td>

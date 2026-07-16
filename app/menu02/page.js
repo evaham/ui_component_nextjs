@@ -47,7 +47,7 @@ export default function Menu02Page() {
                 <col style={{ width: '130px' }} />
                 <col style={{ width: '200px' }} />
               </colgroup>
-              <thead className="border-b border-zinc-200 text-white bg-blue-900/90">
+              <thead className="border-b border-zinc-200 text-white bg-[#4A5B6D]">
                 <tr>
                   <th className="p-2 text-center font-normal">No.</th>
                   <th className="p-2 text-left font-normal">바코드</th>

@@ -67,7 +67,7 @@ export default function Menu11Page() {
                 <col style={{ width: '150px' }} />
                 <col style={{ width: '60px' }} />
               </colgroup>
-              <thead className="sticky top-0 z-10 border-b border-zinc-200 text-white bg-blue-900/90">
+              <thead className="sticky top-0 z-10 border-b border-zinc-200 text-white bg-[#4A5B6D]">
                 <tr>
                   <th rowSpan="2" className="p-2 py-0.5 text-center font-normal">No.</th>
                   <th rowSpan="2" className="p-2 py-0.5 text-left font-normal">바코드</th>

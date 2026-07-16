@@ -16,6 +16,30 @@ export default function DateTableList({ rows = [], renderRow, rowKey = 'id' }) {
       {row.상품명 != null && row.상품명 !== '' && (
         <td className="p-2 text-left">{row.상품명}</td>
       )}
+      {row.특매매장수 != null && row.특매매장수 !== '' && (
+        <td className="p-2 text-right bg-blue-100/20">{row.특매매장수}</td>
+      )}
+      {row.특매미적용시 != null && row.특매미적용시 !== '' && (
+        <td className="p-2 text-right bg-blue-100/20">{row.특매미적용시}</td>
+      )}
+      {row.특매적용시 != null && row.특매적용시 !== '' && (
+        <td className="p-2 text-right bg-blue-100/20">{row.특매적용시}</td>
+      )}
+      {row.특매증가 != null && row.특매증가 !== '' && (
+        <td className="p-2 text-right bg-blue-100/20">{row.특매증가}</td>
+      )}
+      {row.우리매장미적용시 != null && row.우리매장미적용시 !== '' && (
+        <td className="p-2 text-right">{row.우리매장미적용시}</td>
+      )}
+      {row.우리매장예상 != null && row.우리매장예상 !== '' && (
+        <td className="p-2 text-right">{row.우리매장예상}</td>
+      )}
+      {row.우리매장적용시 != null && row.우리매장적용시 !== '' && (
+        <td className="p-2 text-right">{row.우리매장적용시}</td>
+      )}
+      {row.우리매장증가 != null && row.우리매장증가 !== '' && (
+        <td className="p-2 text-right">{row.우리매장증가}</td>
+      )}
       {row.취급매장 != null && row.취급매장 !== '' && (
         <td className="p-2 text-right">{row.취급매장}</td>
       )}
