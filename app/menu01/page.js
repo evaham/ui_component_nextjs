@@ -20,7 +20,7 @@ export default function Menu01Page() {
     <div className="flex flex-col flex-1 max-w-7xl justify-center">
       <main className="flex flex-col gap-6">
         <div className="flex flex-col gap-3 p-6 bg-white rounded-2xl">
-          <div className="flex -mx-6 divide-x divide-black/20">
+          <div className="flex -mx-6 divide-x divide-zinc-200">
             <div className="flex-1 flex flex-col gap-1 px-6">
               <div className="flex items-center gap-2">
                 <div className="relative mr-auto px-2 py-0.5 rounded bg-green-100 text-sm text-green-700 font-bold">
@@ -124,26 +124,26 @@ export default function Menu01Page() {
                 <col style={{ width: '80px' }} />
                 <col style={{ width: '80px' }} />
               </colgroup>
-              <thead className="border-b border-zinc-200 text-white bg-[#26499d]">
+              <thead className="border-b border-zinc-200 text-white bg-blue-900/90">
                 <tr>
-                  <th rowSpan="2" className="p-2 py-0.5 text-center font-medium">No.</th>
-                  <th rowSpan="2" className="p-2 py-0.5 text-left font-medium">바코드</th>
-                  <th rowSpan="2" className="p-2 py-0.5 text-left font-medium">상품명</th>
-                  <th rowSpan="2" className="p-2 py-0.5 text-right font-medium">취급점</th>
-                  <th colSpan="4" className="p-2 py-0.5 text-center font-medium">타매장 평균</th>
-                  <th colSpan="4" className="p-2 py-0.5 text-center font-medium">우리 매장</th>
-                  <th rowSpan="2" className="p-2 py-0.5 text-right font-medium">판매가비교</th>
-                  <th rowSpan="2" className="p-2 pr-6 py-0.5 text-right font-medium">판매량비교</th>
+                  <th rowSpan="2" className="p-2 py-0.5 text-center font-normal">No.</th>
+                  <th rowSpan="2" className="p-2 py-0.5 text-left font-normal">바코드</th>
+                  <th rowSpan="2" className="p-2 py-0.5 text-left font-normal">상품명</th>
+                  <th rowSpan="2" className="p-2 py-0.5 text-right font-normal">취급점</th>
+                  <th colSpan="4" className="p-2 py-0.5 text-center font-normal">타매장 평균</th>
+                  <th colSpan="4" className="p-2 py-0.5 text-center font-normal">우리 매장</th>
+                  <th rowSpan="2" className="p-2 py-0.5 text-right font-normal">판매가비교</th>
+                  <th rowSpan="2" className="p-2 pr-6 py-0.5 text-right font-normal">판매량비교</th>
                 </tr>
                 <tr>
-                  <th className="p-2 py-0.5 text-right font-medium">매입가</th>
-                  <th className="p-2 py-0.5 text-right font-medium">판매가</th>
-                  <th className="p-2 py-0.5 text-right font-medium">이익율</th>
-                  <th className="p-2 py-0.5 text-right font-medium">판매량</th>
-                  <th className="p-2 py-0.5 text-right font-medium">매입가</th>
-                  <th className="p-2 py-0.5 text-right font-medium">판매가</th>
-                  <th className="p-2 py-0.5 text-right font-medium">이익율</th>
-                  <th className="p-2 pr-6 py-0.5 text-right font-medium">판매량</th>
+                  <th className="p-2 py-0.5 text-right font-normal">매입가</th>
+                  <th className="p-2 py-0.5 text-right font-normal">판매가</th>
+                  <th className="p-2 py-0.5 text-right font-normal">이익율</th>
+                  <th className="p-2 py-0.5 text-right font-normal">판매량</th>
+                  <th className="p-2 py-0.5 text-right font-normal">매입가</th>
+                  <th className="p-2 py-0.5 text-right font-normal">판매가</th>
+                  <th className="p-2 py-0.5 text-right font-normal">이익율</th>
+                  <th className="p-2 pr-6 py-0.5 text-right font-normal">판매량</th>
                 </tr>
               </thead>
               <DateTableList rows={rows} rowKey="id" />

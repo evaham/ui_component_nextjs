@@ -47,7 +47,7 @@ export default function Menu02Page() {
                 <col style={{ width: '130px' }} />
                 <col style={{ width: '200px' }} />
               </colgroup>
-              <thead className="border-b border-zinc-200 text-white bg-[#26499d]">
+              <thead className="border-b border-zinc-200 text-white bg-blue-900/90">
                 <tr>
                   <th className="p-2 text-center font-normal">No.</th>
                   <th className="p-2 text-left font-normal">바코드</th>
@@ -64,7 +64,7 @@ export default function Menu02Page() {
         </div>
         {/* 선택상품 정보 */}
         <div className="flex flex-col gap-4 w-70 p-6 rounded-2xl bg-white shadow-xs transition-all">
-          <div className="">상품명이 들어가는 영역</div>
+          <div className="">신라면 블랙</div>
           <hr className="border-zinc-200" />
           <div className="flex flex-col gap-4">
             <div className="flex-1 flex flex-col gap-1 border border-zinc-200 rounded-xl p-4">
@@ -87,23 +87,23 @@ export default function Menu02Page() {
                 </dl>
               </div>
             </div>
-            <div className="flex-1 flex flex-col gap-1 border border-blue-600 rounded-xl p-4">
+            <div className="flex-1 flex flex-col gap-1 border-2 border-blue-500 rounded-xl p-4">
               <div className="text-sm">추천</div>
               <div>
-                <span className="text-3xl font-bold">2,500</span>원
+                <span className="text-3xl text-blue-700 font-bold">2,500</span>원
               </div>
               <div className="text-sm">
                 <dl className="flex gap-1 justify-between">
                   <dt>이익율</dt>
-                  <dd>28 %</dd>
+                  <dd><span className="text-blue-700 font-bold">28</span> %</dd>
                 </dl>
                 <dl className="flex gap-1 justify-between">
                   <dt>예상 판매량</dt>
-                  <dd>18 개</dd>
+                  <dd><span className="text-blue-700 font-bold">18</span> 개</dd>
                 </dl>
                 <dl className="flex gap-1 justify-between">
                   <dt>월 실현이익</dt>
-                  <dd>12,100 원</dd>
+                  <dd><span className="text-blue-700 font-bold">12,100</span> 원</dd>
                 </dl>
               </div>
             </div>

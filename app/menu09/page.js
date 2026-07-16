@@ -10,7 +10,7 @@ export default function Menu09Page() {
   return (
     <div className="flex flex-col flex-1 max-w-7xl justify-center">
       <main className="flex items-start gap-6">
-        <div className="flex-1 flex flex-col gap-4 p-6 border border-zinc-200 rounded-xl bg-white shadow-sm">
+        <div className="flex-1 flex flex-col gap-4 p-6 rounded-xl bg-white">
           <SearchBar />
           <div className="h-160 -mx-6 border-y border-zinc-100">
             <table className="table-fixed w-full border-collapse bg-white text-sm">
@@ -19,7 +19,7 @@ export default function Menu09Page() {
                 <col style={{ width: '120px' }} />
                 <col style={{ width: '150px' }} />
               </colgroup>
-              <thead className="sticky top-0 z-10 border-b border-zinc-200 text-white bg-[#26499d]">
+              <thead className="sticky top-0 z-10 border-b border-zinc-200 text-white bg-blue-900/90">
                 <tr>
                   <th className="p-2 text-center font-normal">No.</th>
                   <th className="p-2 text-left font-normal">바코드</th>

@@ -40,15 +40,24 @@ export default function Menu03Page() {
                 <col style={{ width: '120px' }} />
                 <col style={{ width: '150px' }} />
               </colgroup>
-              <thead className="border-b border-zinc-200 text-white bg-[#26499d]">
+              <thead className="border-b border-zinc-200 text-white bg-blue-900/90">
                 <tr>
-                  <th className="p-2 text-center font-normal">No.</th>
-                  <th className="p-2 text-left font-normal">바코드</th>
-                  <th className="p-2 text-left font-normal">상품명</th>
-                  <th className="p-2 text-right font-normal">품목포지션</th>
-                  <th className="p-2 text-right font-normal">평균 판매가</th>
-                  <th className="p-2 text-right font-normal">우리 판매가</th>
-                  <th className="p-2 pr-6 text-right font-normal">판매가 비교</th>
+                  <th rowSpan="2" className="p-2 py-0.5 text-center font-normal">No.</th>
+                  <th rowSpan="2" className="p-2 py-0.5 text-left font-normal">바코드</th>
+                  <th rowSpan="2" className="p-2 py-0.5 text-left font-normal">상품명</th>
+                  <th rowSpan="2" className="p-2 py-0.5 text-right font-normal">취급점</th>
+                  <th colSpan="4" className="p-2 py-0.5 text-center font-normal bg-blue-100/15">특매 적용/미적용 일평균 판매량</th>
+                  <th colSpan="4" className="p-2 py-0.5 text-center font-normal">우리 매장 판매량</th>
+                </tr>
+                <tr>
+                  <th className="p-2 py-0.5 text-right font-normal bg-blue-100/15">특매 매장수</th>
+                  <th className="p-2 py-0.5 text-right font-normal bg-blue-100/15">미적용 시</th>
+                  <th className="p-2 py-0.5 text-right font-normal bg-blue-100/15">적용 시</th>
+                  <th className="p-2 py-0.5 text-right font-normal bg-blue-100/15">증가(%)</th>
+                  <th className="p-2 py-0.5 text-right font-normal">미적용 시</th>
+                  <th className="p-2 py-0.5 text-right font-normal">예상</th>
+                  <th className="p-2 py-0.5 text-right font-normal">적용 시</th>
+                  <th className="p-2 pr-6 py-0.5 text-right font-normal">증가(%)</th>
                 </tr>
               </thead>
               <DateTableList rows={rows} rowKey="id" />

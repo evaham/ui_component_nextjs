@@ -27,7 +27,7 @@ export default function Menu05Page() {
                 <col style={{ width: '120px' }} />
                 <col style={{ width: '150px' }} />
               </colgroup>
-              <thead className="sticky top-0 z-10 border-b border-zinc-200 text-white bg-[#26499d]">
+              <thead className="sticky top-0 z-10 border-b border-zinc-200 text-white bg-blue-900/90">
                 <tr>
                   <th className="p-2 text-center font-normal">No.</th>
                   <th className="p-2 text-left font-normal">바코드</th>

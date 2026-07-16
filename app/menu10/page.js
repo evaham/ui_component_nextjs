@@ -25,7 +25,7 @@ export default function Menu10Page() {
   return (
     <div className="flex flex-col flex-1 max-w-7xl justify-center">
       <main className="flex items-start gap-6">
-        <div className="flex-1 flex flex-col gap-4 p-6 border border-zinc-200 rounded-xl bg-white shadow-sm">
+        <div className="flex-1 flex flex-col gap-4 p-6 rounded-xl bg-white">
           <SearchBar />
 
           <div className="mb-2">
@@ -36,7 +36,7 @@ export default function Menu10Page() {
                 <col style={{ width: '100px' }} />
                 <col style={{ width: '280px' }} />
               </colgroup>
-              <thead className="sticky top-0 z-10 border-b border-zinc-200 text-white bg-[#26499d]">
+              <thead className="sticky top-0 z-10 border-b border-zinc-200 text-white bg-blue-900/90">
                 <tr>
                   <th className="p-2 text-center font-normal"></th>
                   <th colSpan={3} className="p-2 text-left font-normal">우리매장 매출(6/15)</th>
