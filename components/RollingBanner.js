@@ -56,11 +56,11 @@ export default function RollingBanner() {
   const extendedData = [...productData, ...productData.slice(0, 5)];
 
   return (
-    <div className="rounded-xl bg-white shadow-xs p-5 overflow-hidden">
+    <div className="rounded-xl bg-white shadow-xs p-6 overflow-hidden">
       {/* 타이틀 헤더 */}
-      <div className="flex items-center gap-2 mb-2">
-        <div className="w-2 h-2 rounded-full bg-[#26499d]" />
+      <div className="flex items-center gap-2 -mt-3 mb-2">
         <h2 className="font-bold tracking-tight">주목 상품정보</h2>
+        <button className="">더보기</button>
       </div>
 
       {/* 롤링 컨테이너 (5개 높이 고정) */}
