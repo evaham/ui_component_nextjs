@@ -55,12 +55,17 @@ export default function Menu04Page() {
             buttonLabel="조회"
           />
 
-          <div className="overflow-y-auto h-170 -mx-6 border-y border-zinc-100">
+          <div className="min-h-150 -mx-6 border-y border-zinc-100">
             <table className="table-fixed w-full border-collapse bg-white text-sm">
               <colgroup>
                 <col style={{ width: '40px' }} />
                 <col style={{ width: '120px' }} />
-                <col style={{ width: '150px' }} />
+                <col style={{ width: '200px' }} />
+                <col style={{ width: '120px' }} />
+                <col style={{ width: '90px' }} />
+                <col style={{ width: '90px' }} />
+                <col style={{ width: '90px' }} />
+                <col style={{ width: '90px' }} />
               </colgroup>
               <thead className="sticky top-0 z-10 border-b border-zinc-200 text-white bg-[#4A5B6D]">
                 <tr>
@@ -79,7 +84,7 @@ export default function Menu04Page() {
           </div>
         </div>
         {/* 그래프 정보 */}
-        <div className="min-h-64 p-6 rounded-2xl bg-white transition-all">
+        <div className="sticky top-0 min-h-64 p-6 rounded-2xl bg-white transition-all">
           <div className="flex flex-col justify-center font-semibold -mt-2 mb-2">
             <div>농심바나나킥</div>
             6개월 매입단가 추이

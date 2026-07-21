@@ -14,9 +14,32 @@ const defaultCenterFilters = [
   { label: '판매가 10% 이상 차이', options: [{ value: '', label: '판매가 10% 이상 차이' }] },
 ];
 
+const defaultLocationFilter = [
+  { id: 'nationwide', label: '전국', value: 'nationwide' },
+  { id: 'seoul', label: '서울', value: 'seoul' },
+  { id: 'busan', label: '부산', value: 'busan' },
+  { id: 'daegu', label: '대구', value: 'daegu' },
+  { id: 'incheon', label: '인천', value: 'incheon' },
+  { id: 'gwangju', label: '광주', value: 'gwangju' },
+  { id: 'daejeon', label: '대전', value: 'daejeon' },
+  { id: 'ulsan', label: '울산', value: 'ulsan' },
+  { id: 'sejong', label: '세종', value: 'sejong' },
+  { id: 'gyeonggi', label: '경기', value: 'gyeonggi' },
+  { id: 'gangwon', label: '강원', value: 'gangwon' },
+  { id: 'chungbuk', label: '충북', value: 'chungbuk' },
+  { id: 'chungnam', label: '충남', value: 'chungnam' },
+  { id: 'jeonbuk', label: '전북', value: 'jeonbuk' },
+  { id: 'jeonnam', label: '전남', value: 'jeonnam' },
+  { id: 'gyeongbuk', label: '경북', value: 'gyeongbuk' },
+  { id: 'gyeongnam', label: '경남', value: 'gyeongnam' },
+  { id: 'jeju', label: '제주', value: 'jeju' },
+];
+
 export default function SearchBar({
   searchFilters = defaultSearchFilters,
   centerFilters = defaultCenterFilters,
+  locationFilter = defaultLocationFilter,
+
   placeholder = '바코드, 상품명',
   buttonLabel = '조회',
   searchGroupLabel1 = '검색그룹명1',
@@ -43,7 +66,7 @@ export default function SearchBar({
 
   return (
     <div className="flex flex-col gap-1 border-zinc-200 text-sm text-midium">
-      {searchFilters.length > 0 && <div>
+      {searchFilters.length > 0 && (
         <div className="flex flex-wrap gap-1 items-center">
           <div>{searchGroupLabel1}</div>
           {searchFilters.map(renderSelect)}
@@ -56,16 +79,34 @@ export default function SearchBar({
             {buttonLabel}
           </button>
         </div>
-      </div>}
-
-
-
-
+      )}
 
       {centerFilters.length > 0 && (
         <div className="flex flex-wrap gap-1 items-center">
           <div>{searchGroupLabel2}</div>
           {centerFilters.map(renderSelect)}
+        </div>
+      )}
+
+      {locationFilter.length > 0 && (
+        <div className="flex mt-2 gap-x-3">
+          <div className="">지역선택</div>
+          <div className="flex flex-wrap gap-x-2 max-w-130">
+            {locationFilter.map((location) => (
+              <div key={location.id} className="flex items-center mr-2">
+                <input
+                  type="checkbox"
+                  id={location.id}
+                  name="locationFilter"
+                  value={location.value}
+                  className="cursor-pointer"
+                />
+                <label htmlFor={location.id} className="ml-1 cursor-pointer">
+                  {location.label}
+                </label>
+              </div>
+            ))}
+          </div>
         </div>
       )}
     </div>
