@@ -172,7 +172,6 @@ export default function DataTableList({ rows = [], renderRow, rowKey = 'id' }) {
           <td colSpan="14" className="px-4 py-12 text-center text-zinc-400">데이터를 준비 중입니다.</td>
         </tr>
       )}
-
       {hasRows && rows.map((row, idx) => (
         renderRow ? renderRow(row, idx) : defaultRender(row, idx)
       ))}

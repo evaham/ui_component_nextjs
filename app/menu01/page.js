@@ -3,8 +3,7 @@ import { useState } from 'react';
 import SearchBar from "@/components/SearchBar";
 import SearchTab from "@/components/SearchTab";
 import DataTableList from '@/components/DataTableList';
-import LayerPopup from '@/components/LayerPopup';
-import LineGraph from '@/components/LineGraph';
+
 
 export default function Menu01Page() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -180,98 +179,6 @@ export default function Menu01Page() {
           </div>
         </div>
       </main>
-      {/* 레이어팝업 */}
-      <LayerPopup isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} title="상품 가격비교">
-        <div className="w-6xl space-y-4">
-          <div>
-            <table className="w-full border-collapse border border-gray-400 bg-white text-sm">
-              <colgroup>
-                <col style={{ width: '100px' }} />
-                <col style={{ width: '' }} />
-                <col style={{ width: '100px' }} />
-                <col style={{ width: '20%' }} />
-                <col style={{ width: '100px' }} />
-                <col style={{ width: '20%' }} />
-              </colgroup>
-              <tbody>
-                <tr>
-                  <td className="border border-gray-300 p-4 text-left text-gray-900">바코드</td>
-                  <td className="border border-gray-300 p-4 text-left text-gray-900">88088088080080</td>
-                  <td className="border border-gray-300 p-4 text-gray-500">우리 매입가</td>
-                  <td className="border border-gray-300 p-4 text-gray-500">1,800</td>
-                  <td rowSpan={3} className="border border-gray-300 p-4 text-gray-500">상품설명</td>
-                  <td rowSpan={3} className="border border-gray-300 p-4 text-gray-500">
-                    가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사
-                  </td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-4 text-gray-500">상품명</td>
-                  <td className="border border-gray-300 p-4 text-gray-500">맥스웰오리지널믹스</td>
-                  <td className="border border-gray-300 p-4 text-gray-500">우리 판매가</td>
-                  <td className="border border-gray-300 p-4 text-gray-500">2,500</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-4 text-gray-500">규격</td>
-                  <td className="border border-gray-300 p-4 text-gray-500">1,000g</td>
-                  <td className="border border-gray-300 p-4 text-gray-500">우리 이익율</td>
-                  <td className="border border-gray-300 p-4 text-gray-500">2,800</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div className="flex items-center">
-            <SearchTab tabs={[
-              '점포별',
-              '지역별',
-              '규모별'
-            ]} />
-            <div className="flex items-center gap-1 ml-auto">
-              <select className="min-w-30 px-2 py-1 border rounded border-zinc-300 bg-white">
-                <option value="sales">판매가</option>
-                <option value="profit">이익순</option>
-              </select>
-              <select className="min-w-30 px-2 py-1 border rounded border-zinc-300 bg-white">
-                <option value="sales">판매량</option>
-                <option value="profit">이익순</option>
-              </select>
-              <button className="ml-auto px-4 py-1 bg-[#26499d] text-white rounded hover:bg-[#26499d] transition-colors cursor-pointer">다시조회</button>
-            </div>
-          </div>
-          <div className="flex items-center gap-2">
-            <span className="font-semibold text-zinc-500">상품명</span>
-            <span className="font-bold">{selectedProduct}</span>
-          </div>
-          <div className="flex *:flex-1 gap-4 p-6 rounded-2xl border bg-white transition-all">
-            <LineGraph />
-            <LineGraph />
-            <LineGraph />
-          </div>
-          <div className="-mx-6 border-y border-zinc-100">
-            <table className="table-fixed w-full border-collapse bg-white text-sm overflow-hidden">
-              <colgroup>
-
-              </colgroup>
-              <thead className="border-b border-zinc-200 text-white bg-[#4A5B6D]">
-                <tr>
-                  <th className="p-2 py-0.5 text-center font-normal">No.</th>
-                  <th className="p-2 py-0.5 text-left font-normal">지역</th>
-                  <th className="p-2 py-0.5 text-left font-normal">규모</th>
-                  <th className="p-2 py-0.5 text-left font-normal">점포명</th>
-                  <th className="p-2 py-0.5 text-right font-normal">판매가</th>
-                  <th className="p-2 py-0.5 text-right font-normal">이익율</th>
-                  <th className="p-2 py-0.5 text-right font-normal">등록일</th>
-                  <th className="p-2 pr-6 py-0.5 text-right font-normal">판매가변경</th>
-                </tr>
-              </thead>
-              <DataTableList rows={rows2} rowKey="id" />
-            </table>
-          </div>
-
-
-
-
-        </div>
-      </LayerPopup>
     </div>
   );
 }

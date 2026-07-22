@@ -16,6 +16,7 @@ const navItems = [
   { href: "/menu09", label: "미취급상품", group: 2 },
   { href: "/menu10", label: "일별 매출비교", group: 2 },
   { href: "/menu11", label: "매출속보", group: 2 },
+  { href: "/menu12", label: "모바일 반응형 UI 테스트용", group: 3 },
 ];
 
 function getNavClass(isActive) {
@@ -49,6 +50,7 @@ export default function Sidebar({ open, onClose }) {
             </defs>
           </svg>
         </Link>
+        
         <nav className="space-y-1">
           {navItems.map((item) => {
             const isActive = item.href === pathname;
@@ -78,13 +80,15 @@ export default function Sidebar({ open, onClose }) {
             type="button"
             onClick={() => onClose && onClose()}
             aria-label="사이드바 닫기"
-            className="absolute top-2 right-2 p-2 rounded hover:bg-gray-100"
+            className="absolute top-30 -right-2 p-2 rounded hover:bg-gray-100"
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-zinc-700" viewBox="0 0 20 20" fill="currentColor">
               <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
             </svg>
           </button>
-
+          <div className="flex flex-col h-full">
+            투게더 데이터 아이콘
+          </div>
           <nav className="space-y-2">
             {navItems.map((item) => {
               const isActive = item.href === pathname;
