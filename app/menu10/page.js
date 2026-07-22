@@ -1,7 +1,7 @@
 'use client';
 
 import SearchBar from "@/components/SearchBar";
-import DateTableList from '@/components/DateTableList';
+import DataTableList from '@/components/DataTableList';
 
 export default function Menu10Page() {
   const rows = [
@@ -71,7 +71,7 @@ export default function Menu10Page() {
                   <th className="p-2 pr-6 text-right font-normal">123,123,123</th>
                 </tr>
               </thead>
-              <DateTableList rows={rows} rowKey="id" />
+              <DataTableList rows={rows} rowKey="id" />
               <tfoot className="sticky top-0 z-10 border-b border-zinc-200 text-white bg-[#26499D]">
                 <tr>
                   <td className="p-2 text-center font-normal"></td>

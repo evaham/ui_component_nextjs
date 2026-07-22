@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const pageTitles = {
@@ -18,9 +19,8 @@ const pageTitles = {
 };
 
 export default function Header({ onToggle }) {
-  const pathname = usePathname();
-  const title = pageTitles[pathname] ?? "알림판";
-
+    const pathname = usePathname();
+    const title = pageTitles[pathname] ?? "알림판";
   return (
     <header className="w-full h-14 bg-white border-b border-gray-300 flex items-center px-4 shadow-sm">
       <button
@@ -31,7 +31,7 @@ export default function Header({ onToggle }) {
         메뉴
       </button>
       <div className="text-lg font-semibold">{title}</div>
-      <div className="ml-auto text-sm">관리 · 공유</div>
+      <Link href="/login" className="ml-auto text-sm">로그아웃</Link>
     </header>
   );
 }

@@ -1,4 +1,4 @@
-import DateTableList from "@/components/DateTableList";
+import DataTableList from "@/components/DataTableList";
 import SearchBar from "@/components/SearchBar";
 
 
@@ -58,7 +58,7 @@ export default function Menu02Page() {
                   <th className="p-2 pr-6 text-right font-normal">판매가 비교</th>
                 </tr>
               </thead>
-              <DateTableList rows={rows} rowKey="id" />
+              <DataTableList rows={rows} rowKey="id" />
             </table>
           </div>
         </div>

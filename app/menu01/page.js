@@ -1,20 +1,49 @@
 "use client";
+import { useState } from 'react';
 import SearchBar from "@/components/SearchBar";
 import SearchTab from "@/components/SearchTab";
-import DateTableList from '@/components/DateTableList';
+import DataTableList from '@/components/DataTableList';
+import LayerPopup from '@/components/LayerPopup';
+import LineGraph from '@/components/LineGraph';
 
 export default function Menu01Page() {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState(null);
+
+  const handleOpenProduct = (name) => {
+    setSelectedProduct(name);
+    setIsPopupOpen(true);
+  };
+
+  const renderProductLink = (name) => (
+    <a
+      href="#"
+      onClick={(e) => { e.preventDefault(); handleOpenProduct(name); }}
+      className="text-indigo-700 overflow-hidden text-ellipsis"
+    >
+      {name}
+    </a>
+  );
   const rows = [
-    { id: 'r1', no: 1, 바코드: '8809591316526', 상품명: <a href="#" className="text-indigo-700 overflow-hidden text-ellipsis">신라면 블랙</a>, 취급점: '1,511', 타매장매입가: '4,480', 타매장판매가: '5,600', 타매장이익율: '20%', 타매장판매량: '150', 우리매장매입가: '5,152', 우리매장판매가: '6,440', 우리매장이익율: '20%', 우리매장판매량: '109', 판매가비교: '15.0%', 판매량비교: '27.3%'},
-    { id: 'r2', no: 1, 바코드: '8809591316526', 상품명: <a href="#" className="text-indigo-700 overflow-hidden text-ellipsis">신라면 블랙</a>, 취급점: '1,511', 타매장매입가: '4,480', 타매장판매가: '5,600', 타매장이익율: '20%', 타매장판매량: '150', 우리매장매입가: '5,152', 우리매장판매가: '6,440', 우리매장이익율: '20%', 우리매장판매량: '109', 판매가비교: '15.0%', 판매량비교: '27.3%'},
-    { id: 'r3', no: 1, 바코드: '8809591316526', 상품명: <a href="#" className="text-indigo-700 overflow-hidden text-ellipsis">신라면 블랙</a>, 취급점: '1,511', 타매장매입가: '4,480', 타매장판매가: '5,600', 타매장이익율: '20%', 타매장판매량: '150', 우리매장매입가: '5,152', 우리매장판매가: '6,440', 우리매장이익율: '20%', 우리매장판매량: '109', 판매가비교: '15.0%', 판매량비교: '27.3%'},
-    { id: 'r4', no: 1, 바코드: '8809591316526', 상품명: <a href="#" className="text-indigo-700 overflow-hidden text-ellipsis">신라면 블랙</a>, 취급점: '1,511', 타매장매입가: '4,480', 타매장판매가: '5,600', 타매장이익율: '20%', 타매장판매량: '150', 우리매장매입가: '5,152', 우리매장판매가: '6,440', 우리매장이익율: '20%', 우리매장판매량: '109', 판매가비교: '15.0%', 판매량비교: '27.3%'},
-    { id: 'r5', no: 1, 바코드: '8809591316526', 상품명: <a href="#" className="text-indigo-700 overflow-hidden text-ellipsis">신라면 블랙</a>, 취급점: '1,511', 타매장매입가: '4,480', 타매장판매가: '5,600', 타매장이익율: '20%', 타매장판매량: '150', 우리매장매입가: '5,152', 우리매장판매가: '6,440', 우리매장이익율: '20%', 우리매장판매량: '109', 판매가비교: '15.0%', 판매량비교: '27.3%'},
-    { id: 'r6', no: 1, 바코드: '8809591316526', 상품명: <a href="#" className="text-indigo-700 overflow-hidden text-ellipsis">신라면 블랙</a>, 취급점: '1,511', 타매장매입가: '4,480', 타매장판매가: '5,600', 타매장이익율: '20%', 타매장판매량: '150', 우리매장매입가: '5,152', 우리매장판매가: '6,440', 우리매장이익율: '20%', 우리매장판매량: '109', 판매가비교: '15.0%', 판매량비교: '27.3%'},
-    { id: 'r7', no: 1, 바코드: '8809591316526', 상품명: <a href="#" className="text-indigo-700 overflow-hidden text-ellipsis">신라면 블랙</a>, 취급점: '1,511', 타매장매입가: '4,480', 타매장판매가: '5,600', 타매장이익율: '20%', 타매장판매량: '150', 우리매장매입가: '5,152', 우리매장판매가: '6,440', 우리매장이익율: '20%', 우리매장판매량: '109', 판매가비교: '15.0%', 판매량비교: '27.3%'},
-
+    { id: 'r1', no: 1, 바코드: '8809591316526', 상품명: renderProductLink('신라면 블랙'), 취급점: '1,511', 타매장매입가: '4,480', 타매장판매가: '5,600', 타매장이익율: '20%', 타매장판매량: '150', 우리매장매입가: '5,152', 우리매장판매가: '6,440', 우리매장이익율: '20%', 우리매장판매량: '109', 판매가비교: '15.0%', 판매량비교: '27.3%'},
+    { id: 'r2', no: 2, 바코드: '8809591316526', 상품명: renderProductLink('신라면 화이트'), 취급점: '1,511', 타매장매입가: '4,480', 타매장판매가: '5,600', 타매장이익율: '20%', 타매장판매량: '150', 우리매장매입가: '5,152', 우리매장판매가: '6,440', 우리매장이익율: '20%', 우리매장판매량: '109', 판매가비교: '15.0%', 판매량비교: '27.3%'},
+    { id: 'r3', no: 3, 바코드: '8809591316526', 상품명: renderProductLink('신라면 블랙'), 취급점: '1,511', 타매장매입가: '4,480', 타매장판매가: '5,600', 타매장이익율: '20%', 타매장판매량: '150', 우리매장매입가: '5,152', 우리매장판매가: '6,440', 우리매장이익율: '20%', 우리매장판매량: '109', 판매가비교: '15.0%', 판매량비교: '27.3%'},
+    { id: 'r4', no: 4, 바코드: '8809591316526', 상품명: renderProductLink('신라면 블랙'), 취급점: '1,511', 타매장매입가: '4,480', 타매장판매가: '5,600', 타매장이익율: '20%', 타매장판매량: '150', 우리매장매입가: '5,152', 우리매장판매가: '6,440', 우리매장이익율: '20%', 우리매장판매량: '109', 판매가비교: '15.0%', 판매량비교: '27.3%'},
+    { id: 'r5', no: 5, 바코드: '8809591316526', 상품명: renderProductLink('신라면 블랙'), 취급점: '1,511', 타매장매입가: '4,480', 타매장판매가: '5,600', 타매장이익율: '20%', 타매장판매량: '150', 우리매장매입가: '5,152', 우리매장판매가: '6,440', 우리매장이익율: '20%', 우리매장판매량: '109', 판매가비교: '15.0%', 판매량비교: '27.3%'},
+    { id: 'r6', no: 6, 바코드: '8809591316526', 상품명: renderProductLink('신라면 블랙'), 취급점: '1,511', 타매장매입가: '4,480', 타매장판매가: '5,600', 타매장이익율: '20%', 타매장판매량: '150', 우리매장매입가: '5,152', 우리매장판매가: '6,440', 우리매장이익율: '20%', 우리매장판매량: '109', 판매가비교: '15.0%', 판매량비교: '27.3%'},
+    { id: 'r7', no: 7, 바코드: '8809591316526', 상품명: renderProductLink('신라면 블랙'), 취급점: '1,511', 타매장매입가: '4,480', 타매장판매가: '5,600', 타매장이익율: '20%', 타매장판매량: '150', 우리매장매입가: '5,152', 우리매장판매가: '6,440', 우리매장이익율: '20%', 우리매장판매량: '109', 판매가비교: '15.0%', 판매량비교: '27.3%'},
   ];
-
+  const rows2 = [
+    { id: 'r1', no: 1, 지역: '서울', 규모: '100평 이하', 점포명: renderProductLink('S마트'), 상품판매가: '4,480', 상품이익율: '5,600', 등록일: '24-10-08', 판매가변경: '26-04-10', },
+    { id: 'r2', no: 2, 지역: '인천', 규모: '100평 이하', 점포명: renderProductLink('YS마트'), 상품판매가: '1,480', 상품이익율: '600', 등록일: '24-10-08', 판매가변경: '26-04-10', },
+    { id: 'r3', no: 3, 지역: '부산', 규모: '100평 이하', 점포명: renderProductLink('BS마트'), 상품판매가: '2,480', 상품이익율: '1,600', 등록일: '24-10-08', 판매가변경: '26-04-10', },
+    { id: 'r4', no: 4, 지역: '대구', 규모: '100평 이하', 점포명: renderProductLink('DS마트'), 상품판매가: '3,480', 상품이익율: '2,600', 등록일: '24-10-08', 판매가변경: '26-04-10', },
+    { id: 'r5', no: 5, 지역: '광주', 규모: '100평 이하', 점포명: renderProductLink('GS마트'), 상품판매가: '4,480', 상품이익율: '3,600', 등록일: '24-10-08', 판매가변경: '26-04-10', },
+    { id: 'r6', no: 6, 지역: '대전', 규모: '100평 이하', 점포명: renderProductLink('DS마트'), 상품판매가: '5,480', 상품이익율: '4,600', 등록일: '24-10-08', 판매가변경: '26-04-10', },
+    { id: 'r7', no: 7, 지역: '울산', 규모: '100평 이하', 점포명: renderProductLink('US마트'), 상품판매가: '6,480', 상품이익율: '5,600', 등록일: '24-10-08', 판매가변경: '26-04-10', },
+    { id: 'r8', no: 8, 지역: '제주', 규모: '100평 이하', 점포명: renderProductLink('JS마트'), 상품판매가: '7,480', 상품이익율: '6,600', 등록일: '24-10-08', 판매가변경: '26-04-10', },
+  
+  ];
 
   return (
     <div className="flex flex-col flex-1 max-w-7xl justify-center">
@@ -146,11 +175,103 @@ export default function Menu01Page() {
                   <th className="p-2 pr-6 py-0.5 text-right font-normal">판매량</th>
                 </tr>
               </thead>
-              <DateTableList rows={rows} rowKey="id" />
+              <DataTableList rows={rows} rowKey="id" />
             </table>
           </div>
         </div>
       </main>
+      {/* 레이어팝업 */}
+      <LayerPopup isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} title="상품 가격비교">
+        <div className="w-6xl space-y-4">
+          <div>
+            <table className="w-full border-collapse border border-gray-400 bg-white text-sm">
+              <colgroup>
+                <col style={{ width: '100px' }} />
+                <col style={{ width: '' }} />
+                <col style={{ width: '100px' }} />
+                <col style={{ width: '20%' }} />
+                <col style={{ width: '100px' }} />
+                <col style={{ width: '20%' }} />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td className="border border-gray-300 p-4 text-left text-gray-900">바코드</td>
+                  <td className="border border-gray-300 p-4 text-left text-gray-900">88088088080080</td>
+                  <td className="border border-gray-300 p-4 text-gray-500">우리 매입가</td>
+                  <td className="border border-gray-300 p-4 text-gray-500">1,800</td>
+                  <td rowSpan={3} className="border border-gray-300 p-4 text-gray-500">상품설명</td>
+                  <td rowSpan={3} className="border border-gray-300 p-4 text-gray-500">
+                    가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사
+                  </td>
+                </tr>
+                <tr>
+                  <td className="border border-gray-300 p-4 text-gray-500">상품명</td>
+                  <td className="border border-gray-300 p-4 text-gray-500">맥스웰오리지널믹스</td>
+                  <td className="border border-gray-300 p-4 text-gray-500">우리 판매가</td>
+                  <td className="border border-gray-300 p-4 text-gray-500">2,500</td>
+                </tr>
+                <tr>
+                  <td className="border border-gray-300 p-4 text-gray-500">규격</td>
+                  <td className="border border-gray-300 p-4 text-gray-500">1,000g</td>
+                  <td className="border border-gray-300 p-4 text-gray-500">우리 이익율</td>
+                  <td className="border border-gray-300 p-4 text-gray-500">2,800</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div className="flex items-center">
+            <SearchTab tabs={[
+              '점포별',
+              '지역별',
+              '규모별'
+            ]} />
+            <div className="flex items-center gap-1 ml-auto">
+              <select className="min-w-30 px-2 py-1 border rounded border-zinc-300 bg-white">
+                <option value="sales">판매가</option>
+                <option value="profit">이익순</option>
+              </select>
+              <select className="min-w-30 px-2 py-1 border rounded border-zinc-300 bg-white">
+                <option value="sales">판매량</option>
+                <option value="profit">이익순</option>
+              </select>
+              <button className="ml-auto px-4 py-1 bg-[#26499d] text-white rounded hover:bg-[#26499d] transition-colors cursor-pointer">다시조회</button>
+            </div>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="font-semibold text-zinc-500">상품명</span>
+            <span className="font-bold">{selectedProduct}</span>
+          </div>
+          <div className="flex *:flex-1 gap-4 p-6 rounded-2xl border bg-white transition-all">
+            <LineGraph />
+            <LineGraph />
+            <LineGraph />
+          </div>
+          <div className="-mx-6 border-y border-zinc-100">
+            <table className="table-fixed w-full border-collapse bg-white text-sm overflow-hidden">
+              <colgroup>
+
+              </colgroup>
+              <thead className="border-b border-zinc-200 text-white bg-[#4A5B6D]">
+                <tr>
+                  <th className="p-2 py-0.5 text-center font-normal">No.</th>
+                  <th className="p-2 py-0.5 text-left font-normal">지역</th>
+                  <th className="p-2 py-0.5 text-left font-normal">규모</th>
+                  <th className="p-2 py-0.5 text-left font-normal">점포명</th>
+                  <th className="p-2 py-0.5 text-right font-normal">판매가</th>
+                  <th className="p-2 py-0.5 text-right font-normal">이익율</th>
+                  <th className="p-2 py-0.5 text-right font-normal">등록일</th>
+                  <th className="p-2 pr-6 py-0.5 text-right font-normal">판매가변경</th>
+                </tr>
+              </thead>
+              <DataTableList rows={rows2} rowKey="id" />
+            </table>
+          </div>
+
+
+
+
+        </div>
+      </LayerPopup>
     </div>
   );
 }

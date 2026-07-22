@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-export default function DateTableList({ rows = [], renderRow, rowKey = 'id' }) {
+export default function DataTableList({ rows = [], renderRow, rowKey = 'id' }) {
   const hasRows = Array.isArray(rows) && rows.length > 0;
 
   const defaultRender = (row, idx) => (
@@ -73,18 +73,14 @@ export default function DateTableList({ rows = [], renderRow, rowKey = 'id' }) {
       {row.최종매입 != null && row.최종매입 !== '' && (
         <td className="p-2 text-right">{row.최종매입}</td>
       )}
-      {row.판매가변경 != null && row.판매가변경 !== '' && (
-        <td className="p-2 text-right">{row.판매가변경}</td>
-      )}
+
       {row.평균판매량 != null && row.평균판매량 !== '' && (
         <td className="p-2 text-right">{row.평균판매량}</td>
       )}
       {row.평균판매액 != null && row.평균판매액 !== '' && (
         <td className="p-2 text-right">{row.평균판매액}</td>
       )}
-      {row.등록일 != null && row.등록일 !== '' && (
-        <td className="p-2 text-right">{row.등록일}</td>
-      )}
+
       {row.평균판매가 != null && row.평균판매가 !== '' && (
         <td className="p-2 text-right">{row.평균판매가}</td>
       )}
@@ -153,6 +149,18 @@ export default function DateTableList({ rows = [], renderRow, rowKey = 'id' }) {
       )}
       {row.판매량비교 != null && row.판매량비교 !== '' && (
         <td className="p-2 text-right">{row.판매량비교}</td>
+      )}
+      {row.상품판매가 != null && row.상품판매가 !== '' && (
+        <td className="p-2 text-right">{row.상품판매가}</td>
+      )}
+      {row.상품이익율 != null && row.상품이익율 !== '' && (
+        <td className="p-2 text-right">{row.상품이익율}</td>
+      )}
+      {row.등록일 != null && row.등록일 !== '' && (
+        <td className="p-2 text-right">{row.등록일}</td>
+      )}
+      {row.판매가변경 != null && row.판매가변경 !== '' && (
+        <td className="p-2 text-right">{row.판매가변경}</td>
       )}
     </tr>
   );

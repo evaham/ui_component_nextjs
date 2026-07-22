@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import SearchBar from "@/components/SearchBar";
-import DateTableList from '@/components/DateTableList';
+import DataTableList from '@/components/DataTableList';
 import { ComposedChart, Line, Area, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Scatter } from 'recharts';
 
 
@@ -48,7 +48,7 @@ export default function Menu05Page() {
                   <th className="p-2 pr-6 text-right font-normal">확산지역</th>
                 </tr>
               </thead>
-              <DateTableList rows={rows} rowKey="id" />
+              <DataTableList rows={rows} rowKey="id" />
             </table>
           </div>
         </div>

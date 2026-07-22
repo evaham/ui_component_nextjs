@@ -14,15 +14,15 @@ export default function SearchTab({ tabs }) {
 
   return (
     <div className="flex items-center">
-      <div className="flex px-2 py-1 gap-1 bg-zinc-50 rounded-lg">
+      <div className="flex p-0.5 gap-1 bg-zinc-100 rounded border border-zinc-200">
         {tabLabels.map((label, idx) => {
           const isActive = idx === activeIndex;
           const isFirst = idx === 0;
           const isLast = idx === tabLabels.length - 1;
-          const baseClass = 'px-3 py-1.5 border rounded-lg font-medium text-sm cursor-pointer';
+          const baseClass = 'px-3 py-1.5 rounded font-medium text-sm cursor-pointer';
           const activeClass = isActive
             ? 'bg-[#26499d] text-white hover:bg-[#26499d] hover:text-white'
-            : 'border-transparent text-zinc-500 hover:bg-white hover:text-zinc-900 hover:shadow-xs';
+            : 'border-transparent text-zinc-700 hover:bg-white hover:text-zinc-900 hover:shadow-xs';
           return (
             <button
               key={`${label}-${idx}`}

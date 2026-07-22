@@ -1,6 +1,6 @@
 'use client';
 import SearchBar from "@/components/SearchBar";
-import DateTableList from '@/components/DateTableList';
+import DataTableList from '@/components/DataTableList';
 
 export default function Menu09Page() {
   const rows = [
@@ -32,7 +32,7 @@ export default function Menu09Page() {
                   <th className="p-2 pr-6 text-right font-normal">등록일</th>
                 </tr>
               </thead>
-              <DateTableList rows={rows} rowKey="id" />
+              <DataTableList rows={rows} rowKey="id" />
             </table>
           </div>
         </div>

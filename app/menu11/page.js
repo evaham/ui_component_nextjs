@@ -1,7 +1,7 @@
 "use client";
 import SearchBar from "@/components/SearchBar";
 import SearchTab from "@/components/SearchTab";
-import DateTableList from '@/components/DateTableList';
+import DataTableList from '@/components/DataTableList';
 import DashboardCard4 from "@/components/DashboardCard4";
 
 export default function Menu11Page() {
@@ -89,7 +89,7 @@ export default function Menu11Page() {
                   <th className="p-2 py-0.5 text-right font-normal">판매량</th>
                 </tr>
               </thead>
-              <DateTableList rows={rows} renderRow={renderRow} rowKey="id" />
+              <DataTableList rows={rows} renderRow={renderRow} rowKey="id" />
             </table>
           </div>
         </div>

@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import SearchBar from "@/components/SearchBar";
-import DateTableList from '@/components/DateTableList';
+import DataTableList from '@/components/DataTableList';
 import { LineChart } from "recharts"; 
 import { Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
 
@@ -79,7 +79,7 @@ export default function Menu04Page() {
                   <th className="p-2 pr-6 text-right font-normal">차액율</th>
                 </tr>
               </thead>
-              <DateTableList rows={rows} rowKey="id" />
+              <DataTableList rows={rows} rowKey="id" />
             </table>
           </div>
         </div>

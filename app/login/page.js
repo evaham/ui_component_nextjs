@@ -7,7 +7,7 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen flex items-center justify-center">
       <div className="w-full max-w-md">
-        <div className="flex items-center justify-center w-100 mb-6 mx-auto">
+        <div className="flex items-center justify-center w-100 -mt-50 mb-6 mx-auto">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 347 94" fill="none">
             <path d="M60.6757 65.9144C60.3523 65.3178 59.1058 64.5344 54.4252 65.6735C54.4252 65.6735 51.2381 66.5772 47.0103 65.7938C47.0103 65.7938 51.5381 68.0481 60.3877 66.4871C60.7052 66.3244 60.7227 66.0952 60.6757 65.9144Z" fill="#D1C99D"/>
             <path fillRule="evenodd" clipRule="evenodd" d="M63.4106 65.2714C64.7807 65.0544 68.35 63.3728 69.526 62.6556C71.1195 61.6914 72.8424 59.2266 71.5311 56.4784C69.5025 52.2356 62.5168 53.9713 58.4654 55.0983C51.4681 57.075 40.6839 62.6496 32.8104 60.1124C32.2871 59.9496 31.5052 59.7328 31.1523 59.4013C33.0869 61.1913 35.9622 62.6797 38.1379 63.4572C45.7526 66.1451 56.6602 61.6374 62.2934 62.4872C62.9696 62.6017 63.8399 62.8908 64.1281 63.3428C64.8278 64.3553 63.8575 65.0002 63.4106 65.2714Z" fill="#5EB6E4"/>
@@ -29,58 +29,53 @@ export default function LoginPage() {
           <div className="flex items-center justify-center gap-6 mb-6">
             <div className="flex items-center ">
               <input type="radio" name="loginType" value="center" id="center" defaultChecked />
-              <label htmlFor="center" className="block pl-1 text-center text-lg font-medium text-gray-700 cursor-pointer peer-checked:text-indigo-600">
+              <label htmlFor="center" className="block pl-1 text-center font-medium text-gray-700 cursor-pointer peer-checked:text-indigo-600">
                 센터 로그인
               </label>
             </div>
             <div className="flex justify-center">
               <input type="radio" name="loginType" value="franchise" id="franchise" className="" />
-              <label htmlFor="franchise" className="block pl-1 text-center text-lg font-medium text-gray-700 cursor-pointer peer-checked:text-indigo-600">
+              <label htmlFor="franchise" className="block pl-1 text-center font-medium text-gray-700 cursor-pointer peer-checked:text-indigo-600">
                 가맹점 로그인
               </label>
             </div>
           </div>
-
           <form className="space-y-4">
-            <div className="flex items-center gap-2 mb-4">
+            <div className="flex items-center gap-2">
               <label className="block w-13 text-sm font-medium text-gray-700 mb-1">가맹점</label>
-              <input type="text" className="px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder="가맹점 이름"
-              />
-              <button className="w-20 px-4 py-2 bg-[#26499d] text-white rounded-md hover:bg-[#1e3a8a]">찾기</button>
+              <input type="text" className="px-3 py-2 border border-zinc-400 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="가맹점 이름" />
+              <button className="w-20 px-4 py-2 bg-[#26499d] text-white rounded-md hover:bg-[#1e3a8a] cursor-pointer">찾기</button>
             </div>
-            <div className="relative">
-              <div className="flex items-center gap-2 mb-4">
+            <hr className="border-zinc-100" />
+            <div className="relative flex flex-col space-y-2">
+              <div className="flex items-center gap-2">
                 <label className="block w-13 text-sm font-medium text-gray-700 mb-1">아이디</label>
-                <input type="text" className="px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  placeholder="아이디"
-                />
+                <input type="text" className="px-3 py-2 border border-zinc-400 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="아이디" />
               </div>
-              <div className="flex items-center gap-2 mb-4">
+              <div className="flex items-center gap-2">
                 <label className="block w-13 text-sm font-medium text-gray-700 mb-1">비밀번호</label>
-                <input type="password" className="px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  placeholder="비밀번호"
-                />
+                <input type="password" className="px-3 py-2 border border-zinc-400 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="비밀번호" />
               </div>
-              <div>
-                <input type="checkbox" id="rememberMe" className="mr-2" />
-                <label htmlFor="rememberMe" className="text-sm text-gray-700">
-                  가맹점 기억
-                </label>
-                <input type="checkbox" id="rememberId" className="mr-2" />
-                <label htmlFor="rememberId" className="text-sm text-gray-700">
-                  아이디 기억
-                </label>
-              </div>
-              <Link
-                href="/"
-                type="submit"
-                className="absolute top-0 right-0 w-20 h-25 inline-flex items-center justify-center px-4 py-2 bg-[#26499d] text-white rounded-md hover:bg-[#1e3a8a] disabled:opacity-60"
-              >
+              <Link href="/" type="submit" className="absolute top-0 right-0 w-20 h-23 inline-flex items-center justify-center px-4 py-2 bg-[#26499d] text-white rounded-md hover:bg-[#1e3a8a] disabled:opacity-60 cursor-pointer" >
                 로그인
               </Link>
-            </div>
+              <div className="ml-15 text-red-500 text-sm hidden">비밀번호 입력이 틀렸습니다.</div>
+              <div className="flex items-center mt-1 pl-15 gap-4">
+                <div className="flex items-center">
+                  <input type="checkbox" id="rememberMe" className="" />
+                  <label htmlFor="rememberMe" className="pl-1 text-sm text-gray-700 cursor-pointer">
+                    가맹점 기억
+                  </label>
+                </div>
+                <div className="flex items-center">
+                  <input type="checkbox" id="rememberId" className="" />
+                  <label htmlFor="rememberId" className="pl-1 text-sm text-gray-700 cursor-pointer">
+                    아이디 기억
+                  </label>
+                </div>
+              </div>
 
+            </div>
           </form>
         </div>
       </div>

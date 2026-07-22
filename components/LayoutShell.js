@@ -16,7 +16,7 @@ export default function LayoutShell({ children }) {
 
   return (
     <div className="min-h-full flex">
-      <Sidebar open={open} />
+      <Sidebar open={open} onClose={() => setOpen(false)} />
       <div className="flex flex-col flex-1">
         <Header onToggle={() => setOpen((v) => !v)} />
         <main className="flex-1 p-6 overflow-auto">{children}</main>

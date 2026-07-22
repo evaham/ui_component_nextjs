@@ -1,5 +1,5 @@
 import SearchBar from "@/components/SearchBar";
-import DateTableList from '@/components/DateTableList';
+import DataTableList from '@/components/DataTableList';
 
 export default function Menu03Page() {
   const rows = [
@@ -79,7 +79,7 @@ export default function Menu03Page() {
                   <th className="p-2 pr-6 py-0.5 text-right font-normal">증가(%)</th>
                 </tr>
               </thead>
-              <DateTableList rows={rows} rowKey="id" />
+              <DataTableList rows={rows} rowKey="id" />
             </table>
           </div>
         </div>

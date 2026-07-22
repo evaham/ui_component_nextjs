@@ -24,14 +24,14 @@ function getNavClass(isActive) {
     : "block px-2 py-1 rounded hover:bg-gray-100 text-zinc-700";
 }
 
-export default function Sidebar({ open }) {
+export default function Sidebar({ open, onClose }) {
   const pathname = usePathname();
 
   return (
     <>
       {/* Desktop sidebar */}
       <aside className="hidden md:block sticky top-0 w-64 min-w-64 p-4 bg-white border-r border-zinc-200 overflow-y-auto">
-        <div className="sticky -top-4 mb-8 -mx-4 -mt-4 border-b border-zinc-300 bg-white">
+        <Link href="/" className="sticky -top-4 flex mb-8 -mx-4 -mt-4 border-b border-zinc-300 bg-white">
           <svg xmlns="http://www.w3.org/2000/svg" width={200} height={55} viewBox="0 0 347 94" fill="none">
             <path d="M60.6757 65.9144C60.3523 65.3178 59.1058 64.5344 54.4252 65.6735C54.4252 65.6735 51.2381 66.5772 47.0103 65.7938C47.0103 65.7938 51.5381 68.0481 60.3877 66.4871C60.7052 66.3244 60.7227 66.0952 60.6757 65.9144Z" fill="#D1C99D"/>
             <path fillRule="evenodd" clipRule="evenodd" d="M63.4106 65.2714C64.7807 65.0544 68.35 63.3728 69.526 62.6556C71.1195 61.6914 72.8424 59.2266 71.5311 56.4784C69.5025 52.2356 62.5168 53.9713 58.4654 55.0983C51.4681 57.075 40.6839 62.6496 32.8104 60.1124C32.2871 59.9496 31.5052 59.7328 31.1523 59.4013C33.0869 61.1913 35.9622 62.6797 38.1379 63.4572C45.7526 66.1451 56.6602 61.6374 62.2934 62.4872C62.9696 62.6017 63.8399 62.8908 64.1281 63.3428C64.8278 64.3553 63.8575 65.0002 63.4106 65.2714Z" fill="#5EB6E4"/>
@@ -48,7 +48,7 @@ export default function Sidebar({ open }) {
             </linearGradient>
             </defs>
           </svg>
-        </div>
+        </Link>
         <nav className="space-y-1">
           {navItems.map((item) => {
             const isActive = item.href === pathname;
@@ -73,26 +73,43 @@ export default function Sidebar({ open }) {
         }`}
         aria-hidden={!open}
       >
-        <nav className="space-y-2">
-          {navItems.map((item) => {
-            const isActive = item.href === pathname;
-            return (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={getNavClass(isActive)}
-                aria-current={isActive ? "page" : undefined}
-              >
-                {item.label}
-              </Link>
-            );
-          })}
-        </nav>
+        <div className="relative">
+          <button
+            type="button"
+            onClick={() => onClose && onClose()}
+            aria-label="사이드바 닫기"
+            className="absolute top-2 right-2 p-2 rounded hover:bg-gray-100"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-zinc-700" viewBox="0 0 20 20" fill="currentColor">
+              <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+            </svg>
+          </button>
+
+          <nav className="space-y-2">
+            {navItems.map((item) => {
+              const isActive = item.href === pathname;
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={getNavClass(isActive)}
+                  aria-current={isActive ? "page" : undefined}
+                  onClick={() => onClose && onClose()}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
+          </nav>
+        </div>
       </div>
 
       {/* 모바일 오버레이 백드롭 */}
       {open && (
-        <div className="fixed inset-0 z-30 bg-black/30 md:hidden" />
+        <div
+          className="fixed inset-0 z-30 bg-black/30 md:hidden"
+          onClick={() => onClose && onClose()}
+        />
       )}
     </>
   );

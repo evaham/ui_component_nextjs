@@ -4,7 +4,7 @@ import { useState } from 'react';
 import SearchTab from '@/components/SearchTab';
 import SearchBar from '@/components/SearchBar';
 import LayerPopup from '@/components/LayerPopup';
-import DateTableList from '@/components/DateTableList';
+import DataTableList from '@/components/DataTableList';
 
 export default function Menu08Page() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -58,7 +58,7 @@ export default function Menu08Page() {
                   <th className="p-2 pr-6 text-right font-normal">판매가 비교</th>
                 </tr>
               </thead>
-              <DateTableList rows={rows} rowKey="id" />
+              <DataTableList rows={rows} rowKey="id" />
             </table>
           </div>
         </div>
