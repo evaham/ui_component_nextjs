@@ -60,7 +60,10 @@ export default function RollingBanner() {
       {/* 타이틀 헤더 */}
       <div className="flex items-center gap-2 -mt-3 mb-2">
         <h2 className="font-bold tracking-tight">주목 상품정보</h2>
-        <button className="">더보기</button>
+        <button className="flex items-center ml-auto text-xs text-zinc-600 font-medium cursor-pointer tracking-tight">
+          더보기
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#3e3e3e"><path d="M540-480 356-664l20-20 204 204-204 204-20-20 184-184Z"/></svg>
+        </button>
       </div>
 
       {/* 롤링 컨테이너 (5개 높이 고정) */}

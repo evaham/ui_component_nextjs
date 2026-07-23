@@ -53,7 +53,7 @@ export default function Menu03Page() {
             placeholder="바코드, 상품명"
             buttonLabel="조회"
           />
-          <div className="min-h-150 -mx-6 border-y border-zinc-100">
+          <div className="min-h-100 -mx-6 border-y border-zinc-100 bg-black/1">
             <table className="table-fixed w-full border-collapse bg-white text-sm">
               <colgroup>
                 <col style={{ width: '40px' }} />

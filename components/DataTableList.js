@@ -182,13 +182,6 @@ export default function DataTableList({ rows = [], renderRow, rowKey = 'id' }) {
         <td className="p-2 text-right">{row.매장객수증감}</td>
       )}
       
-
-
-
-
-
-
-      
     </tr>
   );
 

@@ -40,7 +40,7 @@ export default function Menu02Page() {
             placeholder="바코드, 상품명"
             buttonLabel="검색"
           />
-          <div className="-mx-6 border-y border-zinc-100">
+          <div className="min-h-100 -mx-6 border-y border-zinc-100 bg-black/1">
             <table className="table-fixed w-full border-collapse bg-white text-sm">
               <colgroup>
                 <col style={{ width: '40px' }} />
@@ -63,7 +63,7 @@ export default function Menu02Page() {
           </div>
         </div>
         {/* 선택상품 정보 */}
-        <div className="flex flex-col w-72 p-6 rounded-2xl bg-white shadow-xs transition-all">
+        <div className="sticky top-0 min-w-72 min-h-64 p-6 rounded-2xl bg-white transition-all">
           <div className="flex flex-col justify-center text-blue-700 font-semibold -mt-2 mb-2">신라면 블랙</div>
           <hr className="border-zinc-200 mb-4" />
           <div className="flex flex-col gap-4">

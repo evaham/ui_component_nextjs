@@ -10,9 +10,9 @@ export default function Menu09Page() {
   return (
     <div className="flex flex-col flex-1 max-w-7xl justify-center">
       <div className="flex items-start gap-4">
-        <div className="flex-1 flex flex-col gap-4 p-6 rounded-xl bg-white">
+        <div className="flex-1 flex flex-col gap-4 p-6 rounded-2xl bg-white">
           <SearchBar />
-          <div className="h-160 -mx-6 border-y border-zinc-100">
+          <div className="min-h-100 -mx-6 border-y border-zinc-100 bg-black/1">
             <table className="table-fixed w-full border-collapse bg-white text-sm">
               <colgroup>
                 <col style={{ width: '40px' }} />

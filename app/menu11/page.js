@@ -50,15 +50,8 @@ export default function Menu11Page() {
         <DashboardCard4 type="" />
 
         <div className="flex flex-col gap-4 p-6 rounded-2xl bg-white">
-          <SearchTab tabs={[
-            '전체',
-            'A. 유지',
-            'B. 점검필요',
-            'C. 강점확인',
-            'D. 교체검토'
-          ]} />
           <SearchBar />
-          <div className="min-h-150 -mx-6 border-y border-zinc-100">
+          <div className="min-h-100 -mx-6 border-y border-zinc-100 bg-black/1">
             <table className="table-fixed w-full border-collapse bg-white text-sm overflow-hidden">
               <colgroup>
                 <col style={{ width: '40px' }} />

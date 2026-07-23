@@ -55,7 +55,7 @@ export default function Menu04Page() {
             buttonLabel="조회"
           />
 
-          <div className="min-h-150 -mx-6 border-y border-zinc-100">
+          <div className="min-h-100 -mx-6 border-y border-zinc-100 bg-black/1">
             <table className="table-fixed w-full border-collapse bg-white text-sm">
               <colgroup>
                 <col style={{ width: '40px' }} />
@@ -84,7 +84,7 @@ export default function Menu04Page() {
           </div>
         </div>
         {/* 그래프 정보 */}
-        <div className="sticky top-0 min-h-64 p-6 rounded-2xl bg-white transition-all">
+        <div className="sticky top-0 min-w-72 min-h-64 p-6 rounded-2xl bg-white transition-all">
           <div className="flex flex-col justify-center font-semibold -mt-2 mb-2">
             <span>농심바나나킥</span>
             <span className="text-sm font-medium text-gray-500">6개월 매입단가 추이</span>

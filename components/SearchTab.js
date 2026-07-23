@@ -13,16 +13,16 @@ export default function SearchTab({ tabs }) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div className="flex items-center">
-      <div className="flex p-0.5 gap-1 bg-zinc-100 rounded border border-zinc-200">
+    <div className="flex -mb-px border-b border-zinc-200">
+      <div className="flex bg-zinc-100 rounded rounded-b-none">
         {tabLabels.map((label, idx) => {
           const isActive = idx === activeIndex;
           const isFirst = idx === 0;
           const isLast = idx === tabLabels.length - 1;
-          const baseClass = 'px-3 py-1.5 rounded font-medium text-sm cursor-pointer';
+          const baseClass = 'px-3 py-1.5 rounded rounded-b-none font-medium text-sm cursor-pointer';
           const activeClass = isActive
-            ? 'bg-[#26499d] text-white hover:bg-[#26499d] hover:text-white'
-            : 'border-transparent text-zinc-700 hover:bg-white hover:text-zinc-900 hover:shadow-xs';
+            ? 'bg-[#26499d] text-white hover:bg-[#26499d]'
+            : 'border-transparent text-zinc-700 hover:bg-[#26499d]/10 hover:text-zinc-900 hover:shadow-xs';
           return (
             <button
               key={`${label}-${idx}`}
@@ -36,5 +36,36 @@ export default function SearchTab({ tabs }) {
         })}
       </div>
     </div>
+
+
+
+    // <div className="flex items-center">
+    //   <div className="flex p-0.5 gap-1 bg-zinc-100 rounded border border-zinc-200">
+    //     {tabLabels.map((label, idx) => {
+    //       const isActive = idx === activeIndex;
+    //       const isFirst = idx === 0;
+    //       const isLast = idx === tabLabels.length - 1;
+    //       const baseClass = 'px-3 py-1.5 rounded font-medium text-sm cursor-pointer';
+    //       const activeClass = isActive
+    //         ? 'bg-[#26499d] text-white hover:bg-[#26499d] hover:text-white'
+    //         : 'border-transparent text-zinc-700 hover:bg-white hover:text-zinc-900 hover:shadow-xs';
+    //       return (
+    //         <button
+    //           key={`${label}-${idx}`}
+    //           type="button"
+    //           onClick={() => setActiveIndex(idx)}
+    //           className={`${baseClass} ${activeClass}`}
+    //         >
+    //           {label}
+    //         </button>
+    //       );
+    //     })}
+    //   </div>
+    // </div>
+
+
+
+
+
   );
 }

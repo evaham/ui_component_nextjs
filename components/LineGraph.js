@@ -15,7 +15,7 @@ export default function LineGraph() {
 
   return (
     <div className="min-h-64 p-6 rounded-2xl bg-white transition-all">
-      <div className="flex items-center text-lg font-semibold -mt-2 mb-2">
+      <div className="flex items-center font-bold -mt-2 mb-2">
         최근 일주일 매출
       </div>
       <div className="h-50 flex items-center justify-center text-sm text-gray-400">

@@ -44,7 +44,7 @@ export default function Menu08Page() {
   return (
     <div className="flex flex-col flex-1 max-w-7xl justify-center">
       <div className="flex items-start gap-4">
-        <div className="flex-1 flex flex-col gap-4 p-6 rounded-xl bg-white shadow-xs transition-all">
+        <div className="flex-1 flex flex-col gap-4 p-6 rounded-2xl bg-white shadow-xs transition-all">
           <SearchTab tabs={[
             '분류별',
             '공급사별',
@@ -58,7 +58,7 @@ export default function Menu08Page() {
             차트영역
           </div>
 
-          <div className="min-h-100 -mx-6 border-y border-zinc-100">
+          <div className="min-h-100 -mx-6 border-y border-zinc-100 bg-black/1">
             <table className="table-fixed w-full border-collapse bg-white text-sm">
               <colgroup>
                 <col style={{ width: '40px' }} />

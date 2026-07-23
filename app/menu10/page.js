@@ -54,7 +54,7 @@ export default function Menu10Page() {
   return (
     <div className="flex flex-col flex-1 max-w-7xl justify-center">
       <div className="flex items-start gap-4">
-        <div className="flex-1 flex flex-col gap-4 p-6 rounded-xl bg-white">
+        <div className="flex-1 flex flex-col gap-4 p-6 rounded-2xl bg-white">
           <SearchBar />
           <div className="flex -mx-3">
             <table className="table-fixed w-full border-collapse rounded-lg bg-slate-100 text-sm">
@@ -94,7 +94,7 @@ export default function Menu10Page() {
               </tbody>
             </table>
           </div>
-          <div className="min-h-150 -mx-6 border-y border-zinc-100">
+          <div className="min-h-100 -mx-6 border-y border-zinc-100 bg-black/1">
             <table className="table-fixed w-full border-collapse bg-white text-sm">
               <colgroup>
                 <col style={{ width: '5%' }} />
