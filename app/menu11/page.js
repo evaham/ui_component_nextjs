@@ -6,43 +6,9 @@ import DashboardCard4 from "@/components/DashboardCard4";
 
 export default function Menu11Page() {
   const rows = [
-    {
-      id: 'r1',
-      no: 1,
-      barcode: '8809591316526',
-      name: '신라면 블랙',
-      storesHandled: '1,511',
-      otherBuy: '4,480',
-      otherSell: '5,600',
-      otherProfit: '20%',
-      otherSales: '150',
-      ourBuy: '5,152',
-      ourSell: '6,440',
-      ourProfit: '20%',
-      ourSales: '109',
-      inventoryQty: '15.0%',
-      inventoryAmount: '27.3%'
-    }
-  ];
+    { id: 'r1', no: 1, 지역: '서울', 규모: '100평 이하', 점포명: 'S마트', 매출액: '31,241,480', 객수: '5,600', 객단가: '32,124', 수집시각: '26-04-10', },
 
-  const renderRow = (row, idx) => (
-    <tr key={row.id ?? idx} className="hover:bg-zinc-50">
-      <td className="px-1 py-2 text-center">{row.no}</td>
-      <td className="px-1 py-2 text-left">{row.barcode}</td>
-      <td className="px-1 py-2 text-left">{row.name}</td>
-      <td className="px-1 py-2 text-right">{row.storesHandled}</td>
-      <td className="px-1 py-2 text-right">{row.otherBuy}</td>
-      <td className="px-1 py-2 text-right">{row.otherSell}</td>
-      <td className="px-1 py-2 text-right">{row.otherProfit}</td>
-      <td className="px-1 py-2 text-right">{row.otherSales}</td>
-      <td className="px-1 py-2 text-right">{row.ourBuy}</td>
-      <td className="px-1 py-2 text-right">{row.ourSell}</td>
-      <td className="px-1 py-2 text-right">{row.ourProfit}</td>
-      <td className="px-1 py-2 text-right">{row.ourSales}</td>
-      <td className="px-1 py-2 text-right">{row.inventoryQty}</td>
-      <td className="px-1 py-2 text-right">{row.inventoryAmount}</td>
-    </tr>
-  );
+  ];
 
   return (
     <div className="flex flex-col flex-1 max-w-7xl justify-center">
@@ -61,27 +27,17 @@ export default function Menu11Page() {
               </colgroup>
               <thead className="sticky top-0 z-10 border-b border-zinc-200 text-white bg-[#4A5B6D]">
                 <tr>
-                  <th rowSpan="2" className="p-2 py-0.5 text-center font-normal">No.</th>
-                  <th rowSpan="2" className="p-2 py-0.5 text-left font-normal">바코드</th>
-                  <th rowSpan="2" className="p-2 py-0.5 text-left font-normal">상품명</th>
-                  <th rowSpan="2" className="p-2 py-0.5 text-right font-normal">취급점</th>
-                  <th colSpan="4" className="p-2 py-0.5 text-center font-normal">타매장 평균</th>
-                  <th colSpan="4" className="p-2 py-0.5 text-center font-normal">우리 매장</th>
-                  <th rowSpan="2" className="p-2 py-0.5 text-right font-normal">재고수량</th>
-                  <th rowSpan="2" className="p-2 pr-6 py-0.5 text-right font-normal">재고금액</th>
-                </tr>
-                <tr>
-                  <th className="p-2 py-0.5 text-right font-normal">매입가</th>
-                  <th className="p-2 py-0.5 text-right font-normal">판매가</th>
-                  <th className="p-2 py-0.5 text-right font-normal">이익율</th>
-                  <th className="p-2 py-0.5 text-right font-normal">판매량</th>
-                  <th className="p-2 py-0.5 text-right font-normal">매입가</th>
-                  <th className="p-2 py-0.5 text-right font-normal">판매가</th>
-                  <th className="p-2 py-0.5 text-right font-normal">이익율</th>
-                  <th className="p-2 py-0.5 text-right font-normal">판매량</th>
+                  <th className="p-2 text-center font-normal">No.</th>
+                  <th className="p-2 text-left font-normal">지역</th>
+                  <th className="p-2 text-left font-normal">규모</th>
+                  <th className="p-2 text-left font-normal">매장명</th>
+                  <th className="p-2 text-right font-normal">매출액</th>
+                  <th className="p-2 text-right font-normal">객수</th>
+                  <th className="p-2 text-right font-normal">객단가</th>
+                  <th className="p-2 pr-6 text-center font-normal">수집시각</th>
                 </tr>
               </thead>
-              <DataTableList rows={rows} renderRow={renderRow} rowKey="id" />
+              <DataTableList rows={rows} rowKey="id" />
             </table>
           </div>
         </div>

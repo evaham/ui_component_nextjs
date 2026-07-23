@@ -118,7 +118,7 @@ export default function DataTableList({ rows = [], renderRow, rowKey = 'id' }) {
         <td className="p-2 text-right">{row.회원객단가}</td>
       )}
       {row.수집시각 != null && row.수집시각 !== '' && (
-        <td className="p-2 text-right">{row.수집시각}</td>
+        <td className="p-2 text-center">{row.수집시각}</td>
       )}
       {row.타매장매입가 != null && row.타매장매입가 !== '' && (
         <td className="p-2 text-right">{row.타매장매입가}</td>
