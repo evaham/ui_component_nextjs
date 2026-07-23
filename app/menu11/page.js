@@ -46,7 +46,7 @@ export default function Menu11Page() {
 
   return (
     <div className="flex flex-col flex-1 max-w-7xl justify-center">
-      <main className="flex flex-col gap-6">
+      <div className="flex flex-col gap-4">
         <DashboardCard4 type="" />
 
         <div className="flex flex-col gap-4 p-6 rounded-2xl bg-white">
@@ -58,7 +58,6 @@ export default function Menu11Page() {
             'D. 교체검토'
           ]} />
           <SearchBar />
-
           <div className="min-h-150 -mx-6 border-y border-zinc-100">
             <table className="table-fixed w-full border-collapse bg-white text-sm overflow-hidden">
               <colgroup>
@@ -93,7 +92,7 @@ export default function Menu11Page() {
             </table>
           </div>
         </div>
-      </main>
+      </div>
     </div>
   )
 }

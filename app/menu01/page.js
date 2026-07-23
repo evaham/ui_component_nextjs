@@ -3,7 +3,7 @@ import { useState } from 'react';
 import SearchBar from "@/components/SearchBar";
 import SearchTab from "@/components/SearchTab";
 import DataTableList from '@/components/DataTableList';
-
+import LayerPopup01 from '@/components/LayerPopup01';
 
 export default function Menu01Page() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -13,7 +13,6 @@ export default function Menu01Page() {
     setSelectedProduct(name);
     setIsPopupOpen(true);
   };
-
   const renderProductLink = (name) => (
     <a
       href="#"
@@ -32,21 +31,10 @@ export default function Menu01Page() {
     { id: 'r6', no: 6, 바코드: '8809591316526', 상품명: renderProductLink('신라면 블랙'), 취급점: '1,511', 타매장매입가: '4,480', 타매장판매가: '5,600', 타매장이익율: '20%', 타매장판매량: '150', 우리매장매입가: '5,152', 우리매장판매가: '6,440', 우리매장이익율: '20%', 우리매장판매량: '109', 판매가비교: '15.0%', 판매량비교: '27.3%'},
     { id: 'r7', no: 7, 바코드: '8809591316526', 상품명: renderProductLink('신라면 블랙'), 취급점: '1,511', 타매장매입가: '4,480', 타매장판매가: '5,600', 타매장이익율: '20%', 타매장판매량: '150', 우리매장매입가: '5,152', 우리매장판매가: '6,440', 우리매장이익율: '20%', 우리매장판매량: '109', 판매가비교: '15.0%', 판매량비교: '27.3%'},
   ];
-  const rows2 = [
-    { id: 'r1', no: 1, 지역: '서울', 규모: '100평 이하', 점포명: renderProductLink('S마트'), 상품판매가: '4,480', 상품이익율: '5,600', 등록일: '24-10-08', 판매가변경: '26-04-10', },
-    { id: 'r2', no: 2, 지역: '인천', 규모: '100평 이하', 점포명: renderProductLink('YS마트'), 상품판매가: '1,480', 상품이익율: '600', 등록일: '24-10-08', 판매가변경: '26-04-10', },
-    { id: 'r3', no: 3, 지역: '부산', 규모: '100평 이하', 점포명: renderProductLink('BS마트'), 상품판매가: '2,480', 상품이익율: '1,600', 등록일: '24-10-08', 판매가변경: '26-04-10', },
-    { id: 'r4', no: 4, 지역: '대구', 규모: '100평 이하', 점포명: renderProductLink('DS마트'), 상품판매가: '3,480', 상품이익율: '2,600', 등록일: '24-10-08', 판매가변경: '26-04-10', },
-    { id: 'r5', no: 5, 지역: '광주', 규모: '100평 이하', 점포명: renderProductLink('GS마트'), 상품판매가: '4,480', 상품이익율: '3,600', 등록일: '24-10-08', 판매가변경: '26-04-10', },
-    { id: 'r6', no: 6, 지역: '대전', 규모: '100평 이하', 점포명: renderProductLink('DS마트'), 상품판매가: '5,480', 상품이익율: '4,600', 등록일: '24-10-08', 판매가변경: '26-04-10', },
-    { id: 'r7', no: 7, 지역: '울산', 규모: '100평 이하', 점포명: renderProductLink('US마트'), 상품판매가: '6,480', 상품이익율: '5,600', 등록일: '24-10-08', 판매가변경: '26-04-10', },
-    { id: 'r8', no: 8, 지역: '제주', 규모: '100평 이하', 점포명: renderProductLink('JS마트'), 상품판매가: '7,480', 상품이익율: '6,600', 등록일: '24-10-08', 판매가변경: '26-04-10', },
-  
-  ];
 
   return (
     <div className="flex flex-col flex-1 max-w-7xl justify-center">
-      <main className="flex flex-col gap-6">
+      <div className="flex flex-col gap-4">
         <div className="flex flex-col gap-3 p-6 bg-white rounded-2xl">
           <div className="flex -mx-6 divide-x divide-zinc-200">
             <div className="flex-1 flex flex-col gap-1 px-6">
@@ -63,7 +51,6 @@ export default function Menu01Page() {
                 <span className="opacity-70">판매량이 전국 평균과 비슷한 상품입니다. 판매 전략을 유지하세요.</span>
               </div>
             </div>
-
             <div className="flex-1 flex flex-col gap-1 px-6">
               <div className="flex items-center gap-2">
                 <div className="relative mr-auto px-2 py-0.5 rounded bg-red-100 text-sm text-red-700 font-bold">
@@ -102,7 +89,6 @@ export default function Menu01Page() {
                 <span className="opacity-80 font-light tracking-tight">전국 평균 대비 판매량이 낮은 상품입니다. 상품교체를 추천합니다.</span>
               </div>
             </div>
-
             <div className="flex flex-col gap-2 justify-center px-6 text-sm">
               <div className="">
                 <span className="font-bold">전월</span> 전국매장 평균 대비 <br />
@@ -178,7 +164,10 @@ export default function Menu01Page() {
             </table>
           </div>
         </div>
-      </main>
+      </div>
+      <LayerPopup01 isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} title="상품 가격비교" />
+
+
     </div>
   );
 }

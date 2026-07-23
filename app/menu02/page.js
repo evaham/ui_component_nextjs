@@ -25,7 +25,7 @@ export default function Menu02Page() {
 
   return (
     <div className="flex flex-col flex-1 max-w-7xl justify-center">
-      <main className="flex items-start gap-6">
+      <div className="flex items-start gap-4">
         <div className="flex-1 flex flex-col gap-4 p-6 rounded-2xl bg-white shadow-xs transition-all">
           <SearchBar
             searchFilters={[
@@ -63,9 +63,9 @@ export default function Menu02Page() {
           </div>
         </div>
         {/* 선택상품 정보 */}
-        <div className="flex flex-col gap-4 w-70 p-6 rounded-2xl bg-white shadow-xs transition-all">
-          <div className="">신라면 블랙</div>
-          <hr className="border-zinc-200" />
+        <div className="flex flex-col w-72 p-6 rounded-2xl bg-white shadow-xs transition-all">
+          <div className="flex flex-col justify-center text-blue-700 font-semibold -mt-2 mb-2">신라면 블랙</div>
+          <hr className="border-zinc-200 mb-4" />
           <div className="flex flex-col gap-4">
             <div className="flex-1 flex flex-col gap-1 border border-zinc-200 rounded-xl p-4">
               <div className="text-sm">현 단가 유지</div>
@@ -129,7 +129,7 @@ export default function Menu02Page() {
             </div>
           </div>
         </div>
-      </main>
+      </div>
     </div>
   )
 }

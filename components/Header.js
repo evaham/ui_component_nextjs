@@ -16,7 +16,6 @@ const pageTitles = {
   "/menu09": "미취급상품",
   "/menu10": "일별 매출비교",
   "/menu11": "매출속보",
-  "/menu12": "모바일 반응형 UI 테스트용",
 };
 
 export default function Header({ onToggle }) {
@@ -24,20 +23,21 @@ export default function Header({ onToggle }) {
     const title = pageTitles[pathname] ?? "알림판";
   return (
     <header className="w-full flex flex-col items-center bg-white shadow-sm">
-      <div className="hidden md:flex items-center w-full h-14 px-4 bg-white border-b border-gray-300 ">
-        <button
+      <div className="flex items-center w-full h-14 px-4 bg-white border-b border-gray-300 ">
+        {/* <button
           onClick={onToggle}
           className="md:hidden mr-3 px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800"
           aria-label="메뉴 토글"
         >
           <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#333333"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
-        </button>
+        </button> */}
+        
         <div className="text-lg font-semibold">{title}</div>
         <Link href="/login" className="ml-auto text-sm">로그아웃</Link>
       </div>
       
       {/* 모바일에서만 보이는 헤더 */}
-      <div className="flex md:hidden items-center w-full h-14 px-4 bg-white border-b border-gray-300 ">
+      {/* <div className="flex md:hidden items-center w-full h-14 px-4 bg-white border-b border-gray-300 ">
         <button
           onClick={onToggle}
           className="md:hidden -ml-2 mr-3 px-2 py-1 rounded hover:bg-gray-100"
@@ -47,7 +47,7 @@ export default function Header({ onToggle }) {
         </button>
         <div className="text-lg font-semibold">{title}</div>
         <Link href="/login" className="ml-auto text-sm">로그아웃</Link>
-      </div>
+      </div> */}
     </header>
   );
 }

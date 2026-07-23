@@ -50,7 +50,7 @@ export default function DataTableList({ rows = [], renderRow, rowKey = 'id' }) {
         <td className="p-2 text-right">{row.판매액}</td>
       )}
       {row.확산지역 != null && row.확산지역 !== '' && (
-        <td className="p-2 text-right">{row.확산지역}</td>
+        <td className="p-2 text-left">{row.확산지역}</td>
       )}
       {row.품목포지션 != null && row.품목포지션 !== '' && (
         <td className="p-2 text-left">{row.품목포지션}</td>
@@ -162,6 +162,33 @@ export default function DataTableList({ rows = [], renderRow, rowKey = 'id' }) {
       {row.판매가변경 != null && row.판매가변경 !== '' && (
         <td className="p-2 text-right">{row.판매가변경}</td>
       )}
+      
+      {row.날짜 != null && row.날짜 !== '' && (
+        <td className="p-2 text-right">{row.날짜}</td>
+      )}
+      {row.매장매출액 != null && row.매장매출액 !== '' && (
+        <td className="p-2 text-right">{row.매장매출액}</td>
+      )}
+
+      {row.매장매출증감 != null && row.매장매출증감 !== '' && (
+        <td className="p-2 text-right">{row.매장매출증감}</td>
+      )}
+      
+      {row.매장객수 != null && row.매장객수 !== '' && (
+        <td className="p-2 text-right">{row.매장객수}</td>
+      )}
+      
+      {row.매장객수증감 != null && row.매장객수증감 !== '' && (
+        <td className="p-2 text-right">{row.매장객수증감}</td>
+      )}
+      
+
+
+
+
+
+
+      
     </tr>
   );
 

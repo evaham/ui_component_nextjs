@@ -42,7 +42,7 @@ export default function Menu04Page() {
 
   return (
     <div className="flex flex-col flex-1 max-w-7xl justify-center">
-      <main className="flex items-start gap-6">
+      <div className="flex items-start gap-4">
         <div className="flex-1 flex flex-col gap-4 p-6 rounded-2xl bg-white">
           <SearchBar
             searchFilters={[
@@ -86,8 +86,8 @@ export default function Menu04Page() {
         {/* 그래프 정보 */}
         <div className="sticky top-0 min-h-64 p-6 rounded-2xl bg-white transition-all">
           <div className="flex flex-col justify-center font-semibold -mt-2 mb-2">
-            <div>농심바나나킥</div>
-            6개월 매입단가 추이
+            <span>농심바나나킥</span>
+            <span className="text-sm font-medium text-gray-500">6개월 매입단가 추이</span>
           </div>
           <div className="w-80 h-50 flex items-center justify-center text-xs text-gray-400">
             <ResponsiveContainer>
@@ -102,7 +102,7 @@ export default function Menu04Page() {
             </ResponsiveContainer>
           </div>
         </div>
-      </main>
+      </div>
     </div>
   )
 }

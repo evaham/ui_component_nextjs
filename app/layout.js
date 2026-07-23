@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
       lang="ko"
       className={`${pretendard.variable} h-full antialiased`}
     >
-      <body className="min-h-full h-full flex flex-col md:bg-zinc-100">
+      <body className="min-h-full h-full flex flex-col bg-zinc-100">
         <LayoutShell>{children}</LayoutShell>
       </body>
     </html>

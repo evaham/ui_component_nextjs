@@ -9,7 +9,7 @@ export default function Menu09Page() {
 
   return (
     <div className="flex flex-col flex-1 max-w-7xl justify-center">
-      <main className="flex items-start gap-6">
+      <div className="flex items-start gap-4">
         <div className="flex-1 flex flex-col gap-4 p-6 rounded-xl bg-white">
           <SearchBar />
           <div className="h-160 -mx-6 border-y border-zinc-100">
@@ -36,9 +36,8 @@ export default function Menu09Page() {
             </table>
           </div>
         </div>
-        {/* 그래프 정보 */}
 
-      </main>
+      </div>
     </div>
   )
 }

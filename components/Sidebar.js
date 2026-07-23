@@ -16,7 +16,6 @@ const navItems = [
   { href: "/menu09", label: "미취급상품", group: 2 },
   { href: "/menu10", label: "일별 매출비교", group: 2 },
   { href: "/menu11", label: "매출속보", group: 2 },
-  { href: "/menu12", label: "모바일 반응형 UI 테스트용", group: 3 },
 ];
 
 function getNavClass(isActive) {
@@ -31,7 +30,7 @@ export default function Sidebar({ open, onClose }) {
   return (
     <>
       {/* Desktop sidebar */}
-      <aside className="hidden md:block sticky top-0 w-64 min-w-64 p-4 bg-white border-r border-zinc-200 overflow-y-auto">
+      <aside className="block sticky top-0 w-64 min-w-64 p-4 bg-white border-r border-zinc-200 overflow-y-auto">
         <Link href="/" className="sticky -top-4 flex mb-8 -mx-4 -mt-4 border-b border-zinc-300 bg-white">
           <svg xmlns="http://www.w3.org/2000/svg" width={200} height={55} viewBox="0 0 347 94" fill="none">
             <path d="M60.6757 65.9144C60.3523 65.3178 59.1058 64.5344 54.4252 65.6735C54.4252 65.6735 51.2381 66.5772 47.0103 65.7938C47.0103 65.7938 51.5381 68.0481 60.3877 66.4871C60.7052 66.3244 60.7227 66.0952 60.6757 65.9144Z" fill="#D1C99D"/>
@@ -69,8 +68,7 @@ export default function Sidebar({ open, onClose }) {
       </aside>
 
       {/* 모바일 사이드바 */}
-      <div
-        className={`fixed inset-y-0 left-0 z-40 w-64 transform bg-white p-4 border-r border-zinc-200 transition-transform duration-200 md:hidden ${
+      {/* <div className={`fixed inset-y-0 left-0 z-40 w-64 transform bg-white p-4 border-r border-zinc-200 transition-transform duration-200 md:hidden ${
           open ? "translate-x-0" : "-translate-x-full"
         }`}
         aria-hidden={!open}
@@ -106,15 +104,15 @@ export default function Sidebar({ open, onClose }) {
             })}
           </nav>
         </div>
-      </div>
+      </div> */}
 
       {/* 모바일 오버레이 백드롭 */}
-      {open && (
+      {/* {open && (
         <div
           className="fixed inset-0 z-30 bg-black/30 md:hidden"
           onClick={() => onClose && onClose()}
         />
-      )}
+      )} */}
     </>
   );
 }

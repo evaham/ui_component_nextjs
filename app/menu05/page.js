@@ -7,7 +7,9 @@ import { ComposedChart, Line, Area, Bar, XAxis, YAxis, CartesianGrid, Tooltip, L
 
 export default function Menu05Page() {
   const rows = [
-    { id: 'r1', no: 1, 바코드: '8809591316526', 상품명: '신라면 블랙', 취급매장: '1,511', 판매량: '4,480', 판매액: '5,600', 확산지역: '27.3% down' }
+    { id: 'r1', no: 1, 바코드: '8809591316526', 상품명: '신라면 블랙', 취급매장: '1,511', 판매량: '4,480', 판매액: '5,600', 확산지역: '서울,경기,인천,대전,전북' },
+    { id: 'r2', no: 2, 바코드: '8809112316526', 상품명: '신라면 레드', 취급매장: '511', 판매량: '3,230', 판매액: '4,600', 확산지역: ',인천,대전,전북,제주' },
+    {}
   ];
   const data2 = [
     { name: '1주', 평균매출액: 4000, 취급매장: 3000, },
@@ -18,7 +20,7 @@ export default function Menu05Page() {
 
   return (
     <div className="flex flex-col flex-1 max-w-7xl justify-center">
-      <main className="flex items-start gap-6">
+      <div className="flex items-start gap-4">
         <div className="flex-1 flex flex-col gap-4 p-6 rounded-2xl bg-white">
           <SearchBar
             searchFilters={[
@@ -33,9 +35,13 @@ export default function Menu05Page() {
           <div className="min-h-150 -mx-6 border-y border-zinc-100">
             <table className="table-fixed w-full border-collapse bg-white text-sm">
               <colgroup>
-                <col style={{ width: '40px' }} />
-                <col style={{ width: '120px' }} />
-                <col style={{ width: '150px' }} />
+                <col style={{ width: '5%' }} />
+                <col style={{ width: '15%' }} />
+                <col style={{ width: '20%' }} />
+                <col style={{ width: '10%' }} />
+                <col style={{ width: '10%' }} />
+                <col style={{ width: '10%' }} />
+                <col style={{ width: '30%' }} />
               </colgroup>
               <thead className="sticky top-0 z-10 border-b border-zinc-200 text-white bg-[#4A5B6D]">
                 <tr>
@@ -45,7 +51,7 @@ export default function Menu05Page() {
                   <th className="p-2 text-right font-normal">취급매장</th>
                   <th className="p-2 text-right font-normal">판매량</th>
                   <th className="p-2 text-right font-normal">판매액</th>
-                  <th className="p-2 pr-6 text-right font-normal">확산지역</th>
+                  <th className="p-2 pr-6 font-normal text-left">확산지역</th>
                 </tr>
               </thead>
               <DataTableList rows={rows} rowKey="id" />
@@ -55,8 +61,8 @@ export default function Menu05Page() {
         {/* 그래프 정보 */}
         <div className="sticky top-0 min-h-64 p-6 rounded-2xl bg-white transition-all">
           <div className="flex flex-col justify-center font-semibold -mt-2 mb-2">
-            <div>큰사발신라면</div>
-            매출,취급 매장수 추이
+            <span>큰사발신라면</span>
+            <span className="text-sm font-medium text-gray-500">매출,취급 매장수 추이</span>
           </div>
           <div className="w-80 flex flex-col gap-4 items-center justify-center text-xs text-gray-400">
             <ComposedChart
@@ -72,34 +78,36 @@ export default function Menu05Page() {
               <Line type="monotone" dataKey="취급매장" fill="#3b82f6" stroke="#93c5fd" />
               <Bar dataKey="평균매출액" barSize={20} fill="#3b82f6" />
             </ComposedChart>
-            <table className="table-fixed w-full border-collapse bg-white text-sm">
-              <thead className="border-zinc-200 text-white bg-[#4A5B6D]">
-                <tr>
-                  <th></th>
-                  <th className="p-2 text-center font-normal">1주차</th>
-                  <th className="p-2 text-right font-normal">2주차</th>
-                  <th className="p-2 text-right font-normal">3주차</th>
-                  <th className="p-2 text-right font-normal">4주차</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                    <th>취급매장</th>
-                  {data2.map((row, idx) => (
-                    <td key={idx} className="p-2 text-center">{row.취급매장}</td>
-                  ))}
-                </tr>
-                <tr>
-                    <th>매출액</th>
-                  {data2.map((row, idx) => (
-                    <td key={idx} className="p-2 text-center">{row.평균매출액}</td>
-                  ))}
-                </tr>
-              </tbody>
-            </table>
           </div>
+          <table className="w-full mt-2 border-collapse border border-gray-400 bg-white text-sm">
+            <thead>
+              <tr>
+                <th className="border border-gray-300 px-1 py-0.5 text-center font-normal bg-zinc-100"></th>
+                <th className="border border-gray-300 px-1 py-0.5 text-center font-normal bg-zinc-100">1주차</th>
+                <th className="border border-gray-300 px-1 py-0.5 text-center font-normal bg-zinc-100">2주차</th>
+                <th className="border border-gray-300 px-1 py-0.5 text-center font-normal bg-zinc-100">3주차</th>
+                <th className="border border-gray-300 px-1 py-0.5 text-center font-normal bg-zinc-100">4주차</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th className="border border-gray-300 px-1 py-0.5 text-center font-normal bg-zinc-100">취급매장</th>
+                {data2.map((row, idx) => (
+                  <td key={idx} className="border border-gray-300 px-1 py-0.5 text-right">{row.취급매장}</td>
+                ))}
+              </tr>
+              <tr>
+                  <th className="border border-gray-300 px-1 py-0.5 text-center font-normal bg-zinc-100">매출액</th>
+                {data2.map((row, idx) => (
+                  <td key={idx} className="border border-gray-300 px-1 py-0.5 text-right">{row.평균매출액}</td>
+                ))}
+              </tr>
+            </tbody>
+          </table>
+
+
         </div>
-      </main>
+      </div>
     </div>
   )
 }
