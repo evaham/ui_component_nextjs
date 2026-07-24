@@ -2,7 +2,7 @@
 import React from 'react';
 import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts';
 
-export default function LineGraph() {
+export default function LineGraph({ className }) {
   const data = [
     { name: '1일', 우리매출: 4000, 전국200평이하: 3000, 인천200평이하: 3400 },
     { name: '2일', 우리매출: 3000, 전국200평이하: 4400, 인천200평이하: 4400 },
@@ -14,7 +14,7 @@ export default function LineGraph() {
   ];
 
   return (
-    <div className="min-h-64 p-6 rounded-2xl bg-white transition-all">
+    <div className={`min-h-64 p-6 rounded-2xl bg-white transition-all ${className || ""}`}>
       <div className="flex items-center font-bold -mt-2 mb-2">
         최근 일주일 매출
       </div>

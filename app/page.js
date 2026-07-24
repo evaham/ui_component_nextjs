@@ -5,23 +5,15 @@ import LineGraph from "@/components/LineGraph";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 max-w-7xl justify-center">
-      <div className="flex flex-col gap-4">
+    <div className="contents">
+      <div className="dashboard-cards-container
+      ">
         {/* 매출속보 */}
-        <DashboardCard4 type="sales" />
-
-        {/* 어제 매출현황 */}
-        <DashboardCard4 type="yesterday" />
-
-        <div className="flex gap-4">
-          {/* 그래프영역 */}
-          <div className="flex-1 flex flex-col gap-4">
-            <LineGraph />
-            <LineGraph />
-          </div>
-          {/* 롤링 배너영역 */}
-          <RollingBanner />
-        </div>
+        <DashboardCard4 type="sales" className="dashboard-card" />
+        <DashboardCard4 type="yesterday" className="dashboard-card" />
+        <LineGraph className="line-graph" />
+        <LineGraph className="line-graph" />
+        <RollingBanner className="rolling-banner" />
       </div>
     </div>
   );

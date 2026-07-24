@@ -11,15 +11,15 @@ export default function LayoutShell({ children }) {
 
   // 로그인 경로일 경우 Header/Sidebar를 렌더하지 않고 children만 반환
   if (pathname && pathname.startsWith("/login")) {
-    return <div className="min-h-full">{children}</div>;
+    return <div className="wrapper">{children}</div>;
   }
 
   return (
-    <div className="min-h-full flex">
+    <div className="wrapper">
       <Sidebar open={open} onClose={() => setOpen(false)} />
-      <div className="flex flex-col flex-1">
+      <div className="container">
         <Header onToggle={() => setOpen((v) => !v)} />
-        <main className="flex-1 p-4 md:p-6 overflow-auto">{children}</main>
+        <main className="main">{children}</main>
       </div>
     </div>
   );

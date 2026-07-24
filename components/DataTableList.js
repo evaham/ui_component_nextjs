@@ -73,14 +73,12 @@ export default function DataTableList({ rows = [], renderRow, rowKey = 'id' }) {
       {row.최종매입 != null && row.최종매입 !== '' && (
         <td className="p-2 text-right">{row.최종매입}</td>
       )}
-
       {row.평균판매량 != null && row.평균판매량 !== '' && (
         <td className="p-2 text-right">{row.평균판매량}</td>
       )}
       {row.평균판매액 != null && row.평균판매액 !== '' && (
         <td className="p-2 text-right">{row.평균판매액}</td>
       )}
-
       {row.평균판매가 != null && row.평균판매가 !== '' && (
         <td className="p-2 text-right">{row.평균판매가}</td>
       )}
@@ -162,7 +160,6 @@ export default function DataTableList({ rows = [], renderRow, rowKey = 'id' }) {
       {row.판매가변경 != null && row.판매가변경 !== '' && (
         <td className="p-2 text-right">{row.판매가변경}</td>
       )}
-      
       {row.날짜 != null && row.날짜 !== '' && (
         <td className="p-2 text-right">{row.날짜}</td>
       )}
@@ -181,7 +178,6 @@ export default function DataTableList({ rows = [], renderRow, rowKey = 'id' }) {
       {row.매장객수증감 != null && row.매장객수증감 !== '' && (
         <td className="p-2 text-right">{row.매장객수증감}</td>
       )}
-      
     </tr>
   );
 

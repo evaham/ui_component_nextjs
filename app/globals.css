@@ -26,3 +26,110 @@ body {
   color: var(--foreground); */
   font-family: var(--font-pretendard), Arial, Helvetica, sans-serif;
 }
+
+html {
+  @apply h-full antialiased;
+}
+body {
+  @apply flex flex-col min-h-full h-full bg-zinc-100;
+}
+.wrapper {
+  @apply flex min-h-full ;
+}
+
+/* 사이드 메뉴 왼쪽 */
+.sidemenu {
+  @apply block sticky top-0 w-64 min-w-64 p-4 bg-white border-r border-zinc-200 overflow-y-auto;
+}
+.sidemenu .logo-link {
+  @apply sticky -top-4 flex mb-8 -mx-4 -mt-4 border-b border-zinc-300 bg-white;
+}
+.sidemenu nav {
+  @apply space-y-1;
+}
+.sidemenu nav .menu-item {
+  @apply block px-2 py-1 rounded hover:bg-gray-100 text-zinc-700 cursor-pointer;
+}
+.sidemenu nav .menu-item.active {
+  @apply bg-blue-100 hover:bg-blue-100 text-blue-900 font-semibold;
+}
+
+/* 컨테이너 영역 오른쪽 */
+.container {
+  @apply flex flex-col flex-1;
+}
+
+.header {
+  @apply w-full flex flex-col items-center bg-white shadow-sm;
+}
+.header .header-content {
+  @apply flex items-center w-full h-14 px-4 bg-white border-b border-gray-300 ;
+}
+.header .header-content .page-title {
+  @apply text-lg font-semibold;
+}
+.header .header-content .logout-button {
+  @apply ml-auto text-sm cursor-pointer;
+}
+
+
+
+.main {
+  @apply flex-1 p-4 md:p-6 overflow-auto;
+}
+.main .contents {
+  @apply w-full max-w-7xl mx-auto;
+}
+
+
+
+/* 대시보드 그리드가 .dashboard-card .line-graph .rolling-banner 의 위치를 변경함 */
+.dashboard-cards-container {
+  @apply grid grid-cols-3 gap-4 [&>.dashboard-card]:col-span-3 [&>.line-graph]:col-span-2 [&>.rolling-banner]:row-start-3  [&>.rolling-banner]:col-start-3 [&>.rolling-banner]:row-span-2;
+}
+
+
+
+
+.dashboard-card {
+  @apply p-6 rounded-2xl bg-white transition-all;
+}
+
+
+
+
+
+.line-graph {
+  @apply p-6 rounded-2xl bg-white transition-all;
+}
+
+
+
+
+/* 롤링배너 */
+.rolling-banner {
+  @apply rounded-xl bg-white shadow-xs p-6 overflow-hidden;
+}
+.rolling-banner-header {
+  @apply flex items-center gap-2 -mt-3 mb-2;
+}
+.rolling-banner-title {
+  @apply font-bold tracking-tight;
+}
+.rolling-banner .more-button {
+  @apply flex items-center ml-auto text-xs text-zinc-600 font-medium cursor-pointer tracking-tight;
+}
+.rolling-banner-container {
+  @apply relative overflow-hidden;
+}
+.rolling-banner-list {
+  @apply flex flex-col gap-4 transition-transform duration-700 ease-in-out;
+}
+
+
+
+
+
+.section {
+  @apply p-6 rounded-2xl bg-white transition-all;
+}

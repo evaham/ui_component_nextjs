@@ -1,8 +1,8 @@
 'use client';
 
-export default function DashboardCard4({ type }) {
+export default function DashboardCard4({ type, className }) {
   return (
-    <div className="p-6 rounded-2xl bg-white transition-all">
+    <div className={`p-6 rounded-2xl bg-white transition-all ${className || ""}`}>
       {type === "sales" ? (
         <div className="flex items-center -mt-2 mb-2">
           <div className="flex items-center gap-2">

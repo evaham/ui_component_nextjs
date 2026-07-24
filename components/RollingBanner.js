@@ -18,7 +18,7 @@ const productData = [
   { id: 12, tag: '한정판', title: '딸기맛 시즌 스낵', desc1: '봄 시즌 한정 수량 운영 상품', desc2: '재고 소진 임박, 추가 발주 확인 필요' },
 ];
 
-export default function RollingBanner() {
+export default function RollingBanner({ className }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(true);
 
@@ -56,11 +56,11 @@ export default function RollingBanner() {
   const extendedData = [...productData, ...productData.slice(0, 5)];
 
   return (
-    <div className="rounded-xl bg-white shadow-xs p-6 overflow-hidden">
+    <div className={`${className || ""}`}>
       {/* 타이틀 헤더 */}
-      <div className="flex items-center gap-2 -mt-3 mb-2">
-        <h2 className="font-bold tracking-tight">주목 상품정보</h2>
-        <button className="flex items-center ml-auto text-xs text-zinc-600 font-medium cursor-pointer tracking-tight">
+      <div className="rolling-banner-header">
+        <h2 className="rolling-banner-title">주목 상품정보</h2>
+        <button className="more-button" onClick={() => alert('더보기 클릭')}>
           더보기
           <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#3e3e3e"><path d="M540-480 356-664l20-20 204 204-204 204-20-20 184-184Z"/></svg>
         </button>
@@ -68,11 +68,11 @@ export default function RollingBanner() {
 
       {/* 롤링 컨테이너 (5개 높이 고정) */}
       <div 
-        className="relative overflow-hidden"
+        className="rolling-banner-container"
         style={{ height: `${(itemHeight * displayCount) + (gap * (displayCount - 1))}px` }}
       >
         <ul 
-          className={`flex flex-col gap-4 ${isTransitioning ? 'transition-transform duration-700 ease-in-out' : ''}`}
+          className={`rolling-banner-list ${isTransitioning ? '' : ''}`}
           style={{ transform: `translateY(-${currentIndex * (itemHeight + gap)}px)` }}
         >
           {extendedData.map((item, index) => (
