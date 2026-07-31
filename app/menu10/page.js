@@ -52,7 +52,7 @@ export default function Menu10Page() {
 
 
   return (
-    <div className="flex flex-col flex-1 max-w-7xl justify-center">
+    <div className="contents-group">
       <div className="flex items-start gap-4">
         <div className="flex-1 flex flex-col gap-4 p-6 rounded-2xl bg-white">
           <SearchBar />

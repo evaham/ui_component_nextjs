@@ -76,18 +76,14 @@ export default function RollingBanner({ className }) {
           style={{ transform: `translateY(-${currentIndex * (itemHeight + gap)}px)` }}
         >
           {extendedData.map((item, index) => (
-            <li 
-              key={`${item.id}-${index}`} 
-              style={{ height: `${itemHeight}px` }}
-              className="flex flex-col justify-center"
-            >
-              <div className="flex items-center gap-2 mb-1">
-                <div className="px-1 py-0.5 rounded text-xs font-bold bg-blue-50 text-blue-700 whitespace-nowrap">
+            <li key={`${item.id}-${index}`} style={{ height: `${itemHeight}px` }}>
+              <div className="banner-item-header">
+                <div className="banner-item-tag">
                   {item.tag}
                 </div>
-                <span className="font-bold text-zinc-900 truncate">{item.title}</span>
+                <span className="banner-item-title">{item.title}</span>
               </div>
-              <div className="text-sm text-zinc-500 leading-tight">
+              <div className="banner-item-body">
                 <div className="truncate">{item.desc1}</div>
                 <div className="truncate">{item.desc2}</div>
               </div>

@@ -11,13 +11,13 @@ export default function LayoutShell({ children }) {
 
   // 로그인 경로일 경우 Header/Sidebar를 렌더하지 않고 children만 반환
   if (pathname && pathname.startsWith("/login")) {
-    return <div className="wrapper">{children}</div>;
+    return <div className="login-wrapper">{children}</div>;
   }
 
   return (
     <div className="wrapper">
       <Sidebar open={open} onClose={() => setOpen(false)} />
-      <div className="container">
+      <div className="container-wrapper">
         <Header onToggle={() => setOpen((v) => !v)} />
         <main className="main">{children}</main>
       </div>

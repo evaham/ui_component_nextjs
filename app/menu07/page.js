@@ -8,7 +8,7 @@ export default function Menu07Page() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   return (
-    <div className="flex flex-col flex-1 max-w-7xl justify-center">
+    <div className="contents-group">
       <div className="flex flex-col gap-4">
         {/* 매출속보 */}
         <DashboardCard4 type="today" />

@@ -5,7 +5,7 @@ import LineGraph from "@/components/LineGraph";
 
 export default function Home() {
   return (
-    <div className="contents">
+    <div className="contents-group">
       <div className="dashboard-cards-container
       ">
         {/* 매출속보 */}

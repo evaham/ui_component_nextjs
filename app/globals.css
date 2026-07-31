@@ -55,10 +55,12 @@ body {
 }
 
 /* 컨테이너 영역 오른쪽 */
-.container {
+.container-wrapper {
   @apply flex flex-col flex-1;
 }
-
+.max-windth-container {
+  @apply w-full max-w-7xl mx-auto;
+}
 .header {
   @apply w-full flex flex-col items-center bg-white shadow-sm;
 }
@@ -71,42 +73,65 @@ body {
 .header .header-content .logout-button {
   @apply ml-auto text-sm cursor-pointer;
 }
-
-
-
 .main {
-  @apply flex-1 p-4 md:p-6 overflow-auto;
+  @apply flex-1 p-4 md:p-6 overflow-hidden overflow-y-auto;
 }
-.main .contents {
-  @apply w-full max-w-7xl mx-auto;
+.main .contents-group {
+  @apply flex flex-col flex-1 w-7xl justify-center;
 }
 
 
-
-/* 대시보드 그리드가 .dashboard-card .line-graph .rolling-banner 의 위치를 변경함 */
+/* 대시보드의 .dashboard-card .line-graph .rolling-banner 의 위치를 변경함 */
 .dashboard-cards-container {
-  @apply grid grid-cols-3 gap-4 [&>.dashboard-card]:col-span-3 [&>.line-graph]:col-span-2 [&>.rolling-banner]:row-start-3  [&>.rolling-banner]:col-start-3 [&>.rolling-banner]:row-span-2;
+  @apply grid grid-cols-4 gap-4 [&>.dashboard-card]:col-span-4 [&>.line-graph]:col-span-3 [&>.rolling-banner]:row-start-3  [&>.rolling-banner]:col-start-4 [&>.rolling-banner]:row-span-2;
 }
-
-
-
-
-.dashboard-card {
+.card-pannel {
   @apply p-6 rounded-2xl bg-white transition-all;
 }
+.card-header {
+  @apply flex items-center -mt-2 mb-2;
+}
+.card-header .card-title {
+  @apply flex items-center gap-2 font-bold;
+}
+.card-header .card-more-button {
+  @apply flex items-center ml-4 text-xs text-zinc-600 font-medium cursor-pointer tracking-tight;
+}
+.cards-container {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4;
+}
 
 
-
-
-
+.store-data-container {
+  @apply relative flex flex-col gap-1 p-4 border border-zinc-200 rounded-2xl last:bg-zinc-50 last:border-none;
+}
+.store-data-label {
+  @apply text-sm font-medium tracking-tight;
+}
+.store-data-badge {
+  @apply flex gap-1 mb-2 text-sm font-bold bg-black/5 px-3 py-1 rounded-full self-start;
+}
+.store-data-emphasis {
+    @apply flex items-baseline gap-1 font-bold;
+}
+.store-data-stats {
+  @apply flex gap-1 mt-2 text-sm text-zinc-600;
+}
+.my-label {
+  @apply flex items-center text-sm font-bold mt-auto tracking-tight;
+}
+.main-data {
+  @apply  flex items-baseline gap-1 font-bold text-blue-700;
+}
+.sub-data {
+  @apply text-3xl tracking-tight;
+}
 .line-graph {
   @apply p-6 rounded-2xl bg-white transition-all;
 }
 
 
-
-
-/* 롤링배너 */
+/* 대시보드 롤링배너 */
 .rolling-banner {
   @apply rounded-xl bg-white shadow-xs p-6 overflow-hidden;
 }
@@ -125,11 +150,113 @@ body {
 .rolling-banner-list {
   @apply flex flex-col gap-4 transition-transform duration-700 ease-in-out;
 }
+.rolling-banner-list > li {
+  @apply flex flex-col justify-center;
+}
+.banner-item-header {
+  @apply flex items-center gap-2 mb-1;
+}
+.banner-item-tag {
+  @apply px-1 py-0.5 rounded text-xs font-bold bg-blue-50 text-blue-700 whitespace-nowrap;
+}
+.banner-item-title {
+  @apply font-bold text-zinc-900 truncate;
+}
+.banner-item-body {
+  @apply text-sm text-zinc-500 leading-tight;
+}
+
+
+/* 로그인 */
+.login-wrapper {}
+.login-container {
+  @apply flex flex-col items-center justify-center min-h-screen ;
+}
+.login-group {
+  @apply w-full max-w-md p-8 bg-white rounded-lg shadow-md;
+}
+.login-logo-box {
+  @apply flex items-center justify-center w-80 -mt-50 mb-6 mx-auto;
+}
+.login {
+  @apply bg-white rounded-2xl p-8;
+}
+/* 로그인 타입 선택창 */
+.login-type-selector {
+  @apply flex items-center justify-center gap-6 mb-6;
+}
+/* 로그인 라디오버튼 */
+.login-radio-group {
+  @apply flex items-center ;
+}
+.login-radio-group > input[type="radio"] {
+  @apply w-auto px-3 py-2 border border-zinc-400 rounded-md focus:outline-none;
+}
+.login-radio-group > label {
+  @apply block pl-1 text-center font-medium text-gray-700 cursor-pointer peer-checked:text-indigo-600;
+}
+/* 로그인 체크박스 */
+.login-checkbox-group {
+  @apply flex items-center gap-2;
+}
+.login-checkbox-group > input[type="checkbox"] {
+  @apply w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500;
+}
+.login-checkbox-group > label {
+  @apply block text-sm text-gray-700 cursor-pointer;
+}
 
 
 
+.login-hr {
+  @apply border-zinc-100;
+}
+
+/* 로그인 폼 */
+.login-form {
+  @apply space-y-4;
+}
+.form-group {
+  @apply flex items-center gap-2;
+}
+.form-group label {
+  @apply block w-13 text-sm font-medium text-gray-700 mb-1;
+}
+.form-group input[type="text"],
+.form-group input[type="password"] {
+  @apply w-auto px-3 py-2 border border-zinc-400 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+.form-group input[type="checkbox"] {
+  @apply w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500;
+}
+
+.form-button {
+  @apply flex w-20 items-center justify-center px-4 py-2 bg-[#26499d] text-white rounded-md hover:bg-[#1e3a8a] cursor-pointer;
+}
+.form-grid {
+  @apply  grid grid-cols-[1fr_auto] grid-rows-2 gap-2;
+}
+.form-grid .form-group:nth-child(2) {
+  @apply row-start-2;
+}
+.form-grid .form-button {
+  @apply row-span-2;
+}
+.login-message {
+  @apply  ml-15 mt-3 text-red-500 text-sm;
+}
 
 
-.section {
-  @apply p-6 rounded-2xl bg-white transition-all;
+/* 상품경쟁력분석 */
+.product-container {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4;
+}
+.product-group {
+  @apply flex-1 flex flex-col gap-1 px-6;
+}
+.product-header {
+  @apply flex items-center gap-2 mb-1;
+}
+.product-tag {
+  @apply relative mr-auto px-2 py-0.5 rounded text-sm font-bold;
 }

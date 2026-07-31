@@ -33,15 +33,13 @@ export default function Menu01Page() {
   ];
 
   return (
-    <div className="flex flex-col flex-1 max-w-7xl justify-center">
+    <div className="contents-group">
       <div className="flex flex-col gap-4">
-        <div className="flex flex-col gap-3 p-6 bg-white rounded-2xl">
-          <div className="flex -mx-6 divide-x divide-zinc-200">
-            <div className="flex-1 flex flex-col gap-1 px-6">
-              <div className="flex items-center gap-2">
-                <div className="relative mr-auto px-2 py-0.5 rounded bg-green-100 text-sm text-green-700 font-bold">
-                  A. 유지
-                </div>
+        <div className="card-pannel">
+          <div className="product-container">
+            <div className="product-group">
+              <div className="product-header">
+                <div className="product-tag bg-green-100 text-green-700">A. 유지</div>
                 <div>
                   <span className="text-3xl font-bold text-blue-800">3,187</span>개
                 </div>
@@ -51,11 +49,9 @@ export default function Menu01Page() {
                 <span className="opacity-70">판매량이 전국 평균과 비슷한 상품입니다. 판매 전략을 유지하세요.</span>
               </div>
             </div>
-            <div className="flex-1 flex flex-col gap-1 px-6">
-              <div className="flex items-center gap-2">
-                <div className="relative mr-auto px-2 py-0.5 rounded bg-red-100 text-sm text-red-700 font-bold">
-                  B. 점검필요
-                </div>
+            <div className="product-group">
+              <div className="product-header">
+                <div className="product-tag bg-red-100 text-red-700">B. 점검필요</div>
                 <div>
                   <span className="text-4xl font-bold text-blue-800">32</span>개
                 </div>
@@ -65,9 +61,9 @@ export default function Menu01Page() {
                 <span className="opacity-80">전국 평균 대비 판매량이 낮은 상품입니다. 가격을 조정이 필요합니다.</span>
               </div>
             </div>
-            <div className="flex-1 flex flex-col gap-1 px-6">
-              <div className="flex items-center gap-2">
-                <div className="mr-auto px-2 py-0.5 rounded bg-blue-100 text-sm text-blue-700 font-bold">C. 강점확인</div>
+            <div className="product-group">
+              <div className="product-header">
+                <div className="product-tag bg-blue-100 text-blue-700">C. 강점확인</div>
                 <div>
                   <span className="text-4xl font-bold text-blue-800">13</span>개
                 </div>
@@ -77,9 +73,9 @@ export default function Menu01Page() {
                 <span className="opacity-80 font-light tracking-tight">전국 평균 대비 판매량이 높은 상품입니다. 판매 전략을 강화하세요.</span>
               </div>
             </div>
-            <div className="flex-1 flex flex-col gap-1 px-6">
-              <div className="flex items-center gap-2">
-                <div className="mr-auto px-2 py-0.5 rounded bg-zinc-100 text-sm text-zinc-700 font-bold">D. 교체검토</div>
+            <div className="product-group">
+              <div className="product-header">
+                <div className="product-tag bg-zinc-100 text-zinc-700">D. 교체검토</div>
                 <div>
                   <span className="text-4xl font-bold text-blue-800">3</span>개
                 </div>
@@ -166,8 +162,6 @@ export default function Menu01Page() {
         </div>
       </div>
       <LayerPopup01 isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} title="상품 가격비교" />
-
-
     </div>
   );
 }

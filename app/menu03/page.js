@@ -36,7 +36,7 @@ export default function Menu03Page() {
   ];
 
   return (
-    <div className="flex flex-col flex-1 max-w-7xl justify-center">
+    <div className="contents-group">
       <main className="flex items-start gap-6">
         <div className="flex-1 flex flex-col gap-4 p-6 rounded-2xl bg-white shadow-xs transition-all">
           <SearchBar

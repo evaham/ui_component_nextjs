@@ -11,7 +11,7 @@ export default function Menu11Page() {
   ];
 
   return (
-    <div className="flex flex-col flex-1 max-w-7xl justify-center">
+    <div className="contents-group">
       <div className="flex flex-col gap-4">
         <DashboardCard4 type="" />
 
