@@ -28,21 +28,21 @@ export default function LayerPopup01({ isOpen, onClose }) {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-      <div className="fixed inset-0 bg-black/50 transition-opacity" onClick={onClose}></div>
-      <div className="relative bg-white rounded-xl shadow-2xl transform transition-all overflow-hidden flex flex-col">
-        <div className="flex items-center justify-between px-6 py-3 border-b border-gray-100">
-          <h3 className="text-lg font-bold text-gray-900">
+    <div className="layer-popup-wrapper">
+      <div className="layer-popup-backdrop" onClick={onClose}></div>
+      <div className="layer-popup-card">
+        <div className="layer-popup-header">
+          <h3 className="layer-popup-title">
             상품 가격비교
           </h3>
-          <button onClick={onClose} className="text-gray-400 hover:text-gray-600 transition-colors p-1 cursor-pointer" aria-label="닫기">
+          <button onClick={onClose} className="layer-popup-close" aria-label="닫기">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
 
-        <div className="px-6 py-6 overflow-y-auto max-h-[70vh]">
+        <div className="layer-popup-body">
           {/* 레이어팝업 */}
           <div className="w-6xl space-y-4">
             <div>
@@ -125,21 +125,21 @@ export default function LayerPopup01({ isOpen, onClose }) {
               <LineGraph />
               <LineGraph />
             </div>
-            <div className="-mx-6 border-y border-zinc-100">
-              <table className="table-fixed w-full border-collapse bg-white text-sm overflow-hidden">
+            <div className="table-container">
+              <table className="table-data">
                 <colgroup>
 
                 </colgroup>
-                <thead className="border-b border-zinc-200 text-white bg-[#4A5B6D]">
+                <thead>
                   <tr>
-                    <th className="p-2 text-center font-normal">No.</th>
-                    <th className="p-2 text-left font-normal">지역</th>
-                    <th className="p-2 text-left font-normal">규모</th>
-                    <th className="p-2 text-left font-normal">점포명</th>
-                    <th className="p-2 text-right font-normal">상품판매가</th>
-                    <th className="p-2 text-right font-normal">상품이익율</th>
-                    <th className="p-2 text-right font-normal">등록일</th>
-                    <th className="p-2 pr-6 text-right font-normal">판매가변경</th>
+                    <th className="text-center">No.</th>
+                    <th className="text-left">지역</th>
+                    <th className="text-left">규모</th>
+                    <th className="text-left">점포명</th>
+                    <th className="text-right">상품판매가</th>
+                    <th className="text-right">상품이익율</th>
+                    <th className="text-right">등록일</th>
+                    <th className="pr-6! text-right">판매가변경</th>
                   </tr>
                 </thead>
                 <DataTableList rows={rows} rowKey="id" />

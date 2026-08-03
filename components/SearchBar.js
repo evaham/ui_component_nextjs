@@ -51,10 +51,7 @@ export default function SearchBar({
     }
 
     return (
-      <select
-        key={`${filter.label}-${idx}`}
-        className="min-w-30 px-2 py-1 border rounded border-zinc-300 bg-white"
-      >
+      <select key={`${filter.label}-${idx}`} className="select-item">
         {filter.options.map((option, optionIdx) => (
           <option key={`${filter.label}-${optionIdx}`} value={option.value ?? ''}>
             {option.label}
@@ -65,43 +62,38 @@ export default function SearchBar({
   };
 
   return (
-    <div className="flex flex-col gap-1 border-zinc-200 text-sm text-midium">
+    <div className="search-group">
       {searchFilters.length > 0 && (
-        <div className="flex flex-wrap gap-1 items-center">
+        <div>
           <div>{searchGroupLabel1}</div>
           {searchFilters.map(renderSelect)}
-          <input
-            type="text"
-            placeholder={placeholder}
-            className="min-w-30 px-2 py-1 border rounded border-zinc-300 bg-white"
-          />
-          <button className="px-4 py-1 bg-[#26499d] text-white rounded hover:bg-[#26499d] transition-colors cursor-pointer">
+          <input type="text" placeholder={placeholder} className="search-input-text" />
+          <button className="search-btn">
             {buttonLabel}
           </button>
         </div>
       )}
 
       {centerFilters.length > 0 && (
-        <div className="flex flex-wrap gap-1 items-center">
+        <div>
           <div>{searchGroupLabel2}</div>
           {centerFilters.map(renderSelect)}
         </div>
       )}
-
+      {/* 지역선택 */}
       {locationFilter.length > 0 && (
-        <div className="flex mt-2 gap-x-3">
-          <div className="">지역선택</div>
-          <div className="flex flex-wrap gap-x-2 max-w-130">
+        <div className="items-start!">
+          <div className="mr-3">지역선택</div>
+          <div className="checkbox-group">
             {locationFilter.map((location) => (
-              <div key={location.id} className="flex items-center mr-2">
+              <div key={location.id} className="checkbox-item">
                 <input
                   type="checkbox"
                   id={location.id}
                   name="locationFilter"
                   value={location.value}
-                  className="cursor-pointer"
                 />
-                <label htmlFor={location.id} className="ml-1 cursor-pointer">
+                <label htmlFor={location.id}>
                   {location.label}
                 </label>
               </div>

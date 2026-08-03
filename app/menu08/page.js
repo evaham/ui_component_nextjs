@@ -43,8 +43,8 @@ export default function Menu08Page() {
 
   return (
     <div className="contents-group">
-      <div className="flex items-start gap-4">
-        <div className="flex-1 flex flex-col gap-4 p-6 rounded-2xl bg-white shadow-xs transition-all">
+      <div className="contents-col">
+        <div className="card-panel">
           <SearchTab tabs={[
             '분류별',
             '공급사별',
@@ -65,18 +65,18 @@ export default function Menu08Page() {
                 <col style={{ width: '120px' }} />
                 <col style={{ width: '150px' }} />
               </colgroup>
-              <thead className="sticky top-0 z-10 border-b border-zinc-200 text-white bg-[#4A5B6D]">
+              <thead>
                 <tr>
-                  <th className="p-2 text-center font-normal">No.</th>
-                  <th className="p-2 text-left font-normal">바코드</th>
-                  <th className="p-2 text-left font-normal">상품명</th>
-                  <th className="p-2 text-right font-normal">취급점</th>
-                  <th className="p-2 text-right font-normal">평균매입가</th>
-                  <th className="p-2 text-right font-normal">우리매입가</th>
-                  <th className="p-2 text-right font-normal">평균판매가</th>
-                  <th className="p-2 text-right font-normal">우리판매가</th>
-                  <th className="p-2 text-right font-normal">최종매입</th>
-                  <th className="p-2 pr-6 text-right font-normal">판매가변경</th>
+                  <th className="text-center">No.</th>
+                  <th className="text-left">바코드</th>
+                  <th className="text-left">상품명</th>
+                  <th className="text-right">취급점</th>
+                  <th className="text-right">평균매입가</th>
+                  <th className="text-right">우리매입가</th>
+                  <th className="text-right">평균판매가</th>
+                  <th className="text-right">우리판매가</th>
+                  <th className="text-right">최종매입</th>
+                  <th className="pr-6! text-right">판매가변경</th>
                 </tr>
               </thead>
               <DataTableList rows={rows} rowKey="id" />

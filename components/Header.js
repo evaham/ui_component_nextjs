@@ -22,8 +22,8 @@ export default function Header({ onToggle }) {
     const pathname = usePathname();
     const title = pageTitles[pathname] ?? "알림판";
   return (
-    <header className="w-full flex flex-col items-center bg-white shadow-sm">
-      <div className="flex items-center w-full h-14 px-4 bg-white border-b border-gray-300 ">
+    <header className="header">
+      <div className="header-content">
         {/* <button
           onClick={onToggle}
           className="md:hidden mr-3 px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800"
@@ -32,8 +32,8 @@ export default function Header({ onToggle }) {
           <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#333333"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
         </button> */}
         
-        <div className="text-lg font-semibold">{title}</div>
-        <Link href="/login" className="ml-auto text-sm">로그아웃</Link>
+        <div className="header-title">{title}</div>
+        <Link href="/login" className="logout-button">로그아웃</Link>
       </div>
       
       {/* 모바일에서만 보이는 헤더 */}

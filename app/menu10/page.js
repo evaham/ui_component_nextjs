@@ -53,11 +53,11 @@ export default function Menu10Page() {
 
   return (
     <div className="contents-group">
-      <div className="flex items-start gap-4">
-        <div className="flex-1 flex flex-col gap-4 p-6 rounded-2xl bg-white">
+      <div className="contents-col">
+        <div className="card-panel">
           <SearchBar />
-          <div className="flex -mx-3">
-            <table className="table-fixed w-full border-collapse rounded-lg bg-slate-100 text-sm">
+          <div className="table-summary-container">
+            <table className="table-summary">
               <colgroup>
                 <col style={{ width: '5%' }} />
                 <col style={{ width: '5%' }} />
@@ -71,25 +71,25 @@ export default function Menu10Page() {
                 <col style={{ width: '10%' }} />
               </colgroup>
               <tbody>
-                <tr className="text-blue-800 border-b border-zinc-200">
-                  <td colSpan={4} className="p-2 font-bold">우리매장 매출(6/15)</td>
-                  <td className="py-2 text-right font-bold">83,478,810</td>
-                  <td className="py-2 text-right font-bold">2,485</td>
-                  <td className="py-2 text-right font-bold">33,593</td>
-                  <td className="py-2 text-right font-bold">3,450</td>
-                  <td className="py-2 text-right font-bold">13,321</td>
-                  <td className="p-2 text-right font-bold">123,123,123</td>
+                <tr>
+                  <td colSpan={4} className="p-2">우리매장 매출(6/15)</td>
+                  <td className="text-right">83,478,810</td>
+                  <td className="text-right">2,485</td>
+                  <td className="text-right">33,593</td>
+                  <td className="text-right">3,450</td>
+                  <td className="text-right">13,321</td>
+                  <td className="text-right">123,123,123</td>
                 </tr>
-                <tr className="text-blue-800">
-                  <td colSpan={2} className="p-2 text-left font-bold">전체</td>
-                  <td className="py-2 text-left font-bold">200평이하</td>
-                  <td className="py-2 text-left font-bold">평균(00개 매장)</td>
-                  <td className="py-2 text-right font-bold">65,805,200</td>
-                  <td className="py-2 text-right font-bold">2,895</td>
-                  <td className="py-2 text-right font-bold">22,731</td>
-                  <td className="py-2 text-right font-bold">60,580,200</td>
-                  <td className="py-2 text-right font-bold">2,689</td>
-                  <td className="p-2 text-right font-bold">22,529</td>
+                <tr>
+                  <td colSpan={2} className="text-left">전체</td>
+                  <td className="text-left">200평이하</td>
+                  <td className="text-left">평균(00개 매장)</td>
+                  <td className="text-right">65,805,200</td>
+                  <td className="text-right">2,895</td>
+                  <td className="text-right">22,731</td>
+                  <td className="text-right">60,580,200</td>
+                  <td className="text-right">2,689</td>
+                  <td className="text-right">22,529</td>
                 </tr> 
               </tbody>
             </table>
@@ -110,82 +110,36 @@ export default function Menu10Page() {
               </colgroup>
               <thead>
                 <tr>
-                  <th className="p-2 text-center font-normal">No.</th>
-                  <th className="p-2 text-left font-normal">지역</th>
-                  <th className="p-2 text-left font-normal">규모</th>
-                  <th className="p-2 text-left font-normal">점포명</th>
-                  <th className="p-2 text-right font-normal">매출액</th>
-                  <th className="p-2 text-right font-normal">객수</th>
-                  <th className="p-2 text-right font-normal">객단가</th>
-                  <th className="p-2 text-right font-normal">회원 매출액</th>
-                  <th className="p-2 text-right font-normal">회원 객수</th>
-                  <th className="p-2 pr-6 text-right font-normal">회원 객단가</th>
+                  <th className="text-center">No.</th>
+                  <th className="text-left">지역</th>
+                  <th className="text-left">규모</th>
+                  <th className="text-left">점포명</th>
+                  <th className="text-right">매출액</th>
+                  <th className="text-right">객수</th>
+                  <th className="text-right">객단가</th>
+                  <th className="text-right">회원 매출액</th>
+                  <th className="text-right">회원 객수</th>
+                  <th className="pr-6! text-right">회원 객단가</th>
                 </tr>
               </thead>
               <DataTableList rows={rows} rowKey="id" />
               <tfoot className="sum">
                 <tr>
-                  <td className="p-2 text-center font-bold"></td>
-                  <td className="p-2 text-left font-bold">전체</td>
-                  <td className="p-2 text-left font-bold">200평이하</td>
-                  <td className="p-2 text-left font-bold">평균(00개 매장)</td>
-                  <td className="p-2 text-right font-bold">65,805,200</td>
-                  <td className="p-2 text-right font-bold">2,895</td>
-                  <td className="p-2 text-right font-bold">22,731</td>
-                  <td className="p-2 text-right font-bold">60,580,200</td>
-                  <td className="p-2 text-right font-bold">2,689</td>
-                  <td className="p-2 pr-6 text-right font-bold">22,529</td>
+                  <td className="text-center"></td>
+                  <td className="text-left">전체</td>
+                  <td className="text-left">200평이하</td>
+                  <td className="text-left">평균(00개 매장)</td>
+                  <td className="text-right">65,805,200</td>
+                  <td className="text-right">2,895</td>
+                  <td className="text-right">22,731</td>
+                  <td className="text-right">60,580,200</td>
+                  <td className="text-right">2,689</td>
+                  <td className="pr-6! text-right">22,529</td>
                 </tr> 
               </tfoot>
             </table>
           </div>
         </div>
-        {/* 그래프 정보 */}
-        {/* <div className="sticky top-0 min-h-64 p-6 rounded-2xl bg-white transition-all">
-          <div className="flex flex-col justify-center font-semibold -mt-2 mb-2">
-            <span>대백마트</span>
-            <span className="text-sm font-medium text-gray-500">일별매출 내역</span>
-          </div>
-          <div className="w-80 flex flex-col gap-4 items-center justify-center text-xs text-gray-400">
-            <ComposedChart
-              responsive
-              className="w-full h-50"
-              data={data2}
-            >
-              <CartesianGrid stroke="#f5f5f5" />
-              <XAxis dataKey="name" />
-              <YAxis width="auto" />
-              <Tooltip />
-              <Legend />
-              <Line type="monotone" dataKey="취급매장" fill="#3b82f6" stroke="#93c5fd" />
-              <Bar dataKey="평균매출액" barSize={20} fill="#3b82f6" />
-            </ComposedChart>
-          </div>
-          <table className="w-full mt-2 border-collapse border border-gray-400 bg-white text-sm">
-            <thead>
-              <tr>
-                <th className="border border-gray-300 px-1 py-0.5 text-center font-normal bg-zinc-100">No</th>
-                <th className="border border-gray-300 px-1 py-0.5 text-center font-normal bg-zinc-100">날짜</th>
-                <th className="border border-gray-300 px-1 py-0.5 text-center font-normal bg-zinc-100">매출액</th>
-                <th className="border border-gray-300 px-1 py-0.5 text-center font-normal bg-zinc-100">증감</th>
-                <th className="border border-gray-300 px-1 py-0.5 text-center font-normal bg-zinc-100">객수</th>
-                <th className="border border-gray-300 px-1 py-0.5 text-center font-normal bg-zinc-100">증감</th>
-              </tr>
-            </thead>
-            <tbody>
-              {data2.map((row, idx) => (
-                <tr key={idx}>
-                  <td className="border border-gray-300 px-1 py-0.5 text-center">{row.no}</td>
-                  <td className="border border-gray-300 px-1 py-0.5 text-center">{row.날짜}</td>
-                  <td className="border border-gray-300 px-1 py-0.5 text-right">{row.매출액}</td>
-                  <td className="border border-gray-300 px-1 py-0.5 text-right">{row.매출증감}</td>
-                  <td className="border border-gray-300 px-1 py-0.5 text-right">{row.객수}</td>
-                  <td className="border border-gray-300 px-1 py-0.5 text-right">{row.객수증감}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div> */}
       </div>
       <LayerPopup02 isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
     </div>

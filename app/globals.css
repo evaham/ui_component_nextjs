@@ -55,6 +55,21 @@ body {
   @apply bg-blue-100 hover:bg-blue-100 text-blue-900 font-semibold;
 }
 
+/* 헤더메뉴   */
+/* .header-wrapper {
+  @apply w-full flex flex-col items-center bg-white;
+}
+.header-wrapper .header-content {
+  @apply flex items-center w-full h-14 px-4 bg-white border-b border-gray-300;
+}
+.header-wrapper .header-title {
+  @apply text-lg font-semibold;
+}
+.header-wrapper .logout-button {
+  @apply ml-auto text-sm;
+} */
+
+
 /* 컨테이너 영역 오른쪽 */
 .container-wrapper {
   @apply flex flex-col flex-1;
@@ -63,7 +78,7 @@ body {
   @apply w-full max-w-7xl mx-auto;
 }
 .header {
-  @apply w-full flex flex-col items-center bg-white shadow-sm;
+  @apply w-full flex flex-col items-center bg-white;
 }
 .header .header-content {
   @apply flex items-center w-full h-14 px-4 bg-white border-b border-gray-300 ;
@@ -84,6 +99,13 @@ body {
 /* 대시보드의 .dashboard-card .line-graph .rolling-banner 의 위치를 변경함 */
 .dashboard-cards-container {
   @apply grid grid-cols-4 gap-4 [&>.dashboard-card]:col-span-4 [&>.line-graph]:col-span-3 [&>.rolling-banner]:row-start-3  [&>.rolling-banner]:col-start-4 [&>.rolling-banner]:row-span-2;
+}
+
+.contents-col {
+  @apply flex flex-col gap-4;
+}
+.contents-row {
+  @apply flex flex-row gap-4 items-start;
 }
 
 /* 공통카드 패널 */
@@ -108,17 +130,40 @@ body {
   @apply sticky top-0 min-w-72 min-h-64 p-6 rounded-2xl bg-white transition-all;
 }
 .side-card-header {
-  @apply flex items-center gap-2 border-b border-zinc-300 mb-4;
+  @apply flex flex-col justify-center;
 }
-.side-card-header .side-card-title {
-  @apply flex flex-col justify-center text-blue-800 font-semibold -mt-2 mb-2;
+.side-card-hr {
+  @apply my-4 border-b border-zinc-300;
 }
-.side-card-header .side-card-more-button {
-  @apply flex items-center ml-4 text-xs text-zinc-600 font-medium cursor-pointer tracking-tight;
+.side-card-title {
+  @apply flex flex-col justify-center font-semibold;
 }
+.side-card-text {
+  @apply text-sm font-medium text-gray-500;
+}
+
+
 .side-card-container {
-  @apply flex flex-col gap-4;
+  @apply flex flex-col gap-4 text-sm;
 }
+.side-card-chartbox {
+  @apply w-80 h-50 flex items-center justify-center text-xs text-gray-400;
+}
+
+/* 사이드 카드 테이블 */
+.side-card-table {
+  @apply w-full mt-2 border-collapse border border-gray-400 bg-white text-sm;
+}
+.side-card-table thead th {
+  @apply border border-gray-300 px-1 py-0.5 text-center font-normal bg-zinc-100;
+}
+.side-card-table tbody th {
+  @apply border border-gray-300 px-1 py-0.5 text-center font-normal bg-zinc-100;
+}
+.side-card-table tbody td {
+  @apply border border-gray-300 px-1 py-0.5 text-right;
+}
+
 
 .inner-card-panel {
   @apply flex-1 flex flex-col gap-1 border border-zinc-300 rounded-xl p-4;
@@ -142,9 +187,6 @@ body {
 .inner-card-panel-active {
   @apply flex-1 flex flex-col gap-1 border-2 border-blue-500 rounded-xl p-4;
 }
-
-
-
 .store-data-container {
   @apply relative flex flex-col gap-1 p-4 border border-zinc-200 rounded-2xl last:bg-zinc-50 last:border-none;
 }
@@ -306,6 +348,24 @@ body {
   @apply  mx-auto text-blue-800 underline;
 }
 
+
+.table-summary-container {
+  @apply flex -mx-3;
+}
+.table-summary {
+  @apply table-fixed w-full border-collapse rounded-lg bg-slate-100 text-sm;
+}
+.table-summary tbody td {
+  @apply border-b border-zinc-200 px-1 py-2 text-blue-800 font-normal bg-slate-100;
+}
+.table-summary tbody td:first-child {
+  @apply pl-3;
+}
+.table-summary tbody td:last-child {
+  @apply pr-3;
+}
+
+
 /* 공통 데이터 테이블 */
 .table-container {
   @apply min-h-100 -mx-6 border-y border-zinc-100 bg-black/1;
@@ -326,8 +386,68 @@ body {
 .table-data tbody td {
   @apply p-2;
 }
-.table-data tfoot.sum {
-  @apply border-b border-zinc-200 text-blue-800 bg-slate-200;
+.table-data tbody td:last-child {
+  @apply pr-6;
+}
+
+.table-data tfoot.sum td {
+  @apply p-2 border-b border-zinc-200 text-blue-800 font-bold bg-slate-200;
+}
+
+/* 검색영역 */
+.search-group {
+  @apply flex flex-col gap-2 border-zinc-200 text-sm font-medium;
+}
+.search-group > div {
+  @apply flex flex-wrap gap-1 items-center;
 }
 
 
+.search-input-text {
+  @apply min-w-30 px-2 py-1 border rounded border-zinc-300 bg-white;
+}
+.search-btn {
+  @apply px-4 py-1 bg-[#26499d] text-white rounded hover:bg-[#26499d] transition-colors cursor-pointer
+}
+
+
+.checkbox-group {
+  @apply flex flex-wrap gap-x-2 max-w-130;
+}
+.checkbox-item {
+  @apply flex items-center mr-2;
+}
+.checkbox-item input[type="checkbox"] {
+  @apply cursor-pointer;
+}
+.checkbox-item label {
+  @apply ml-1 cursor-pointer;
+}
+
+.select-item {
+  @apply min-w-30 px-2 py-1 border rounded border-zinc-300 bg-white;
+}
+
+
+/* 레이어팝업 */
+.layer-popup-wrapper {
+  @apply fixed inset-0 z-50 flex items-center justify-center p-4;
+}
+.layer-popup-backdrop {
+  @apply fixed inset-0 bg-black/50 transition-opacity;
+}
+.layer-popup-card {
+  @apply relative bg-white rounded-xl shadow-2xl transform transition-all overflow-hidden flex flex-col;
+}
+.layer-popup-header {
+  @apply flex items-center justify-between px-6 py-3 border-b border-gray-100;
+}
+.layer-popup-title {
+  @apply text-lg font-bold text-gray-900;
+}
+.layer-popup-close {
+  @apply text-gray-400 hover:text-gray-600 transition-colors p-1;
+}
+.layer-popup-body {
+  @apply px-6 py-6 overflow-y-auto max-h-[70vh];
+}

@@ -34,7 +34,7 @@ export default function Menu01Page() {
 
   return (
     <div className="contents-group">
-      <div className="flex flex-col gap-4">
+      <div className="contents-col">
         <div className="card-panel">
           <div className="product-container">
             <div className="product-group">
@@ -137,24 +137,24 @@ export default function Menu01Page() {
               </colgroup>
               <thead>
                 <tr>
-                  <th rowSpan="2" className="py-0.5 text-center">No.</th>
-                  <th rowSpan="2" className="py-0.5 text-left">바코드</th>
-                  <th rowSpan="2" className="py-0.5 text-left">상품명</th>
-                  <th rowSpan="2" className="py-0.5 text-right">취급점</th>
-                  <th colSpan="4" className="py-0.5 text-center">타매장 평균</th>
-                  <th colSpan="4" className="py-0.5 text-center">우리 매장</th>
-                  <th rowSpan="2" className="py-0.5 text-right">판매가비교</th>
-                  <th rowSpan="2" className="pr-6 py-0.5 text-right">판매량비교</th>
+                  <th rowSpan="2" className="py-0.5! text-center">No.</th>
+                  <th rowSpan="2" className="py-0.5! text-left">바코드</th>
+                  <th rowSpan="2" className="py-0.5! text-left">상품명</th>
+                  <th rowSpan="2" className="py-0.5! text-right">취급점</th>
+                  <th colSpan="4" className="py-0.5! text-center">타매장 평균</th>
+                  <th colSpan="4" className="py-0.5! text-center">우리 매장</th>
+                  <th rowSpan="2" className="py-0.5! text-right">판매가비교</th>
+                  <th rowSpan="2" className="pr-6! py-0.5! text-right">판매량비교</th>
                 </tr>
                 <tr>
-                  <th className="py-0.5 text-right">매입가</th>
-                  <th className="py-0.5 text-right">판매가</th>
-                  <th className="py-0.5 text-right">이익율</th>
-                  <th className="py-0.5 text-right">판매량</th>
-                  <th className="py-0.5 text-right">매입가</th>
-                  <th className="py-0.5 text-right">판매가</th>
-                  <th className="py-0.5 text-right">이익율</th>
-                  <th className="pr-6 py-0.5 text-right">판매량</th>
+                  <th className="py-0.5! text-right">매입가</th>
+                  <th className="py-0.5! text-right">판매가</th>
+                  <th className="py-0.5! text-right">이익율</th>
+                  <th className="py-0.5! text-right">판매량</th>
+                  <th className="py-0.5! text-right">매입가</th>
+                  <th className="py-0.5! text-right">판매가</th>
+                  <th className="py-0.5! text-right">이익율</th>
+                  <th className="py-0.5! text-right">판매량</th>
                 </tr>
               </thead>
               <DataTableList rows={rows} rowKey="id" />

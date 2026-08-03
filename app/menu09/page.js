@@ -9,8 +9,8 @@ export default function Menu09Page() {
 
   return (
     <div className="contents-group">
-      <div className="flex items-start gap-4">
-        <div className="flex-1 flex flex-col gap-4 p-6 rounded-2xl bg-white">
+      <div className="contents-col">
+        <div className="card-panel">
           <SearchBar />
           <div className="table-container">
             <table className="table-data">
@@ -21,15 +21,15 @@ export default function Menu09Page() {
               </colgroup>
               <thead>
                 <tr>
-                  <th className="p-2 text-center font-normal">No.</th>
-                  <th className="p-2 text-left font-normal">바코드</th>
-                  <th className="p-2 text-left font-normal">상품명</th>
-                  <th className="p-2 text-right font-normal">취급점</th>
-                  <th className="p-2 text-right font-normal">평균 매입가</th>
-                  <th className="p-2 text-right font-normal">평균 판매가</th>
-                  <th className="p-2 text-right font-normal">평균 판매량</th>
-                  <th className="p-2 text-right font-normal">평균 판매액</th>
-                  <th className="p-2 pr-6 text-right font-normal">등록일</th>
+                  <th className="text-center">No.</th>
+                  <th className="text-left">바코드</th>
+                  <th className="text-left">상품명</th>
+                  <th className="text-right">취급점</th>
+                  <th className="text-right">평균 매입가</th>
+                  <th className="text-right">평균 판매가</th>
+                  <th className="text-right">평균 판매량</th>
+                  <th className="text-right">평균 판매액</th>
+                  <th className="pr-6! text-right">등록일</th>
                 </tr>
               </thead>
               <DataTableList rows={rows} rowKey="id" />

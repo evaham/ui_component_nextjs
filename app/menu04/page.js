@@ -42,8 +42,8 @@ export default function Menu04Page() {
 
   return (
     <div className="contents-group">
-      <div className="flex items-start gap-4">
-        <div className="flex-1 flex flex-col gap-4 p-6 rounded-2xl bg-white">
+      <div className="contents-row">
+        <div className="card-panel flex-1">
           <SearchBar
             searchFilters={[
               { label: '지역', options: [{ value: '', label: '전체' }, { value: 'seoul', label: '서울' }, { value: 'busan', label: '부산' }] },
@@ -67,16 +67,16 @@ export default function Menu04Page() {
                 <col style={{ width: '90px' }} />
                 <col style={{ width: '90px' }} />
               </colgroup>
-              <thead className="sticky top-0 z-10 border-b border-zinc-200 text-white bg-[#4A5B6D]">
+              <thead>
                 <tr>
-                  <th className="p-2 text-center">No.</th>
-                  <th className="p-2 text-left">바코드</th>
-                  <th className="p-2 text-left">상품명</th>
-                  <th className="p-2 text-left">품목포지션</th>
-                  <th className="p-2 text-right">평균매입가</th>
-                  <th className="p-2 text-right">우리매입량</th>
-                  <th className="p-2 text-right">우리매입가</th>
-                  <th className="p-2 pr-6 text-right">차액율</th>
+                  <th className="text-center">No.</th>
+                  <th className="text-left">바코드</th>
+                  <th className="text-left">상품명</th>
+                  <th className="text-left">품목포지션</th>
+                  <th className="text-right">평균매입가</th>
+                  <th className="text-right">우리매입량</th>
+                  <th className="text-right">우리매입가</th>
+                  <th className="pr-6! text-right">차액율</th>
                 </tr>
               </thead>
               <DataTableList rows={rows} rowKey="id" />
@@ -84,12 +84,13 @@ export default function Menu04Page() {
           </div>
         </div>
         {/* 그래프 정보 */}
-        <div className="sticky top-0 min-w-72 min-h-64 p-6 rounded-2xl bg-white transition-all">
-          <div className="flex flex-col justify-center font-semibold -mt-2 mb-2">
-            <span>농심바나나킥</span>
-            <span className="text-sm font-medium text-gray-500">6개월 매입단가 추이</span>
+        <div className="side-card-panel">
+          <div className="side-card-header">
+            <span className="side-card-title">농심바나나킥</span>
+            <span className="side-card-text">6개월 매입단가 추이</span>
           </div>
-          <div className="w-80 h-50 flex items-center justify-center text-xs text-gray-400">
+          <hr className="side-card-hr" />
+          <div className="side-card-chartbox">
             <ResponsiveContainer>
               <LineChart data={data2}>
                 <CartesianGrid strokeDasharray="3 3" />

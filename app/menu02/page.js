@@ -25,7 +25,7 @@ export default function Menu02Page() {
 
   return (
     <div className="contents-group">
-      <div className="flex items-start gap-4">
+      <div className="contents-row">
         <div className="card-panel">
           <SearchBar
             searchFilters={[
@@ -55,7 +55,7 @@ export default function Menu02Page() {
                   <th className="text-left">품목포지션</th>
                   <th className="text-right">평균 판매가</th>
                   <th className="text-right">우리 판매가</th>
-                  <th className="pr-6 text-right">판매가 비교</th>
+                  <th className="pr-6! text-right">판매가 비교</th>
                 </tr>
               </thead>
               <DataTableList rows={rows} rowKey="id" />
@@ -65,9 +65,9 @@ export default function Menu02Page() {
         {/* 선택상품 정보 */}
         <div className="side-card-panel">
           <div className="side-card-header">
-            <div className="side-card-title">신라면 블랙</div>
+            <div className="side-card-title text-blue-800">신라면 블랙</div>
           </div>
-          
+          <hr className="side-card-hr" />
           <div className="side-card-container">
             <div className="inner-card-panel">
               <div className="inner-card-title">현 단가 유지</div>
