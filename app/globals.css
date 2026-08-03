@@ -13,6 +13,7 @@
   --font-pretendard: var(--font-pretendard);
 } */
 
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -24,7 +25,7 @@ body {
   /* 다크모드 취소 */
   /* background: var(--background);
   color: var(--foreground); */
-  font-family: var(--font-pretendard), Arial, Helvetica, sans-serif;
+  font-family: var(--font-pretendard-gov), Arial, Helvetica, sans-serif;
 }
 
 html {
@@ -80,13 +81,14 @@ body {
   @apply flex flex-col flex-1 w-7xl justify-center;
 }
 
-
 /* 대시보드의 .dashboard-card .line-graph .rolling-banner 의 위치를 변경함 */
 .dashboard-cards-container {
   @apply grid grid-cols-4 gap-4 [&>.dashboard-card]:col-span-4 [&>.line-graph]:col-span-3 [&>.rolling-banner]:row-start-3  [&>.rolling-banner]:col-start-4 [&>.rolling-banner]:row-span-2;
 }
-.card-pannel {
-  @apply p-6 rounded-2xl bg-white transition-all;
+
+/* 공통카드 패널 */
+.card-panel {
+  @apply flex flex-col gap-2 p-6 rounded-2xl bg-white transition-all;
 }
 .card-header {
   @apply flex items-center -mt-2 mb-2;
@@ -100,6 +102,47 @@ body {
 .cards-container {
   @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4;
 }
+
+
+.side-card-panel {
+  @apply sticky top-0 min-w-72 min-h-64 p-6 rounded-2xl bg-white transition-all;
+}
+.side-card-header {
+  @apply flex items-center gap-2 border-b border-zinc-300 mb-4;
+}
+.side-card-header .side-card-title {
+  @apply flex flex-col justify-center text-blue-800 font-semibold -mt-2 mb-2;
+}
+.side-card-header .side-card-more-button {
+  @apply flex items-center ml-4 text-xs text-zinc-600 font-medium cursor-pointer tracking-tight;
+}
+.side-card-container {
+  @apply flex flex-col gap-4;
+}
+
+.inner-card-panel {
+  @apply flex-1 flex flex-col gap-1 border border-zinc-300 rounded-xl p-4;
+}
+.inner-card-header {
+  @apply flex items-center gap-2 mb-1;
+}
+.inner-card-title {
+  @apply text-sm;
+}
+.inner-card-more-button {
+  @apply flex items-center ml-4 text-xs text-zinc-600 font-medium cursor-pointer tracking-tight;
+}
+.inner-card-container {
+  @apply text-sm;
+}
+.inner-card-container dl {
+  @apply flex gap-1 justify-between;
+}
+
+.inner-card-panel-active {
+  @apply flex-1 flex flex-col gap-1 border-2 border-blue-500 rounded-xl p-4;
+}
+
 
 
 .store-data-container {
@@ -129,7 +172,6 @@ body {
 .line-graph {
   @apply p-6 rounded-2xl bg-white transition-all;
 }
-
 
 /* 대시보드 롤링배너 */
 .rolling-banner {
@@ -165,7 +207,6 @@ body {
 .banner-item-body {
   @apply text-sm text-zinc-500 leading-tight;
 }
-
 
 /* 로그인 */
 .login-wrapper {}
@@ -205,9 +246,6 @@ body {
 .login-checkbox-group > label {
   @apply block text-sm text-gray-700 cursor-pointer;
 }
-
-
-
 .login-hr {
   @apply border-zinc-100;
 }
@@ -229,7 +267,6 @@ body {
 .form-group input[type="checkbox"] {
   @apply w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500;
 }
-
 .form-button {
   @apply flex w-20 items-center justify-center px-4 py-2 bg-[#26499d] text-white rounded-md hover:bg-[#1e3a8a] cursor-pointer;
 }
@@ -246,10 +283,9 @@ body {
   @apply  ml-15 mt-3 text-red-500 text-sm;
 }
 
-
 /* 상품경쟁력분석 */
 .product-container {
-  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4;
+  @apply grid grid-cols-1 -mx-6 md:grid-cols-2 lg:grid-cols-5 divide-x divide-zinc-300;
 }
 .product-group {
   @apply flex-1 flex flex-col gap-1 px-6;
@@ -257,6 +293,41 @@ body {
 .product-header {
   @apply flex items-center gap-2 mb-1;
 }
+.product-body {
+  @apply flex flex-col gap-2 text-sm;
+}
 .product-tag {
   @apply relative mr-auto px-2 py-0.5 rounded text-sm font-bold;
 }
+.product-emphasis {
+  @apply text-3xl font-bold text-blue-800;
+}
+.product-link {
+  @apply  mx-auto text-blue-800 underline;
+}
+
+/* 공통 데이터 테이블 */
+.table-container {
+  @apply min-h-100 -mx-6 border-y border-zinc-100 bg-black/1;
+}
+.table-data {
+  @apply table-fixed w-full border-collapse bg-white text-sm overflow-hidden;
+}
+.table-data thead {
+  @apply border-b border-zinc-200 text-white bg-[#4A5B6D];
+}
+.table-data tbody {
+  @apply divide-y divide-zinc-100;
+}
+.table-data thead th {
+  @apply p-2 font-normal;
+}
+
+.table-data tbody td {
+  @apply p-2;
+}
+.table-data tfoot.sum {
+  @apply border-b border-zinc-200 text-blue-800 bg-slate-200;
+}
+
+

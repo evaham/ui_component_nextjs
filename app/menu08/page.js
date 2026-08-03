@@ -58,8 +58,8 @@ export default function Menu08Page() {
             차트영역
           </div>
 
-          <div className="min-h-100 -mx-6 border-y border-zinc-100 bg-black/1">
-            <table className="table-fixed w-full border-collapse bg-white text-sm">
+          <div className="table-container">
+            <table className="table-data">
               <colgroup>
                 <col style={{ width: '40px' }} />
                 <col style={{ width: '120px' }} />

@@ -32,8 +32,8 @@ export default function Menu05Page() {
             placeholder="바코드, 상품명"
             buttonLabel="조회"
           />
-          <div className="min-h-100 -mx-6 border-y border-zinc-100 bg-black/1">
-            <table className="table-fixed w-full border-collapse bg-white text-sm">
+          <div className="table-container">
+            <table className="table-data">
               <colgroup>
                 <col style={{ width: '5%' }} />
                 <col style={{ width: '15%' }} />
@@ -97,7 +97,7 @@ export default function Menu05Page() {
                 ))}
               </tr>
               <tr>
-                  <th className="border border-gray-300 px-1 py-0.5 text-center font-normal bg-zinc-100">매출액</th>
+                <th className="border border-gray-300 px-1 py-0.5 text-center font-normal bg-zinc-100">매출액</th>
                 {data2.map((row, idx) => (
                   <td key={idx} className="border border-gray-300 px-1 py-0.5 text-right">{row.평균매출액}</td>
                 ))}

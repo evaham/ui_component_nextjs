@@ -94,8 +94,8 @@ export default function Menu10Page() {
               </tbody>
             </table>
           </div>
-          <div className="min-h-100 -mx-6 border-y border-zinc-100 bg-black/1">
-            <table className="table-fixed w-full border-collapse bg-white text-sm">
+          <div className="table-container">
+            <table className="table-data">
               <colgroup>
                 <col style={{ width: '5%' }} />
                 <col style={{ width: '5%' }} />
@@ -108,7 +108,7 @@ export default function Menu10Page() {
                 <col style={{ width: '10%' }} />
                 <col style={{ width: '10%' }} />
               </colgroup>
-              <thead className="border-b border-zinc-200 text-white bg-[#4A5B6D]">
+              <thead>
                 <tr>
                   <th className="p-2 text-center font-normal">No.</th>
                   <th className="p-2 text-left font-normal">지역</th>
@@ -123,7 +123,7 @@ export default function Menu10Page() {
                 </tr>
               </thead>
               <DataTableList rows={rows} rowKey="id" />
-              <tfoot className="sticky top-0 z-10 border-b border-zinc-200 text-blue-800 bg-slate-200">
+              <tfoot className="sum">
                 <tr>
                   <td className="p-2 text-center font-bold"></td>
                   <td className="p-2 text-left font-bold">전체</td>

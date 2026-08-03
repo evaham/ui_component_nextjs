@@ -2,7 +2,7 @@
 
 export default function DashboardCard4({ type, className }) {
   return (
-    <div className={`card-pannel ${className || ""}`}>
+    <div className={`card-panel ${className || ""}`}>
       {type === "sales" ? (
         <div className="card-header">
           <div className="card-title">

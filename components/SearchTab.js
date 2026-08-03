@@ -13,16 +13,16 @@ export default function SearchTab({ tabs }) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div className="flex -mb-px border-b border-zinc-200">
+    <div className="tab-menu flex -mb-px -mx-6 px-6 border-b border-zinc-300">
       <div className="flex bg-zinc-100 rounded rounded-b-none">
         {tabLabels.map((label, idx) => {
           const isActive = idx === activeIndex;
           const isFirst = idx === 0;
           const isLast = idx === tabLabels.length - 1;
-          const baseClass = 'px-3 py-1.5 rounded rounded-b-none font-medium text-sm cursor-pointer';
+          const baseClass = '-mb-px px-3 py-1.5 rounded-tr rounded-tl font-medium text-sm cursor-pointer';
           const activeClass = isActive
-            ? 'bg-[#26499d] text-white hover:bg-[#26499d]'
-            : 'border-transparent text-zinc-700 hover:bg-[#26499d]/10 hover:text-zinc-900 hover:shadow-xs';
+            ? 'bg-white text-blue-700 border-t border-l border-r border-zinc-300'
+            : 'border-transparent text-zinc-500 hover:bg-zinc-200 hover:text-zinc-900 hover:shadow-xs';
           return (
             <button
               key={`${label}-${idx}`}

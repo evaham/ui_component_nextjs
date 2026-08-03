@@ -17,15 +17,15 @@ export default function Menu11Page() {
 
         <div className="flex flex-col gap-4 p-6 rounded-2xl bg-white">
           <SearchBar />
-          <div className="min-h-100 -mx-6 border-y border-zinc-100 bg-black/1">
-            <table className="table-fixed w-full border-collapse bg-white text-sm overflow-hidden">
+          <div className="table-container">
+            <table className="table-data">
               <colgroup>
                 <col style={{ width: '40px' }} />
                 <col style={{ width: '120px' }} />
                 <col style={{ width: '150px' }} />
                 <col style={{ width: '60px' }} />
               </colgroup>
-              <thead className="sticky top-0 z-10 border-b border-zinc-200 text-white bg-[#4A5B6D]">
+              <thead>
                 <tr>
                   <th className="p-2 text-center font-normal">No.</th>
                   <th className="p-2 text-left font-normal">지역</th>

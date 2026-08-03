@@ -55,8 +55,8 @@ export default function Menu04Page() {
             buttonLabel="조회"
           />
 
-          <div className="min-h-100 -mx-6 border-y border-zinc-100 bg-black/1">
-            <table className="table-fixed w-full border-collapse bg-white text-sm">
+          <div className="table-container">
+            <table className="table-data">
               <colgroup>
                 <col style={{ width: '40px' }} />
                 <col style={{ width: '120px' }} />
@@ -69,14 +69,14 @@ export default function Menu04Page() {
               </colgroup>
               <thead className="sticky top-0 z-10 border-b border-zinc-200 text-white bg-[#4A5B6D]">
                 <tr>
-                  <th className="p-2 text-center font-normal">No.</th>
-                  <th className="p-2 text-left font-normal">바코드</th>
-                  <th className="p-2 text-left font-normal">상품명</th>
-                  <th className="p-2 text-left font-normal">품목포지션</th>
-                  <th className="p-2 text-right font-normal">평균매입가</th>
-                  <th className="p-2 text-right font-normal">우리매입량</th>
-                  <th className="p-2 text-right font-normal">우리매입가</th>
-                  <th className="p-2 pr-6 text-right font-normal">차액율</th>
+                  <th className="p-2 text-center">No.</th>
+                  <th className="p-2 text-left">바코드</th>
+                  <th className="p-2 text-left">상품명</th>
+                  <th className="p-2 text-left">품목포지션</th>
+                  <th className="p-2 text-right">평균매입가</th>
+                  <th className="p-2 text-right">우리매입량</th>
+                  <th className="p-2 text-right">우리매입가</th>
+                  <th className="p-2 pr-6 text-right">차액율</th>
                 </tr>
               </thead>
               <DataTableList rows={rows} rowKey="id" />

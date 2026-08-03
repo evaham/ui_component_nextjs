@@ -53,8 +53,8 @@ export default function Menu03Page() {
             placeholder="바코드, 상품명"
             buttonLabel="조회"
           />
-          <div className="min-h-100 -mx-6 border-y border-zinc-100 bg-black/1">
-            <table className="table-fixed w-full border-collapse bg-white text-sm">
+          <div className="table-container">
+            <table className="table-data">
               <colgroup>
                 <col style={{ width: '40px' }} />
                 <col style={{ width: '120px' }} />
@@ -62,21 +62,21 @@ export default function Menu03Page() {
               </colgroup>
               <thead className="border-b border-zinc-200 text-white bg-[#4A5B6D]">
                 <tr>
-                  <th rowSpan="2" className="p-2 py-0.5 text-center font-normal">No.</th>
-                  <th rowSpan="2" className="p-2 py-0.5 text-left font-normal">바코드</th>
-                  <th rowSpan="2" className="p-2 py-0.5 text-left font-normal">상품명</th>
-                  <th colSpan="4" className="p-2 py-0.5 text-center font-normal bg-black/25">특매 적용/미적용 일평균 판매량</th>
-                  <th colSpan="4" className="p-2 py-0.5 text-center font-normal">우리 매장 판매량</th>
+                  <th rowSpan="2" className="p-2 py-0.5 text-center">No.</th>
+                  <th rowSpan="2" className="p-2 py-0.5 text-left">바코드</th>
+                  <th rowSpan="2" className="p-2 py-0.5 text-left">상품명</th>
+                  <th colSpan="4" className="p-2 py-0.5 text-center bg-black/25">특매 적용/미적용 일평균 판매량</th>
+                  <th colSpan="4" className="p-2 py-0.5 text-center">우리 매장 판매량</th>
                 </tr>
                 <tr>
-                  <th className="p-2 py-0.5 text-right font-normal bg-black/25">특매 매장수</th>
-                  <th className="p-2 py-0.5 text-right font-normal bg-black/25">미적용 시</th>
-                  <th className="p-2 py-0.5 text-right font-normal bg-black/25">적용 시</th>
-                  <th className="p-2 py-0.5 text-right font-normal bg-black/25">증가(%)</th>
-                  <th className="p-2 py-0.5 text-right font-normal">미적용 시</th>
-                  <th className="p-2 py-0.5 text-right font-normal">예상</th>
-                  <th className="p-2 py-0.5 text-right font-normal">적용 시</th>
-                  <th className="p-2 pr-6 py-0.5 text-right font-normal">증가(%)</th>
+                  <th className="p-2 py-0.5 text-right bg-black/25">특매 매장수</th>
+                  <th className="p-2 py-0.5 text-right bg-black/25">미적용 시</th>
+                  <th className="p-2 py-0.5 text-right bg-black/25">적용 시</th>
+                  <th className="p-2 py-0.5 text-right bg-black/25">증가(%)</th>
+                  <th className="p-2 py-0.5 text-right">미적용 시</th>
+                  <th className="p-2 py-0.5 text-right">예상</th>
+                  <th className="p-2 py-0.5 text-right">적용 시</th>
+                  <th className="p-2 pr-6 py-0.5 text-right">증가(%)</th>
                 </tr>
               </thead>
               <DataTableList rows={rows} rowKey="id" />

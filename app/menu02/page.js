@@ -26,7 +26,7 @@ export default function Menu02Page() {
   return (
     <div className="contents-group">
       <div className="flex items-start gap-4">
-        <div className="flex-1 flex flex-col gap-4 p-6 rounded-2xl bg-white shadow-xs transition-all">
+        <div className="card-panel">
           <SearchBar
             searchFilters={[
               { label: '품목', options: [{ value: '', label: '품목포지션' }] },
@@ -40,22 +40,22 @@ export default function Menu02Page() {
             placeholder="바코드, 상품명"
             buttonLabel="검색"
           />
-          <div className="min-h-100 -mx-6 border-y border-zinc-100 bg-black/1">
-            <table className="table-fixed w-full border-collapse bg-white text-sm">
+          <div className="table-container">
+            <table className="table-data">
               <colgroup>
                 <col style={{ width: '40px' }} />
                 <col style={{ width: '130px' }} />
                 <col style={{ width: '200px' }} />
               </colgroup>
-              <thead className="border-b border-zinc-200 text-white bg-[#4A5B6D]">
+              <thead>
                 <tr>
-                  <th className="p-2 text-center font-normal">No.</th>
-                  <th className="p-2 text-left font-normal">바코드</th>
-                  <th className="p-2 text-left font-normal">상품명</th>
-                  <th className="p-2 text-left font-normal">품목포지션</th>
-                  <th className="p-2 text-right font-normal">평균 판매가</th>
-                  <th className="p-2 text-right font-normal">우리 판매가</th>
-                  <th className="p-2 pr-6 text-right font-normal">판매가 비교</th>
+                  <th className="text-center">No.</th>
+                  <th className="text-left">바코드</th>
+                  <th className="text-left">상품명</th>
+                  <th className="text-left">품목포지션</th>
+                  <th className="text-right">평균 판매가</th>
+                  <th className="text-right">우리 판매가</th>
+                  <th className="pr-6 text-right">판매가 비교</th>
                 </tr>
               </thead>
               <DataTableList rows={rows} rowKey="id" />
@@ -63,65 +63,67 @@ export default function Menu02Page() {
           </div>
         </div>
         {/* 선택상품 정보 */}
-        <div className="sticky top-0 min-w-72 min-h-64 p-6 rounded-2xl bg-white transition-all">
-          <div className="flex flex-col justify-center text-blue-700 font-semibold -mt-2 mb-2">신라면 블랙</div>
-          <hr className="border-zinc-200 mb-4" />
-          <div className="flex flex-col gap-4">
-            <div className="flex-1 flex flex-col gap-1 border border-zinc-200 rounded-xl p-4">
-              <div className="text-sm">현 단가 유지</div>
+        <div className="side-card-panel">
+          <div className="side-card-header">
+            <div className="side-card-title">신라면 블랙</div>
+          </div>
+          
+          <div className="side-card-container">
+            <div className="inner-card-panel">
+              <div className="inner-card-title">현 단가 유지</div>
               <div>
                 <span className="text-3xl font-bold">2,800</span>원
               </div>
-              <div className="text-sm">
-                <dl className="flex gap-1 justify-between">
+              <div className="inner-card-container">
+                <dl>
                   <dt>이익율</dt>
                   <dd>28 %</dd>
                 </dl>
-                <dl className="flex gap-1 justify-between">
+                <dl>
                   <dt>예상 판매량</dt>
                   <dd>18 개</dd>
                 </dl>
-                <dl className="flex gap-1 justify-between">
+                <dl>
                   <dt>월 실현이익</dt>
                   <dd>12,100 원</dd>
                 </dl>
               </div>
             </div>
-            <div className="flex-1 flex flex-col gap-1 border-2 border-blue-500 rounded-xl p-4">
+            <div className="inner-card-panel-active">
               <div className="text-sm">추천</div>
               <div>
                 <span className="text-3xl text-blue-700 font-bold">2,500</span>원
               </div>
-              <div className="text-sm">
-                <dl className="flex gap-1 justify-between">
+              <div className="inner-card-container">
+                <dl>
                   <dt>이익율</dt>
                   <dd><span className="text-blue-700 font-bold">28</span> %</dd>
                 </dl>
-                <dl className="flex gap-1 justify-between">
+                <dl>
                   <dt>예상 판매량</dt>
                   <dd><span className="text-blue-700 font-bold">18</span> 개</dd>
                 </dl>
-                <dl className="flex gap-1 justify-between">
+                <dl>
                   <dt>월 실현이익</dt>
                   <dd><span className="text-blue-700 font-bold">12,100</span> 원</dd>
                 </dl>
               </div>
             </div>
-            <div className="flex-1 flex flex-col gap-1 border border-zinc-200 rounded-xl p-4">
-              <div className="text-sm">비효율</div>
+            <div className="inner-card-panel">
+              <div className="inner-card-title">비효율</div>
               <div>
                 <span className="text-3xl font-bold">3,000</span>원
               </div>
-              <div className="text-sm">
-                <dl className="flex gap-1 justify-between">
+              <div className="inner-card-container">
+                <dl>
                   <dt>이익율</dt>
                   <dd>28 %</dd>
                 </dl>
-                <dl className="flex gap-1 justify-between">
+                <dl>
                   <dt>예상 판매량</dt>
                   <dd>18 개</dd>
                 </dl>
-                <dl className="flex gap-1 justify-between">
+                <dl>
                   <dt>월 실현이익</dt>
                   <dd>12,100 원</dd>
                 </dl>
