@@ -28,20 +28,6 @@ export default function LayerPopup({ isOpen, onClose, title, children }) {
           </div>
         </div>
 
-        {/* <div className="px-6 py-4 bg-gray-50 flex justify-end gap-3">
-          <button 
-             onClick={onClose}
-             className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
-          >
-            취소
-          </button>
-          <button 
-            onClick={onClose}
-            className="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 shadow-sm transition-colors"
-          >
-            확인
-          </button>
-        </div> */}
       </div>
     </div>
   );

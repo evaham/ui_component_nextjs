@@ -36,7 +36,7 @@ export default function LayerPopup01({ isOpen, onClose }) {
             상품 가격비교
           </h3>
           <button onClick={onClose} className="layer-popup-close" aria-label="닫기">
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="size-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
@@ -46,7 +46,7 @@ export default function LayerPopup01({ isOpen, onClose }) {
           {/* 레이어팝업 */}
           <div className="w-6xl space-y-4">
             <div>
-              <table className="w-full border-collapse border border-gray-400 bg-white text-sm">
+              <table className="table-base">
                 <colgroup>
                   <col style={{ width: '10%' }} />
                   <col style={{ width: '20%' }} />
@@ -57,75 +57,54 @@ export default function LayerPopup01({ isOpen, onClose }) {
                 </colgroup>
                 <tbody>
                   <tr>
-                    <td className="border  border-gray-300 px-4 py-2 text-center bg-zinc-100">바코드</td>
-                    <td className="border  border-gray-300 px-4 py-2">88088088080080</td>
-                    <td className="border  border-gray-300 px-4 py-2 text-center bg-zinc-100">우리 매입가</td>
-                    <td className="border  border-gray-300 px-4 py-2 text-right">1,800</td>
-                    <td rowSpan={3} className="border  border-gray-300 px-4 py-2 text-center bg-zinc-100">상품설명</td>
-                    <td rowSpan={3} className="border  border-gray-300 px-4 py-2">
+                    <th>바코드</th>
+                    <td>88088088080080</td>
+                    <th>우리 매입가</th>
+                    <td className="text-right">1,800</td>
+                    <th rowSpan={3}>상품설명</th>
+                    <td rowSpan={3}>
                       가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사
                     </td>
                   </tr>
                   <tr>
-                    <td className="border  border-gray-300 px-4 py-2 text-center bg-zinc-100">상품명</td>
-                    <td className="border  border-gray-300 px-4 py-2">맥스웰오리지널믹스</td>
-                    <td className="border  border-gray-300 px-4 py-2 text-center bg-zinc-100">우리 판매가</td>
-                    <td className="border  border-gray-300 px-4 py-2 text-right">2,500</td>
+                    <th>상품명</th>
+                    <td>맥스웰오리지널믹스</td>
+                    <th>우리 판매가</th>
+                    <td className="text-right">2,500</td>
                   </tr>
                   <tr>
-                    <td className="border  border-gray-300 px-4 py-2 text-center bg-zinc-100">규격</td>
-                    <td className="border  border-gray-300 px-4 py-2 text-right">1,000g</td>
-                    <td className="border  border-gray-300 px-4 py-2 text-center bg-zinc-100">우리 이익율</td>
-                    <td className="border  border-gray-300 px-4 py-2 text-right">14%</td>
+                    <th>규격</th>
+                    <td className="text-right">1,000g</td>
+                    <th>우리 이익율</th>
+                    <td className="text-right">14%</td>
                   </tr>
                 </tbody>
               </table>
             </div>
-            <div className="hidden">
-              <div className="grid grid-cols-6 w-full gap-px bg-gray-300 border border-gray-300 *:bg-white text-sm">
-                <div className="flex items-center px-4 text-left text-gray-900">바코드</div>
-                <div className="flex items-center px-4 text-left text-gray-900">88088088080080</div>
-                <div className="flex items-center px-4 text-gray-500">우리 매입가</div>
-                <div className="flex items-center px-4 text-gray-500">1,800</div>
-                <div className="row-span-3 flex items-center px-4 text-gray-500">상품설명</div>
-                <div className="row-span-3 flex items-center px-4 text-gray-500">
-                  가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사
-                </div>
-                <div className="flex items-center px-4 text-gray-500">상품명</div>
-                <div className="flex items-center px-4 text-gray-500">맥스웰오리지널믹스</div>
-                <div className="flex items-center px-4 text-gray-500">우리 판매가</div>
-                <div className="flex items-center px-4 text-gray-500">2,500</div>
-                <div className="flex items-center px-4 text-gray-500">규격</div>
-                <div className="flex items-center px-4 text-gray-500">1,000g</div>
-                <div className="flex items-center px-4 text-gray-500">우리 이익율</div>
-                <div className="flex items-center px-4 text-gray-500">2,800</div>
-              </div>
-            </div>
 
-            <div className="flex items-center">
-              <SearchTab tabs={[
-                '점포별',
-                '지역별',
-                '규모별'
-              ]} />
-              <div className="flex items-center gap-1 ml-auto">
-                <select className="min-w-30 px-2 py-1 border rounded border-zinc-300 bg-white">
-                  <option value="sales">판매가</option>
-                  <option value="profit">이익순</option>
-                </select>
-                <select className="min-w-30 px-2 py-1 border rounded border-zinc-300 bg-white">
-                  <option value="sales">판매량</option>
-                  <option value="profit">이익순</option>
-                </select>
-                <button className="ml-auto px-4 py-1 bg-[#26499d] text-white rounded hover:bg-[#26499d] transition-colors cursor-pointer">다시조회</button>
-              </div>
+            <SearchTab tabs={[
+              '점포별',
+              '지역별',
+              '규모별'
+            ]} />
+            <div className="flex items-center gap-1 mt-2">
+              <select className="select-item">
+                <option value="sales">판매가</option>
+                <option value="profit">이익순</option>
+              </select>
+              <select className="select-item">
+                <option value="sales">판매량</option>
+                <option value="profit">이익순</option>
+              </select>
+              <button className="primary-button">다시조회</button>
             </div>
-            <div className="flex *:flex-1 gap-4 p-6 border border-zinc-300 bg-white transition-all">
+            <div className="relative flex *:flex-1 gap-4 p-6 border border-zinc-300 bg-white transition-all">
+              <p className="absolute top-2 left-2">샘플영역</p>
               <LineGraph />
               <LineGraph />
               <LineGraph />
             </div>
-            <div className="table-container">
+            <div className="table-data-container">
               <table className="table-data">
                 <colgroup>
 

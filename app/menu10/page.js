@@ -94,7 +94,7 @@ export default function Menu10Page() {
               </tbody>
             </table>
           </div>
-          <div className="table-container">
+          <div className="table-data-container">
             <table className="table-data">
               <colgroup>
                 <col style={{ width: '5%' }} />

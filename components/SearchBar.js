@@ -62,29 +62,33 @@ export default function SearchBar({
   };
 
   return (
-    <div className="search-group">
+    <div className="search-container">
       {searchFilters.length > 0 && (
-        <div>
-          <div>{searchGroupLabel1}</div>
-          {searchFilters.map(renderSelect)}
-          <input type="text" placeholder={placeholder} className="search-input-text" />
-          <button className="search-btn">
-            {buttonLabel}
-          </button>
+        <div className="search-group">
+          <div className="search-group-label">{searchGroupLabel1}</div>
+          <div className="items-group">
+            {searchFilters.map(renderSelect)}
+            <input type="text" placeholder={placeholder} className="input-text" />
+            <button className="primary-button">
+              {buttonLabel}
+            </button>
+          </div>
         </div>
       )}
 
       {centerFilters.length > 0 && (
-        <div>
-          <div>{searchGroupLabel2}</div>
-          {centerFilters.map(renderSelect)}
+        <div className="search-group">
+          <div className="search-group-label">{searchGroupLabel2}</div>
+          <div className="items-group">
+            {centerFilters.map(renderSelect)}
+          </div>
         </div>
       )}
       {/* 지역선택 */}
       {locationFilter.length > 0 && (
-        <div className="items-start!">
-          <div className="mr-3">지역선택</div>
-          <div className="checkbox-group">
+        <div className="search-group">
+          <div className="search-group-label mb-auto">지역선택</div>
+          <div className="items-group max-w-160">
             {locationFilter.map((location) => (
               <div key={location.id} className="checkbox-item">
                 <input

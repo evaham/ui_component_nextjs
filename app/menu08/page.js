@@ -58,7 +58,7 @@ export default function Menu08Page() {
             차트영역
           </div>
 
-          <div className="table-container">
+          <div className="table-data-container">
             <table className="table-data">
               <colgroup>
                 <col style={{ width: '40px' }} />

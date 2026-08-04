@@ -161,7 +161,7 @@ export default function DataTableList({ rows = [], renderRow, rowKey = 'id' }) {
         <td className="text-right">{row.판매가변경}</td>
       )}
       {row.날짜 != null && row.날짜 !== '' && (
-        <td className="text-right">{row.날짜}</td>
+        <td className="text-left">{row.날짜}</td>
       )}
       {row.매장매출액 != null && row.매장매출액 !== '' && (
         <td className="text-right">{row.매장매출액}</td>

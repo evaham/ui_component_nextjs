@@ -17,24 +17,28 @@ export default function Menu11Page() {
 
         <div className="flex flex-col gap-4 p-6 rounded-2xl bg-white">
           <SearchBar />
-          <div className="table-container">
+          <div className="table-data-container">
             <table className="table-data">
               <colgroup>
-                <col style={{ width: '40px' }} />
-                <col style={{ width: '120px' }} />
-                <col style={{ width: '150px' }} />
-                <col style={{ width: '60px' }} />
+                <col style={{ width: '10%' }} />
+                <col style={{ width: '10%' }} />
+                <col style={{ width: '10%' }} />
+                <col style={{ width: '20%' }} />
+                <col style={{ width: '20%' }} />
+                <col style={{ width: '10%' }} />
+                <col style={{ width: '10%' }} />
+                <col style={{ width: '10%' }} />
               </colgroup>
               <thead>
                 <tr>
-                  <th className="p-2 text-center font-normal">No.</th>
-                  <th className="p-2 text-left font-normal">지역</th>
-                  <th className="p-2 text-left font-normal">규모</th>
-                  <th className="p-2 text-left font-normal">매장명</th>
-                  <th className="p-2 text-right font-normal">매출액</th>
-                  <th className="p-2 text-right font-normal">객수</th>
-                  <th className="p-2 text-right font-normal">객단가</th>
-                  <th className="p-2 pr-6 text-center font-normal">수집시각</th>
+                  <th className="text-center">No.</th>
+                  <th className="text-left">지역</th>
+                  <th className="text-left">규모</th>
+                  <th className="text-left">매장명</th>
+                  <th className="text-right">매출액</th>
+                  <th className="text-right">객수</th>
+                  <th className="text-right">객단가</th>
+                  <th className="pr-6! text-center">수집시각</th>
                 </tr>
               </thead>
               <DataTableList rows={rows} rowKey="id" />

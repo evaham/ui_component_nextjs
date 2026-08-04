@@ -32,7 +32,7 @@ export default function Menu05Page() {
             placeholder="바코드, 상품명"
             buttonLabel="조회"
           />
-          <div className="table-container">
+          <div className="table-data-container">
             <table className="table-data">
               <colgroup>
                 <col style={{ width: '5%' }} />
@@ -59,13 +59,13 @@ export default function Menu05Page() {
           </div>
         </div>
         {/* 그래프 정보 */}
-        <div className="side-card-panel">
-          <div className="side-card-header">
-            <span className="side-card-title">큰사발신라면</span>
-            <span className="side-card-text">매출,취급 매장수 추이</span>
+        <div className="card-panel sticky top-0 min-w-72 min-h-64">
+          <div className="card-header">
+            <div className="card-title">큰사발신라면</div>
+            <span className="card-text">매출,취급 매장수 추이</span>
           </div>
-          <hr className="side-card-hr" />
-          <div className="side-card-chartbox">
+          <hr className="card-hr" />
+          <div className="card-chartbox">
             <ComposedChart
               responsive
               className="w-full h-50"
@@ -80,7 +80,7 @@ export default function Menu05Page() {
               <Bar dataKey="평균매출액" barSize={20} fill="#3b82f6" />
             </ComposedChart>
           </div>
-          <table className="side-card-table">
+          <table className="table-tight">
             <thead>
               <tr>
                 <th></th>

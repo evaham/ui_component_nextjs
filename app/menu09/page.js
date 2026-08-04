@@ -12,7 +12,7 @@ export default function Menu09Page() {
       <div className="contents-col">
         <div className="card-panel">
           <SearchBar />
-          <div className="table-container">
+          <div className="table-data-container">
             <table className="table-data">
               <colgroup>
                 <col style={{ width: '40px' }} />

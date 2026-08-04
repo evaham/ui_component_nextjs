@@ -40,7 +40,7 @@ export default function Menu02Page() {
             placeholder="바코드, 상품명"
             buttonLabel="검색"
           />
-          <div className="table-container">
+          <div className="table-data-container">
             <table className="table-data">
               <colgroup>
                 <col style={{ width: '40px' }} />

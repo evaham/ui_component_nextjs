@@ -55,7 +55,7 @@ export default function Menu04Page() {
             buttonLabel="조회"
           />
 
-          <div className="table-container">
+          <div className="table-data-container">
             <table className="table-data">
               <colgroup>
                 <col style={{ width: '40px' }} />
