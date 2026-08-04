@@ -59,16 +59,16 @@ export default function Menu05Page() {
           </div>
         </div>
         {/* 그래프 정보 */}
-        <div className="card-panel sticky top-0 min-w-72 min-h-64">
-          <div className="card-header">
-            <div className="card-title">큰사발신라면</div>
-            <span className="card-text">매출,취급 매장수 추이</span>
+        <div className="side-card-panel">
+          <div className="side-card-header">
+            <span className="side-card-title">큰사발신라면</span>
+            <span className="side-card-text">매출,취급 매장수 추이</span>
           </div>
-          <hr className="card-hr" />
-          <div className="card-chartbox">
+          <hr className="side-card-hr" />
+          <div className="side-card-chartbox">
             <ComposedChart
               responsive
-              className="w-full h-50"
+              className="w-full h-50 text-xs"
               data={data2}
             >
               <CartesianGrid stroke="#f5f5f5" />

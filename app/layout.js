@@ -11,6 +11,7 @@ import localFont from "next/font/local";
 //   weight:"45 920",
 // });
 
+
 const pretendardGov = localFont({
   src: "../public/fonts/PretendardGOVVariable.woff2",
   variable: "--font-pretendard-gov",

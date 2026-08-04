@@ -3,6 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #333333;
+  --font-pretendard: 'Pretendard GOV';
 }
 
 /* @theme inline {
@@ -21,12 +22,21 @@
   }
 } */
 
+
+
+
+@font-face {
+  font-family: 'Pretendard GOV';
+  font-weight: 45 920;
+  font-style: normal;
+  src: url('../public/fonts/PretendardGOVVariable.woff2') format('woff2');
+}
+
 body {
   /* 다크모드 취소 */
   /* background: var(--background);
   color: var(--foreground); */
-  font-family: var(--font-pretendard-gov), Arial, Helvetica, sans-serif;
-  color: var(--foreground);
+  font-family: "Pretendard GOV Variable", "Pretendard GOV", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;  color: var(--foreground);
 }
 
 html {
@@ -118,6 +128,11 @@ body {
   @apply my-4 border-b border-zinc-200;
 }
 
+.side-card-container {
+  @apply flex flex-col gap-4 text-sm;
+}
+
+
 
 
 .side-card-panel {
@@ -137,9 +152,6 @@ body {
 }
 
 
-.side-card-container {
-  @apply flex flex-col gap-4 text-sm;
-}
 .side-card-chartbox {
   @apply w-80 h-50 flex items-center justify-center text-xs text-gray-400;
 }
@@ -412,6 +424,9 @@ body {
 }
 .table-data thead th {
   @apply p-2 font-normal;
+}
+.table-data tbody tr {
+  @apply hover:bg-zinc-50 [&>td:last-child]:pr-6;
 }
 .table-data tbody td {
   @apply p-2;

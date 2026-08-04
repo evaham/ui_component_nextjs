@@ -38,7 +38,7 @@ export default function Menu03Page() {
   return (
     <div className="contents-group">
       <div className="contents-col">
-        <div className="flex-1 flex flex-col gap-4 p-6 rounded-2xl bg-white shadow-xs transition-all">
+        <div className="card-panel">
           <SearchBar
             searchFilters={[
               { label: '상위 100개', options: [{ value: 'top100', label: '상위 100개' }] },

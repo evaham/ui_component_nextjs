@@ -72,7 +72,7 @@ export default function Menu10Page() {
               </colgroup>
               <tbody>
                 <tr>
-                  <td colSpan={4} className="p-2">우리매장 매출(6/15)</td>
+                  <td colSpan={4}>우리매장 매출(6/15)</td>
                   <td className="text-right">83,478,810</td>
                   <td className="text-right">2,485</td>
                   <td className="text-right">33,593</td>

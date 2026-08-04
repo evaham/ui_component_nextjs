@@ -6,7 +6,7 @@ export default function DataTableList({ rows = [], renderRow, rowKey = 'id' }) {
   const hasRows = Array.isArray(rows) && rows.length > 0;
 
   const defaultRender = (row, idx) => (
-    <tr key={row[rowKey] ?? idx} className="hover:bg-zinc-50 [&>td:last-child]:pr-6">
+    <tr key={row[rowKey] ?? idx}>
       {row.no!= null && row.no !== '' && (
         <td className="text-center">{row.no ?? idx + 1}</td>
       )}
