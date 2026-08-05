@@ -87,7 +87,7 @@ body {
   @apply ml-auto text-sm cursor-pointer;
 }
 .main {
-  @apply flex-1 p-4 md:p-6 overflow-hidden overflow-y-auto;
+  @apply flex-1 p-6 overflow-hidden overflow-y-auto;
 }
 .main .contents-group {
   @apply flex flex-col flex-1 w-7xl justify-center;
@@ -122,7 +122,7 @@ body {
   @apply flex items-center ml-4 text-xs text-zinc-600 font-medium cursor-pointer tracking-tight;
 }
 .cards-container {
-  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4;
+  @apply grid grid-cols-4 gap-4;
 }
 .card-hr{
   @apply my-4 border-b border-zinc-200;
